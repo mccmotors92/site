@@ -184,6 +184,9 @@ textarea{min-height:110px;resize:vertical}
 .bouton.r:hover{background:var(--rouge2);border-color:var(--rouge2)}
 .retour-msg{display:none;color:var(--gris);font-size:14.5px;border-left:1px solid var(--rouge);padding-left:16px}
 .partager{display:block;width:100%;margin:14px 0 0;background:none;border:1px solid var(--trait2);color:#c9bea4;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;padding:15px;cursor:pointer;transition:border-color .2s,color .2s}.partager:hover{border-color:var(--rouge);color:var(--ivoire)}
+.wa{position:fixed;right:26px;bottom:26px;z-index:40;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--noir2);color:var(--rouge2);border:1px solid var(--rouge);box-shadow:0 6px 24px rgba(0,0,0,.35);transition:background .2s,color .2s}.wa:hover{background:var(--rouge);color:var(--noir)}
+@media (max-width:640px){.wa{right:16px;bottom:16px;width:50px;height:50px}}
+.lien-wa{border-bottom:1px solid var(--rouge)}
 .lien-ml{border-bottom:1px solid var(--trait)}.lien-ml:hover{color:var(--ivoire)}
 .mentions{max-width:820px;padding:150px 0 130px}.mentions h1{font-size:clamp(44px,6vw,72px);margin:28px 0 50px}.mentions h2{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--rouge2);margin:44px 0 14px}.mentions p{color:#cfc6b0;font-size:15.5px;margin:0 0 12px}.mentions a{border-bottom:1px solid var(--rouge)}
 .retour-msg a{color:var(--ivoire);border-bottom:1px solid var(--rouge)}
@@ -438,6 +441,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "contact": {
     "telephone": "",
     "email": "contact@mccmotors.fr",
+    "whatsapp": "33755634911",
     "atelier": "Yvelines, sur rendez-vous uniquement",
     "trad": {
       "en": {
@@ -1376,7 +1380,10 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "erreur": "L'envoi n'a pas abouti. Écrivez-nous directement à <a href=\"mailto:{mail}\">{mail}</a>.",
   "retour": "Retour au site",
   "partager": "Partager cette auto",
-  "copie": "Lien copié"
+  "copie": "Lien copié",
+  "wa.ecrire": "Écrire sur WhatsApp",
+  "wa.msg": "Bonjour, je vous contacte depuis le site MCC Motors.",
+  "wa.int": "Je suis intéressé par :"
  },
  "en": {
   "nav.veh": "Cars",
@@ -1501,7 +1508,10 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "erreur": "Your message could not be sent. Please write to us directly at <a href=\"mailto:{mail}\">{mail}</a>.",
   "retour": "Back to the site",
   "partager": "Share this car",
-  "copie": "Link copied"
+  "copie": "Link copied",
+  "wa.ecrire": "Message us on WhatsApp",
+  "wa.msg": "Hello, I am contacting you from the MCC Motors website.",
+  "wa.int": "I am interested in:"
  },
  "de": {
   "nav.veh": "Fahrzeuge",
@@ -1626,7 +1636,10 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "erreur": "Die Nachricht konnte nicht gesendet werden. Schreiben Sie uns bitte direkt an <a href=\"mailto:{mail}\">{mail}</a>.",
   "retour": "Zurück zur Website",
   "partager": "Fahrzeug teilen",
-  "copie": "Link kopiert"
+  "copie": "Link kopiert",
+  "wa.ecrire": "Auf WhatsApp schreiben",
+  "wa.msg": "Guten Tag, ich kontaktiere Sie über die Website von MCC Motors.",
+  "wa.int": "Ich interessiere mich für:"
  },
  "pt": {
   "nav.veh": "Veículos",
@@ -1751,7 +1764,10 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "erreur": "Não foi possível enviar a mensagem. Escreva-nos diretamente para <a href=\"mailto:{mail}\">{mail}</a>.",
   "retour": "Voltar ao site",
   "partager": "Partilhar este automóvel",
-  "copie": "Ligação copiada"
+  "copie": "Ligação copiada",
+  "wa.ecrire": "Escrever no WhatsApp",
+  "wa.msg": "Olá, contacto-vos a partir do site da MCC Motors.",
+  "wa.int": "Tenho interesse em:"
  }
 }
 </script>
@@ -1964,6 +1980,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   </footer>
 </div>
 
+<a id="wa" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.5 10.5 0 0 1-1.8-5.7C5 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2l-1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6.4-.6c.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg></a>
 <div id="page-fiche"><div class="wrap" id="fiche"></div></div>
 
 <script>
@@ -2026,6 +2043,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   });
 
   var C = D.contact;
+  function lienWa(){ var m=t('wa.msg'); if(courante&&document.body.classList.contains('fiche')) m+=' '+t('wa.int')+' '+courante.v.marque+' '+tr(courante.v,'modele')+(courante.v.annee?' ('+courante.v.annee+')':'')+'.'; return 'https://wa.me/'+C.whatsapp+'?text='+encodeURIComponent(m); }
+  function majWa(){ var a=document.getElementById('wa'); if(!a) return; if(!C.whatsapp){a.remove();return;} a.href=lienWa(); a.title=t('wa.ecrire'); }
   function rendreListes(){
     grille('vehicules'); grille('projets');
     var P = D.pieces||[];
@@ -2035,6 +2054,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     var dl='';
     if(C.telephone) dl+='<div><dt>'+t('l.tel')+'</dt><dd>'+esc(C.telephone)+'</dd></div>';
     if(C.email) dl+='<div><dt>'+t('l.mail')+'</dt><dd>'+esc(C.email)+'</dd></div>';
+    if(C.whatsapp) dl+='<div><dt>WhatsApp</dt><dd><a class="lien-wa" target="_blank" rel="noopener" href="'+lienWa()+'">'+t('wa.ecrire')+'</a></dd></div>';
     if(C.atelier) dl+='<div><dt>'+t('l.atelier')+'</dt><dd>'+esc(tr(C,'atelier'))+'</dd></div>';
     document.getElementById('coordonnees').innerHTML = dl;
   }
@@ -2104,14 +2124,14 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   function route(){
     var h = location.hash.replace('#','');
     var f = trouver(h);
-    if(f){ document.body.classList.add('fiche'); rendreFiche(f); window.scrollTo(0,0); entete(); return; }
+    if(f){ document.body.classList.add('fiche'); rendreFiche(f); window.scrollTo(0,0); entete(); majWa(); return; }
     if(h==='mentions'){ courante=null; document.body.classList.add('fiche'); rendreMentions(); window.scrollTo(0,0); entete(); return; }
     var etaitFiche = document.body.classList.contains('fiche');
     document.body.classList.remove('fiche');
     var cible = h && document.getElementById(h);
     if(cible){ setTimeout(function(){cible.scrollIntoView({behavior: etaitFiche?'auto':'smooth'});},etaitFiche?30:0); }
     else if(etaitFiche) window.scrollTo(0,0);
-    entete();
+    entete(); majWa();
   }
   window.addEventListener('hashchange',route);
 
@@ -2124,7 +2144,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
 
   // Changement de langue
   function appliquerLangue(){
-    traduirePage(); rendreListes();
+    traduirePage(); rendreListes(); majWa();
     if(courante && document.body.classList.contains('fiche')) rendreFiche(courante,true);
     else if(location.hash==='#mentions') rendreMentions();
     if(window.__observer) window.__observer();
