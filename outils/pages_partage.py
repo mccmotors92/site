@@ -30,7 +30,7 @@ GABARIT = """<!DOCTYPE html>
 <meta property="og:url" content="{url}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{cible}">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
 <meta http-equiv="refresh" content="0; url={cible}">
 <script>location.replace({cible_js});</script>
 </head><body style="background:#0f241b;color:#ede3cc;font-family:sans-serif">

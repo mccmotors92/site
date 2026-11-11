@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://mccmotors.fr/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://mccmotors.fr/">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#0f241b">
 <link rel="preload" href="img/intro.mp4" as="video" type="video/mp4">
@@ -54,6 +54,8 @@ nav a:hover:after{right:0}
 .burger{display:none;background:none;border:0;color:var(--ivoire);cursor:pointer;width:30px}
 .burger span{display:block;height:1px;background:currentColor;margin:7px 0}
 .logo{flex-shrink:0;margin-right:36px}
+.logo-img{height:58px;width:auto;display:block}
+@media (max-width:1300px){.logo-img{height:48px}}@media (max-width:640px){.logo-img{height:38px}}
 @media (max-width:1440px) and (min-width:1081px){nav{gap:26px}nav a{font-size:14px;letter-spacing:.16em}}
 @media (max-width:1300px) and (min-width:1081px){nav{gap:18px}nav a{font-size:13px;letter-spacing:.12em}.logo{margin-right:24px}.logo b,.logo em{font-size:38px}.logo i{height:36px}.langues{padding-left:14px}}
 .langues{display:flex;align-items:center;gap:2px;margin-left:6px;padding-left:22px;border-left:1px solid var(--trait)}
@@ -1776,7 +1778,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   <div class="wrap">
     <a href="#accueil" class="logo" aria-label="MCC Motors — accueil">
       <!-- LOGO : logotype provisoire, à remplacer par <img src="img/logo.png" alt="MCC Motors" style="height:48px"> -->
-      <i></i><b>MCC</b><em>MOTORS</em>
+      <img class="logo-img" src="img/logo-mcc.png" alt="MCC Motors" width="720" height="171">
     </a>
     <nav id="menu">
       <a href="#vehicules" data-i18n="nav.veh">Véhicules</a>
