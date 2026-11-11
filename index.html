@@ -41,6 +41,14 @@ nav a:hover{color:var(--ivoire)}
 nav a:hover:after{right:0}
 .burger{display:none;background:none;border:0;color:var(--ivoire);cursor:pointer;width:30px}
 .burger span{display:block;height:1px;background:currentColor;margin:7px 0}
+.logo{flex-shrink:0;margin-right:36px}
+@media (max-width:1440px) and (min-width:1081px){nav{gap:26px}nav a{font-size:14px;letter-spacing:.16em}}
+@media (max-width:1300px) and (min-width:1081px){nav{gap:18px}nav a{font-size:13px;letter-spacing:.12em}.logo{margin-right:24px}.logo b,.logo em{font-size:38px}.logo i{height:36px}.langues{padding-left:14px}}
+.langues{display:flex;align-items:center;gap:2px;margin-left:6px;padding-left:22px;border-left:1px solid var(--trait)}
+.langues button{background:none;border:0;cursor:pointer;font-family:var(--sans,Inter,sans-serif);font-size:11px;letter-spacing:.14em;color:#8f8a76;padding:6px 6px;transition:color .2s}
+.langues button:hover{color:var(--ivoire)}
+.langues button.on{color:var(--rouge2)}
+@media (max-width:1080px){.langues{margin:8px 0 0;padding:16px 0 0;border-left:0;border-top:1px solid var(--trait)}.langues button{font-size:13px;padding:6px 14px 6px 0}}
 
 /* Accueil */
 .hero{position:relative;height:82vh;min-height:580px;max-height:820px;display:flex;align-items:flex-end;overflow:hidden;background:#0b1c15}
@@ -413,129 +421,1288 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "contact": {
     "telephone": "",
     "email": "contact@mccmotors.fr",
-    "atelier": "Yvelines, sur rendez-vous uniquement"
+    "atelier": "Yvelines, sur rendez-vous uniquement",
+    "trad": {
+      "en": {
+        "atelier": "Yvelines (west of Paris), by appointment only"
+      },
+      "de": {
+        "atelier": "Yvelines (westlich von Paris), nur nach Vereinbarung"
+      },
+      "pt": {
+        "atelier": "Yvelines (oeste de Paris), apenas por marcação"
+      }
+    }
   },
   "visuel_generique": "img/visuel.jpg",
   "vehicules": [
     {
       "id": "triumph-tr3-blanche",
-      "marque": "Triumph", "modele": "TR3", "annee": "",
-      "statut": "vente", "prix": "Nous consulter", "prix_note": "",
+      "marque": "Triumph",
+      "modele": "TR3",
+      "annee": "",
+      "statut": "vente",
+      "prix": "Nous consulter",
+      "prix_note": "",
       "accroche": "Roadster blanc, sellerie noire passepoilée blanc.",
-      "description": ["Triumph TR3 roadster, teinte blanche, sellerie en cuir noir passepoilée de blanc, moquette noire, porte-bagages chromé sur le coffre.", "Descriptif complet, historique et factures communiqués sur demande."],
-      "caracteristiques": {"Moteur": "Quatre cylindres, 2.0, deux carburateurs SU", "Carrosserie": "Roadster", "Teinte": "Blanc", "Intérieur": "Cuir noir, passepoil blanc"},
+      "description": [
+        "Triumph TR3 roadster, teinte blanche, sellerie en cuir noir passepoilée de blanc, moquette noire, porte-bagages chromé sur le coffre.",
+        "Descriptif complet, historique et factures communiqués sur demande."
+      ],
+      "caracteristiques": {
+        "Moteur": "Quatre cylindres, 2.0, deux carburateurs SU",
+        "Carrosserie": "Roadster",
+        "Teinte": "Blanc",
+        "Intérieur": "Cuir noir, passepoil blanc"
+      },
       "travaux": [],
       "vignette": "img/tr3b-vignette-a.jpg",
-      "photos": ["img/tr3b-1.jpg", "img/tr3b-2.jpg", "img/tr3b-3.jpg", "img/tr3b-4.jpg", "img/tr3b-5.jpg"],
-      "videos": []
+      "photos": [
+        "img/tr3b-1.jpg",
+        "img/tr3b-2.jpg",
+        "img/tr3b-3.jpg",
+        "img/tr3b-4.jpg",
+        "img/tr3b-5.jpg"
+      ],
+      "videos": [],
+      "trad": {
+        "en": {
+          "accroche": "White roadster, black upholstery with white piping.",
+          "description": [
+            "Triumph TR3 roadster in white, black leather upholstery with white piping, black carpets, chrome luggage rack on the boot lid.",
+            "Full description, history and invoices available on request."
+          ],
+          "caracteristiques": {
+            "Engine": "Four-cylinder, 2.0, twin SU carburettors",
+            "Body": "Roadster",
+            "Colour": "White",
+            "Interior": "Black leather, white piping"
+          }
+        },
+        "de": {
+          "accroche": "Weißer Roadster, schwarze Polster mit weißen Keder.",
+          "description": [
+            "Triumph TR3 Roadster in Weiß, schwarze Lederausstattung mit weißen Keder, schwarze Teppiche, verchromter Gepäckträger auf dem Kofferraumdeckel.",
+            "Vollständige Beschreibung, Historie und Rechnungen auf Anfrage."
+          ],
+          "caracteristiques": {
+            "Motor": "Vierzylinder, 2.0, zwei SU-Vergaser",
+            "Karosserie": "Roadster",
+            "Farbe": "Weiß",
+            "Innenraum": "Schwarzes Leder, weiße Keder"
+          }
+        },
+        "pt": {
+          "accroche": "Roadster branco, estofos pretos com debrum branco.",
+          "description": [
+            "Triumph TR3 roadster, cor branca, estofos em pele preta com debrum branco, alcatifas pretas, porta-bagagens cromado na tampa da mala.",
+            "Descrição completa, historial e faturas enviados a pedido."
+          ],
+          "caracteristiques": {
+            "Motor": "Quatro cilindros, 2.0, dois carburadores SU",
+            "Carroçaria": "Roadster",
+            "Cor": "Branco",
+            "Interior": "Pele preta, debrum branco"
+          }
+        }
+      }
     },
     {
       "id": "triumph-tr3-rouge",
-      "marque": "Triumph", "modele": "TR3", "annee": "",
-      "statut": "vente", "prix": "Nous consulter", "prix_note": "",
+      "marque": "Triumph",
+      "modele": "TR3",
+      "annee": "",
+      "statut": "vente",
+      "prix": "Nous consulter",
+      "prix_note": "",
       "accroche": "Roadster rouge, intérieur noir, prête à rouler.",
-      "description": ["Triumph TR3 roadster, teinte rouge, intérieur noir, porte-bagages chromé sur le coffre.", "Descriptif complet, historique et factures communiqués sur demande."],
-      "caracteristiques": {"Moteur": "Quatre cylindres, 2.0", "Carrosserie": "Roadster", "Teinte": "Rouge", "Intérieur": "Noir"},
+      "description": [
+        "Triumph TR3 roadster, teinte rouge, intérieur noir, porte-bagages chromé sur le coffre.",
+        "Descriptif complet, historique et factures communiqués sur demande."
+      ],
+      "caracteristiques": {
+        "Moteur": "Quatre cylindres, 2.0",
+        "Carrosserie": "Roadster",
+        "Teinte": "Rouge",
+        "Intérieur": "Noir"
+      },
       "travaux": [],
       "vignette": "img/tr3-vignette-a.jpg",
-      "photos": ["img/tr3-1.jpg", "img/tr3-2.jpg", "img/tr3-3.jpg", "img/tr3-4.jpg", "img/tr3-5.jpg", "img/tr3-6.jpg", "img/tr3-7.jpg"],
-      "videos": []
+      "photos": [
+        "img/tr3-1.jpg",
+        "img/tr3-2.jpg",
+        "img/tr3-3.jpg",
+        "img/tr3-4.jpg",
+        "img/tr3-5.jpg",
+        "img/tr3-6.jpg",
+        "img/tr3-7.jpg"
+      ],
+      "videos": [],
+      "trad": {
+        "en": {
+          "accroche": "Red roadster, black interior, ready to drive.",
+          "description": [
+            "Triumph TR3 roadster in red, black interior, chrome luggage rack on the boot lid.",
+            "Full description, history and invoices available on request."
+          ],
+          "caracteristiques": {
+            "Engine": "Four-cylinder, 2.0",
+            "Body": "Roadster",
+            "Colour": "Red",
+            "Interior": "Black"
+          }
+        },
+        "de": {
+          "accroche": "Roter Roadster, schwarzer Innenraum, fahrbereit.",
+          "description": [
+            "Triumph TR3 Roadster in Rot, schwarzer Innenraum, verchromter Gepäckträger auf dem Kofferraumdeckel.",
+            "Vollständige Beschreibung, Historie und Rechnungen auf Anfrage."
+          ],
+          "caracteristiques": {
+            "Motor": "Vierzylinder, 2.0",
+            "Karosserie": "Roadster",
+            "Farbe": "Rot",
+            "Innenraum": "Schwarz"
+          }
+        },
+        "pt": {
+          "accroche": "Roadster vermelho, interior preto, pronto a circular.",
+          "description": [
+            "Triumph TR3 roadster, cor vermelha, interior preto, porta-bagagens cromado na tampa da mala.",
+            "Descrição completa, historial e faturas enviados a pedido."
+          ],
+          "caracteristiques": {
+            "Motor": "Quatro cilindros, 2.0",
+            "Carroçaria": "Roadster",
+            "Cor": "Vermelho",
+            "Interior": "Preto"
+          }
+        }
+      }
     },
     {
       "id": "range-rover-classic-v8-1987",
-      "marque": "Range Rover", "modele": "Classic V8 3.5", "annee": "1987",
-      "statut": "vente", "prix": "Nous consulter", "prix_note": "",
+      "marque": "Range Rover",
+      "modele": "Classic V8 3.5",
+      "annee": "1987",
+      "statut": "vente",
+      "prix": "Nous consulter",
+      "prix_note": "",
       "accroche": "V8 3.5 à carburateurs, boîte manuelle, cinq portes.",
-      "description": ["Range Rover Classic de 1987, cinq portes, moteur V8 3.5 à carburateurs et boîte manuelle. Teinte verte, intérieur en velours gris, jantes alliage.", "Descriptif complet, historique et factures communiqués sur demande."],
-      "caracteristiques": {"Année": "1987", "Moteur": "V8 3.5, carburateurs", "Boîte": "Manuelle", "Carrosserie": "Cinq portes", "Teinte": "Vert", "Intérieur": "Velours gris"},
+      "description": [
+        "Range Rover Classic de 1987, cinq portes, moteur V8 3.5 à carburateurs et boîte manuelle. Teinte verte, intérieur en velours gris, jantes alliage.",
+        "Descriptif complet, historique et factures communiqués sur demande."
+      ],
+      "caracteristiques": {
+        "Année": "1987",
+        "Moteur": "V8 3.5, carburateurs",
+        "Boîte": "Manuelle",
+        "Carrosserie": "Cinq portes",
+        "Teinte": "Vert",
+        "Intérieur": "Velours gris"
+      },
       "travaux": [],
       "vignette": "img/rrc-vignette-a.jpg",
-      "photos": ["img/rrc-1.jpg", "img/rrc-2.jpg", "img/rrc-3.jpg", "img/rrc-4.jpg", "img/rrc-5.jpg", "img/rrc-6.jpg", "img/rrc-7.jpg"],
-      "videos": []
+      "photos": [
+        "img/rrc-1.jpg",
+        "img/rrc-2.jpg",
+        "img/rrc-3.jpg",
+        "img/rrc-4.jpg",
+        "img/rrc-5.jpg",
+        "img/rrc-6.jpg",
+        "img/rrc-7.jpg"
+      ],
+      "videos": [],
+      "trad": {
+        "en": {
+          "accroche": "Carburettor-fed 3.5 V8, manual gearbox, five doors.",
+          "description": [
+            "1987 Range Rover Classic, five doors, carburettor-fed 3.5 V8 with manual gearbox. Green paintwork, grey velour interior, alloy wheels.",
+            "Full description, history and invoices available on request."
+          ],
+          "caracteristiques": {
+            "Year": "1987",
+            "Engine": "3.5 V8, carburettors",
+            "Gearbox": "Manual",
+            "Body": "Five doors",
+            "Colour": "Green",
+            "Interior": "Grey velour"
+          }
+        },
+        "de": {
+          "accroche": "3.5-V8 mit Vergasern, Schaltgetriebe, fünf Türen.",
+          "description": [
+            "Range Rover Classic von 1987, fünf Türen, 3.5-V8 mit Vergasern und Schaltgetriebe. Grüne Lackierung, Innenraum in grauem Velours, Leichtmetallfelgen.",
+            "Vollständige Beschreibung, Historie und Rechnungen auf Anfrage."
+          ],
+          "caracteristiques": {
+            "Baujahr": "1987",
+            "Motor": "V8 3.5, Vergaser",
+            "Getriebe": "Schaltgetriebe",
+            "Karosserie": "Fünftürer",
+            "Farbe": "Grün",
+            "Innenraum": "Grauer Velours"
+          }
+        },
+        "pt": {
+          "accroche": "V8 3.5 a carburadores, caixa manual, cinco portas.",
+          "description": [
+            "Range Rover Classic de 1987, cinco portas, motor V8 3.5 a carburadores e caixa manual. Cor verde, interior em veludo cinzento, jantes de liga leve.",
+            "Descrição completa, historial e faturas enviados a pedido."
+          ],
+          "caracteristiques": {
+            "Ano": "1987",
+            "Motor": "V8 3.5, carburadores",
+            "Caixa": "Manual",
+            "Carroçaria": "Cinco portas",
+            "Cor": "Verde",
+            "Interior": "Veludo cinzento"
+          }
+        }
+      }
     },
     {
       "id": "porsche-911-sc-targa-1979",
-      "marque": "Porsche", "modele": "911 SC Targa", "annee": "1979", "masque": true,
-      "statut": "vente", "prix": "Nous consulter", "prix_note": "",
+      "marque": "Porsche",
+      "modele": "911 SC Targa",
+      "annee": "1979",
+      "masque": true,
+      "statut": "vente",
+      "prix": "Nous consulter",
+      "prix_note": "",
       "accroche": "Targa bleue, carrosserie Turbo-look.",
-      "description": ["Porsche 911 SC Targa de 1979, carrosserie Turbo-look, teinte bleue.", "Descriptif complet, historique et photographies communiqués sur demande."],
-      "caracteristiques": {"Année": "1979", "Moteur": "Six cylindres à plat, 3.0", "Carrosserie": "Targa, Turbo-look", "Teinte": "Bleu"},
+      "description": [
+        "Porsche 911 SC Targa de 1979, carrosserie Turbo-look, teinte bleue.",
+        "Descriptif complet, historique et photographies communiqués sur demande."
+      ],
+      "caracteristiques": {
+        "Année": "1979",
+        "Moteur": "Six cylindres à plat, 3.0",
+        "Carrosserie": "Targa, Turbo-look",
+        "Teinte": "Bleu"
+      },
       "travaux": [],
       "vignette": "",
       "photos": [],
-      "videos": []
+      "videos": [],
+      "trad": {
+        "en": {
+          "accroche": "Blue Targa with Turbo-look body.",
+          "description": [
+            "1979 Porsche 911 SC Targa, Turbo-look body, blue paintwork.",
+            "Full description, history and photographs available on request."
+          ],
+          "caracteristiques": {
+            "Year": "1979",
+            "Engine": "Flat-six, 3.0",
+            "Body": "Targa, Turbo-look",
+            "Colour": "Blue"
+          }
+        },
+        "de": {
+          "accroche": "Blauer Targa mit Turbo-Look-Karosserie.",
+          "description": [
+            "Porsche 911 SC Targa von 1979, Turbo-Look-Karosserie, blaue Lackierung.",
+            "Vollständige Beschreibung, Historie und Fotos auf Anfrage."
+          ],
+          "caracteristiques": {
+            "Baujahr": "1979",
+            "Motor": "Sechszylinder-Boxer, 3.0",
+            "Karosserie": "Targa, Turbo-Look",
+            "Farbe": "Blau"
+          }
+        },
+        "pt": {
+          "accroche": "Targa azul, carroçaria Turbo-look.",
+          "description": [
+            "Porsche 911 SC Targa de 1979, carroçaria Turbo-look, cor azul.",
+            "Descrição completa, historial e fotografias enviados a pedido."
+          ],
+          "caracteristiques": {
+            "Ano": "1979",
+            "Motor": "Seis cilindros boxer, 3.0",
+            "Carroçaria": "Targa, Turbo-look",
+            "Cor": "Azul"
+          }
+        }
+      }
     },
     {
       "id": "jaguar-xjs-cabriolet-1994",
-      "marque": "Jaguar", "modele": "XJS 4.0 Cabriolet", "annee": "1994",
-      "statut": "vendu", "prix": "", "prix_note": "",
+      "marque": "Jaguar",
+      "modele": "XJS 4.0 Cabriolet",
+      "annee": "1994",
+      "statut": "vendu",
+      "prix": "",
+      "prix_note": "",
       "accroche": "La dernière génération de XJS, préparée par nos soins.",
-      "description": ["Jaguar XJS 4.0 cabriolet de 1994, remise en état avant sa livraison à son nouveau propriétaire."],
-      "caracteristiques": {"Année": "1994", "Moteur": "Six cylindres en ligne, 4.0", "Carrosserie": "Cabriolet"},
+      "description": [
+        "Jaguar XJS 4.0 cabriolet de 1994, remise en état avant sa livraison à son nouveau propriétaire."
+      ],
+      "caracteristiques": {
+        "Année": "1994",
+        "Moteur": "Six cylindres en ligne, 4.0",
+        "Carrosserie": "Cabriolet"
+      },
       "travaux": [],
       "vignette": "",
       "photos": [],
-      "videos": []
+      "videos": [],
+      "trad": {
+        "en": {
+          "modele": "XJS 4.0 Convertible",
+          "accroche": "The last generation of the XJS, prepared in-house.",
+          "description": [
+            "1994 Jaguar XJS 4.0 convertible, recommissioned before delivery to its new owner."
+          ],
+          "caracteristiques": {
+            "Year": "1994",
+            "Engine": "Straight-six, 4.0",
+            "Body": "Convertible"
+          }
+        },
+        "de": {
+          "accroche": "Die letzte Generation des XJS, von uns vorbereitet.",
+          "description": [
+            "Jaguar XJS 4.0 Cabriolet von 1994, vor der Übergabe an den neuen Besitzer instand gesetzt."
+          ],
+          "caracteristiques": {
+            "Baujahr": "1994",
+            "Motor": "Reihensechszylinder, 4.0",
+            "Karosserie": "Cabriolet"
+          }
+        },
+        "pt": {
+          "modele": "XJS 4.0 Descapotável",
+          "accroche": "A última geração do XJS, preparada por nós.",
+          "description": [
+            "Jaguar XJS 4.0 descapotável de 1994, recuperado antes da entrega ao novo proprietário."
+          ],
+          "caracteristiques": {
+            "Ano": "1994",
+            "Motor": "Seis cilindros em linha, 4.0",
+            "Carroçaria": "Descapotável"
+          }
+        }
+      }
     },
     {
       "id": "jaguar-type-e-38-ots-plancher-plat",
-      "marque": "Jaguar", "modele": "Type-E 3.8 Cabriolet", "annee": "",
-      "statut": "vendu", "prix": "", "prix_note": "",
+      "marque": "Jaguar",
+      "modele": "Type-E 3.8 Cabriolet",
+      "annee": "",
+      "statut": "vendu",
+      "prix": "",
+      "prix_note": "",
       "accroche": "Série 1 « plancher plat », restaurée pour son acquéreur.",
-      "description": ["Jaguar Type-E Série 1 3.8 cabriolet, plancher plat, conduite à gauche, certificat Jaguar Heritage.", "Auto cédée en cours de restauration : carrosserie terminée, métrologie moteur complète, boîte rénovée, faisceau neuf, carburateurs refaits. La finition clef en main est conduite et documentée par MCC Motors."],
-      "caracteristiques": {"Moteur": "Six cylindres XK, 3.8", "Carrosserie": "Cabriolet (OTS)", "Particularité": "Plancher plat", "Documentation": "Certificat Jaguar Heritage"},
+      "description": [
+        "Jaguar Type-E Série 1 3.8 cabriolet, plancher plat, conduite à gauche, certificat Jaguar Heritage.",
+        "Auto cédée en cours de restauration : carrosserie terminée, métrologie moteur complète, boîte rénovée, faisceau neuf, carburateurs refaits. La finition clef en main est conduite et documentée par MCC Motors."
+      ],
+      "caracteristiques": {
+        "Moteur": "Six cylindres XK, 3.8",
+        "Carrosserie": "Cabriolet (OTS)",
+        "Particularité": "Plancher plat",
+        "Documentation": "Certificat Jaguar Heritage"
+      },
       "travaux": [],
       "vignette": "",
       "photos": [],
-      "videos": []
+      "videos": [],
+      "trad": {
+        "en": {
+          "modele": "E-Type 3.8 Roadster",
+          "accroche": "Series 1 'flat floor', restored for its buyer.",
+          "description": [
+            "Jaguar E-Type Series 1 3.8 roadster, flat floor, left-hand drive, Jaguar Heritage certificate.",
+            "Sold during restoration: bodywork completed, full engine metrology, gearbox rebuilt, new wiring loom, carburettors overhauled. The turnkey finish is carried out and documented by MCC Motors."
+          ],
+          "caracteristiques": {
+            "Engine": "XK straight-six, 3.8",
+            "Body": "Roadster (OTS)",
+            "Feature": "Flat floor",
+            "Documentation": "Jaguar Heritage certificate"
+          }
+        },
+        "de": {
+          "modele": "E-Type 3.8 Roadster",
+          "accroche": "Serie 1 „Flat Floor“, für den Käufer restauriert.",
+          "description": [
+            "Jaguar E-Type Serie 1 3.8 Roadster, Flat Floor, Linkslenker, Jaguar-Heritage-Zertifikat.",
+            "Während der Restaurierung verkauft: Karosserie fertiggestellt, vollständige Motorvermessung, Getriebe überholt, neuer Kabelbaum, Vergaser überholt. Die schlüsselfertige Fertigstellung wird von MCC Motors durchgeführt und dokumentiert."
+          ],
+          "caracteristiques": {
+            "Motor": "XK-Reihensechszylinder, 3.8",
+            "Karosserie": "Roadster (OTS)",
+            "Besonderheit": "Flat Floor",
+            "Dokumentation": "Jaguar-Heritage-Zertifikat"
+          }
+        },
+        "pt": {
+          "modele": "E-Type 3.8 Roadster",
+          "accroche": "Série 1 «flat floor», restaurado para o comprador.",
+          "description": [
+            "Jaguar E-Type Série 1 3.8 roadster, flat floor, volante à esquerda, certificado Jaguar Heritage.",
+            "Vendido em curso de restauro: carroçaria concluída, metrologia completa do motor, caixa recondicionada, cablagem nova, carburadores refeitos. O acabamento chave na mão é conduzido e documentado pela MCC Motors."
+          ],
+          "caracteristiques": {
+            "Motor": "Seis cilindros XK, 3.8",
+            "Carroçaria": "Roadster (OTS)",
+            "Particularidade": "Flat floor",
+            "Documentação": "Certificado Jaguar Heritage"
+          }
+        }
+      }
     }
   ],
   "projets": [
     {
       "id": "austin-healey-3000-bt7",
-      "marque": "Austin Healey", "modele": "3000 Mk I BT7", "annee": "",
-      "statut": "vente", "prix": "Nous consulter", "prix_note": "",
+      "marque": "Austin Healey",
+      "modele": "3000 Mk I BT7",
+      "annee": "",
+      "statut": "vente",
+      "prix": "Nous consulter",
+      "prix_note": "",
       "accroche": "Caisse peinte en gris bicolore, moteur contrôlé.",
-      "description": ["Austin Healey 3000 Mk I BT7, roadster 2+2. La caisse est entièrement peinte en gris bicolore et prête pour le remontage.", "Moteur six cylindres 2.9 repeint, compressions mesurées homogènes autour de 150 psi sur les six cylindres. Vidéo du moteur sur banc ci-dessous."],
-      "caracteristiques": {"Modèle": "3000 Mk I BT7", "Moteur": "Six cylindres en ligne, 2.9", "Carrosserie": "Roadster 2+2", "Teinte": "Gris bicolore", "Compressions": "Homogènes, env. 150 psi"},
-      "travaux": ["Remontage complet", "Sellerie et capote", "Chromes et accessoires"],
+      "description": [
+        "Austin Healey 3000 Mk I BT7, roadster 2+2. La caisse est entièrement peinte en gris bicolore et prête pour le remontage.",
+        "Moteur six cylindres 2.9 repeint, compressions mesurées homogènes autour de 150 psi sur les six cylindres. Vidéo du moteur sur banc ci-dessous."
+      ],
+      "caracteristiques": {
+        "Modèle": "3000 Mk I BT7",
+        "Moteur": "Six cylindres en ligne, 2.9",
+        "Carrosserie": "Roadster 2+2",
+        "Teinte": "Gris bicolore",
+        "Compressions": "Homogènes, env. 150 psi"
+      },
+      "travaux": [
+        "Remontage complet",
+        "Sellerie et capote",
+        "Chromes et accessoires"
+      ],
       "vignette": "img/ah-bt7-vignette-a.jpg",
-      "photos": ["img/ah-bt7-1.jpg", "img/ah-bt7-2.jpg", "img/ah-bt7-3.jpg", "img/ah-bt7-4.jpg", "img/ah-bt7-5.jpg", "img/ah-bt7-6.jpg", "img/ah-bt7-7.jpg", "img/ah-bt7-8.jpg", "img/ah-bt7-9.jpg", "img/ah-bt7-10.jpg", "img/ah-bt7-11.jpg"],
-      "videos": [{"src": "img/ah-moteur.mp4", "affiche": "img/ah-moteur.jpg", "legende": "Moteur sur banc"}]
+      "photos": [
+        "img/ah-bt7-1.jpg",
+        "img/ah-bt7-2.jpg",
+        "img/ah-bt7-3.jpg",
+        "img/ah-bt7-4.jpg",
+        "img/ah-bt7-5.jpg",
+        "img/ah-bt7-6.jpg",
+        "img/ah-bt7-7.jpg",
+        "img/ah-bt7-8.jpg",
+        "img/ah-bt7-9.jpg",
+        "img/ah-bt7-10.jpg",
+        "img/ah-bt7-11.jpg"
+      ],
+      "videos": [
+        {
+          "src": "img/ah-moteur.mp4",
+          "affiche": "img/ah-moteur.jpg",
+          "legende": "Moteur sur banc"
+        }
+      ],
+      "trad": {
+        "en": {
+          "accroche": "Body painted in two-tone grey, engine checked.",
+          "description": [
+            "Austin Healey 3000 Mk I BT7, 2+2 roadster. The body is fully painted in two-tone grey and ready for reassembly.",
+            "2.9 straight-six engine repainted, compressions even at around 150 psi on all six cylinders. Video of the engine running on the test stand below."
+          ],
+          "caracteristiques": {
+            "Model": "3000 Mk I BT7",
+            "Engine": "Straight-six, 2.9",
+            "Body": "2+2 roadster",
+            "Colour": "Two-tone grey",
+            "Compressions": "Even, approx. 150 psi"
+          },
+          "travaux": [
+            "Full reassembly",
+            "Upholstery and hood",
+            "Chrome and accessories"
+          ],
+          "legendes": [
+            "Engine on test stand"
+          ]
+        },
+        "de": {
+          "accroche": "Karosserie in Zweifarben-Grau lackiert, Motor geprüft.",
+          "description": [
+            "Austin Healey 3000 Mk I BT7, 2+2-Roadster. Die Karosserie ist vollständig in Zweifarben-Grau lackiert und bereit für den Zusammenbau.",
+            "Reihensechszylinder 2.9 neu lackiert, gleichmäßige Kompression von rund 150 psi auf allen sechs Zylindern. Video des Motors auf dem Prüfstand unten."
+          ],
+          "caracteristiques": {
+            "Modell": "3000 Mk I BT7",
+            "Motor": "Reihensechszylinder, 2.9",
+            "Karosserie": "2+2-Roadster",
+            "Farbe": "Zweifarben-Grau",
+            "Kompression": "Gleichmäßig, ca. 150 psi"
+          },
+          "travaux": [
+            "Kompletter Zusammenbau",
+            "Sattlerei und Verdeck",
+            "Chrom und Zubehör"
+          ],
+          "legendes": [
+            "Motor auf dem Prüfstand"
+          ]
+        },
+        "pt": {
+          "accroche": "Carroçaria pintada em cinzento bicolor, motor verificado.",
+          "description": [
+            "Austin Healey 3000 Mk I BT7, roadster 2+2. A carroçaria está totalmente pintada em cinzento bicolor e pronta para a montagem.",
+            "Motor de seis cilindros 2.9 repintado, compressões homogéneas em torno de 150 psi nos seis cilindros. Vídeo do motor em banco de ensaio abaixo."
+          ],
+          "caracteristiques": {
+            "Modelo": "3000 Mk I BT7",
+            "Motor": "Seis cilindros em linha, 2.9",
+            "Carroçaria": "Roadster 2+2",
+            "Cor": "Cinzento bicolor",
+            "Compressões": "Homogéneas, cerca de 150 psi"
+          },
+          "travaux": [
+            "Montagem completa",
+            "Estofos e capota",
+            "Cromados e acessórios"
+          ],
+          "legendes": [
+            "Motor em banco de ensaio"
+          ]
+        }
+      }
     },
     {
       "id": "jaguar-type-e-38-golden-sand-1964",
-      "marque": "Jaguar", "modele": "Type-E 3.8 Cabriolet", "annee": "1964",
-      "statut": "vente", "prix": "35 000 €",
+      "marque": "Jaguar",
+      "modele": "Type-E 3.8 Cabriolet",
+      "annee": "1964",
+      "statut": "vente",
+      "prix": "35 000 €",
       "prix_note": "Base en l'état, valant réservation. Restaurée : 95 000 €.",
       "accroche": "Opalescent Golden Sand, livrée neuve à New York.",
-      "description": ["Jaguar Type-E Série 1 3.8 cabriolet, conduite à gauche, fabriquée le 24 janvier 1964 et expédiée à Jaguar Cars New York. Teinte d'origine Opalescent Golden Sand, sellerie tan. Certificat Jaguar Heritage.", "Deux formules : l'achat de la base en l'état, qui vaut réservation du projet, ou l'auto restaurée et livrée dans les mêmes conditions techniques que notre précédente Type-E plancher plat."],
-      "caracteristiques": {"Année": "1964", "Moteur": "Six cylindres XK, 3.8", "Carrosserie": "Cabriolet (OTS)", "Teinte": "Opalescent Golden Sand", "Sellerie": "Tan", "Boîte": "Conforme au modèle et au millésime", "Documentation": "Certificat Jaguar Heritage"},
-      "travaux": ["Carrosserie complète", "Peinture dans la teinte d'origine", "Moteur et boîte révisés", "Sellerie et capote", "Trains roulants, freinage, faisceau"],
+      "description": [
+        "Jaguar Type-E Série 1 3.8 cabriolet, conduite à gauche, fabriquée le 24 janvier 1964 et expédiée à Jaguar Cars New York. Teinte d'origine Opalescent Golden Sand, sellerie tan. Certificat Jaguar Heritage.",
+        "Deux formules : l'achat de la base en l'état, qui vaut réservation du projet, ou l'auto restaurée et livrée dans les mêmes conditions techniques que notre précédente Type-E plancher plat."
+      ],
+      "caracteristiques": {
+        "Année": "1964",
+        "Moteur": "Six cylindres XK, 3.8",
+        "Carrosserie": "Cabriolet (OTS)",
+        "Teinte": "Opalescent Golden Sand",
+        "Sellerie": "Tan",
+        "Boîte": "Conforme au modèle et au millésime",
+        "Documentation": "Certificat Jaguar Heritage"
+      },
+      "travaux": [
+        "Carrosserie complète",
+        "Peinture dans la teinte d'origine",
+        "Moteur et boîte révisés",
+        "Sellerie et capote",
+        "Trains roulants, freinage, faisceau"
+      ],
       "vignette": "img/te-gs-vignette-b.jpg",
-      "photos": ["img/te-gs-1.jpg", "img/te-gs-2.jpg", "img/te-gs-3.jpg", "img/te-gs-4.jpg", "img/te-gs-5.jpg", "img/te-gs-6.jpg", "img/te-gs-7.jpg", "img/te-gs-8.jpg", "img/te-gs-9.jpg", "img/te-gs-10.jpg", "img/te-gs-11.jpg", "img/te-gs-12.jpg", "img/te-gs-13.jpg", "img/te-gs-14.jpg", "img/te-gs-15.jpg", "img/te-gs-16.jpg", "img/te-gs-17.jpg", "img/te-gs-18.jpg", "img/te-gs-19.jpg", "img/te-gs-20.jpg", "img/te-gs-21.jpg", "img/te-gs-22.jpg", "img/te-gs-23.jpg", "img/te-gs-24.jpg"],
-      "videos": []
+      "photos": [
+        "img/te-gs-1.jpg",
+        "img/te-gs-2.jpg",
+        "img/te-gs-3.jpg",
+        "img/te-gs-4.jpg",
+        "img/te-gs-5.jpg",
+        "img/te-gs-6.jpg",
+        "img/te-gs-7.jpg",
+        "img/te-gs-8.jpg",
+        "img/te-gs-9.jpg",
+        "img/te-gs-10.jpg",
+        "img/te-gs-11.jpg",
+        "img/te-gs-12.jpg",
+        "img/te-gs-13.jpg",
+        "img/te-gs-14.jpg",
+        "img/te-gs-15.jpg",
+        "img/te-gs-16.jpg",
+        "img/te-gs-17.jpg",
+        "img/te-gs-18.jpg",
+        "img/te-gs-19.jpg",
+        "img/te-gs-20.jpg",
+        "img/te-gs-21.jpg",
+        "img/te-gs-22.jpg",
+        "img/te-gs-23.jpg",
+        "img/te-gs-24.jpg"
+      ],
+      "videos": [],
+      "trad": {
+        "en": {
+          "modele": "E-Type 3.8 Roadster",
+          "accroche": "Opalescent Golden Sand, delivered new to New York.",
+          "prix_note": "Car as it stands, securing the project. Restored: €95,000.",
+          "description": [
+            "Jaguar E-Type Series 1 3.8 roadster, left-hand drive, built on 24 January 1964 and shipped to Jaguar Cars New York. Original colour Opalescent Golden Sand, tan upholstery. Jaguar Heritage certificate.",
+            "Two options: buy the car as it stands, which secures the project, or have it restored and delivered to the same technical standard as our previous flat-floor E-Type."
+          ],
+          "caracteristiques": {
+            "Year": "1964",
+            "Engine": "XK straight-six, 3.8",
+            "Body": "Roadster (OTS)",
+            "Colour": "Opalescent Golden Sand",
+            "Upholstery": "Tan",
+            "Gearbox": "Correct for model and year",
+            "Documentation": "Jaguar Heritage certificate"
+          },
+          "travaux": [
+            "Full bodywork",
+            "Paint in the original colour",
+            "Engine and gearbox overhauled",
+            "Upholstery and hood",
+            "Running gear, brakes, wiring loom"
+          ]
+        },
+        "de": {
+          "modele": "E-Type 3.8 Roadster",
+          "accroche": "Opalescent Golden Sand, neu nach New York ausgeliefert.",
+          "prix_note": "Basisfahrzeug im aktuellen Zustand, gilt als Reservierung. Restauriert: 95.000 €.",
+          "description": [
+            "Jaguar E-Type Serie 1 3.8 Roadster, Linkslenker, gebaut am 24. Januar 1964 und an Jaguar Cars New York ausgeliefert. Originalfarbe Opalescent Golden Sand, Ausstattung in Tan. Jaguar-Heritage-Zertifikat.",
+            "Zwei Möglichkeiten: Kauf des Basisfahrzeugs im aktuellen Zustand, der als Reservierung des Projekts gilt, oder das restaurierte Fahrzeug, ausgeliefert nach denselben technischen Standards wie unser vorheriger E-Type Flat Floor."
+          ],
+          "caracteristiques": {
+            "Baujahr": "1964",
+            "Motor": "XK-Reihensechszylinder, 3.8",
+            "Karosserie": "Roadster (OTS)",
+            "Farbe": "Opalescent Golden Sand",
+            "Ausstattung": "Tan",
+            "Getriebe": "Modell- und jahrgangsgerecht",
+            "Dokumentation": "Jaguar-Heritage-Zertifikat"
+          },
+          "travaux": [
+            "Komplette Karosseriearbeiten",
+            "Lackierung im Originalfarbton",
+            "Motor und Getriebe überholt",
+            "Sattlerei und Verdeck",
+            "Fahrwerk, Bremsen, Kabelbaum"
+          ]
+        },
+        "pt": {
+          "modele": "E-Type 3.8 Roadster",
+          "accroche": "Opalescent Golden Sand, entregue nova em Nova Iorque.",
+          "prix_note": "Base no estado atual, valendo como reserva. Restaurado: 95 000 €.",
+          "description": [
+            "Jaguar E-Type Série 1 3.8 roadster, volante à esquerda, fabricado a 24 de janeiro de 1964 e expedido para a Jaguar Cars New York. Cor de origem Opalescent Golden Sand, estofos tan. Certificado Jaguar Heritage.",
+            "Duas opções: a compra da base no estado atual, que vale como reserva do projeto, ou o automóvel restaurado e entregue nas mesmas condições técnicas do nosso anterior E-Type flat floor."
+          ],
+          "caracteristiques": {
+            "Ano": "1964",
+            "Motor": "Seis cilindros XK, 3.8",
+            "Carroçaria": "Roadster (OTS)",
+            "Cor": "Opalescent Golden Sand",
+            "Estofos": "Tan",
+            "Caixa": "Conforme o modelo e o ano",
+            "Documentação": "Certificado Jaguar Heritage"
+          },
+          "travaux": [
+            "Carroçaria completa",
+            "Pintura na cor original",
+            "Motor e caixa revistos",
+            "Estofos e capota",
+            "Suspensões, travões, cablagem"
+          ]
+        }
+      }
     },
     {
       "id": "triumph-tr4a-irs",
-      "marque": "Triumph", "modele": "TR4A IRS", "annee": "",
-      "statut": "vente", "prix": "11 000 €",
+      "marque": "Triumph",
+      "modele": "TR4A IRS",
+      "annee": "",
+      "statut": "vente",
+      "prix": "11 000 €",
       "prix_note": "Vendue en l'état, comme projet de restauration.",
       "accroche": "Vert anglais, intérieur noir, châssis parfaitement sain.",
-      "description": ["Triumph TR4A à suspension arrière indépendante, vert anglais, intérieur noir, tableau de bord bois, capote et arceau présents.", "Châssis et planchers parfaitement sains : aucune corrosion, aucune trace de choc ni de réparation antérieure. Corrosion sur les ailes et à la jonction des phares ; bas de caisse à remplacer, disponibles en refabrication neuve.", "Remise en route effectuée à l'atelier : vidange, filtre, bougies, niveaux de boîte et de pont, carburateurs et allumage, freinage, émetteur et récepteur d'embrayage. L'auto démarre, roule et freine ; elle est vendue comme projet de restauration et ne doit pas reprendre la route en l'état."],
-      "caracteristiques": {"Moteur": "Quatre cylindres, 2.2", "Train arrière": "Indépendant (IRS)", "Teinte": "Vert anglais", "Intérieur": "Noir, planche bois", "Châssis": "Sain, sans corrosion"},
-      "travaux": ["Ailes et bas de caisse", "Embrayage, pont et trains roulants à contrôler", "Peinture"],
+      "description": [
+        "Triumph TR4A à suspension arrière indépendante, vert anglais, intérieur noir, tableau de bord bois, capote et arceau présents.",
+        "Châssis et planchers parfaitement sains : aucune corrosion, aucune trace de choc ni de réparation antérieure. Corrosion sur les ailes et à la jonction des phares ; bas de caisse à remplacer, disponibles en refabrication neuve.",
+        "Remise en route effectuée à l'atelier : vidange, filtre, bougies, niveaux de boîte et de pont, carburateurs et allumage, freinage, émetteur et récepteur d'embrayage. L'auto démarre, roule et freine ; elle est vendue comme projet de restauration et ne doit pas reprendre la route en l'état."
+      ],
+      "caracteristiques": {
+        "Moteur": "Quatre cylindres, 2.2",
+        "Train arrière": "Indépendant (IRS)",
+        "Teinte": "Vert anglais",
+        "Intérieur": "Noir, planche bois",
+        "Châssis": "Sain, sans corrosion"
+      },
+      "travaux": [
+        "Ailes et bas de caisse",
+        "Embrayage, pont et trains roulants à contrôler",
+        "Peinture"
+      ],
       "vignette": "img/tr4a-vignette-a.jpg",
-      "photos": ["img/tr4a-1.jpg", "img/tr4a-2.jpg", "img/tr4a-3.jpg", "img/tr4a-4.jpg", "img/tr4a-5.jpg", "img/tr4a-6.jpg", "img/tr4a-7.jpg", "img/tr4a-8.jpg", "img/tr4a-9.jpg", "img/tr4a-10.jpg", "img/tr4a-11.jpg", "img/tr4a-12.jpg", "img/tr4a-13.jpg", "img/tr4a-14.jpg", "img/tr4a-15.jpg", "img/tr4a-16.jpg", "img/tr4a-17.jpg", "img/tr4a-18.jpg", "img/tr4a-19.jpg", "img/tr4a-20.jpg", "img/tr4a-21.jpg", "img/tr4a-22.jpg", "img/tr4a-23.jpg", "img/tr4a-24.jpg"],
-      "videos": []
+      "photos": [
+        "img/tr4a-1.jpg",
+        "img/tr4a-2.jpg",
+        "img/tr4a-3.jpg",
+        "img/tr4a-4.jpg",
+        "img/tr4a-5.jpg",
+        "img/tr4a-6.jpg",
+        "img/tr4a-7.jpg",
+        "img/tr4a-8.jpg",
+        "img/tr4a-9.jpg",
+        "img/tr4a-10.jpg",
+        "img/tr4a-11.jpg",
+        "img/tr4a-12.jpg",
+        "img/tr4a-13.jpg",
+        "img/tr4a-14.jpg",
+        "img/tr4a-15.jpg",
+        "img/tr4a-16.jpg",
+        "img/tr4a-17.jpg",
+        "img/tr4a-18.jpg",
+        "img/tr4a-19.jpg",
+        "img/tr4a-20.jpg",
+        "img/tr4a-21.jpg",
+        "img/tr4a-22.jpg",
+        "img/tr4a-23.jpg",
+        "img/tr4a-24.jpg"
+      ],
+      "videos": [],
+      "trad": {
+        "en": {
+          "accroche": "British racing green, black interior, perfectly sound chassis.",
+          "prix_note": "Sold as it stands, as a restoration project.",
+          "description": [
+            "Triumph TR4A with independent rear suspension, British racing green, black interior, wooden dashboard, hood and frame present.",
+            "Chassis and floors perfectly sound: no corrosion, no sign of accident damage or previous repair. Corrosion on the wings and around the headlamps; sills to be replaced, available as new remanufactured parts.",
+            "Recommissioned in our workshop: oil change, filter, plugs, gearbox and axle levels, carburettors and ignition, brakes, clutch master and slave cylinders. The car starts, drives and stops; it is sold as a restoration project and should not return to the road as it stands."
+          ],
+          "caracteristiques": {
+            "Engine": "Four-cylinder, 2.2",
+            "Rear suspension": "Independent (IRS)",
+            "Colour": "British racing green",
+            "Interior": "Black, wooden dashboard",
+            "Chassis": "Sound, no corrosion"
+          },
+          "travaux": [
+            "Wings and sills",
+            "Clutch, axle and running gear to be checked",
+            "Paint"
+          ]
+        },
+        "de": {
+          "accroche": "British Racing Green, schwarzer Innenraum, absolut gesunder Rahmen.",
+          "prix_note": "Verkauf im aktuellen Zustand, als Restaurierungsobjekt.",
+          "description": [
+            "Triumph TR4A mit Einzelradaufhängung hinten, British Racing Green, schwarzer Innenraum, Holzarmaturenbrett, Verdeck und Gestänge vorhanden.",
+            "Rahmen und Bodenbleche absolut gesund: keine Korrosion, keine Unfallspuren oder früheren Reparaturen. Korrosion an den Kotflügeln und im Bereich der Scheinwerfer; Schweller zu ersetzen, als neue Nachfertigungsteile erhältlich.",
+            "In unserer Werkstatt wieder in Betrieb genommen: Ölwechsel, Filter, Zündkerzen, Getriebe- und Achsölstände, Vergaser und Zündung, Bremsen, Kupplungsgeber- und -nehmerzylinder. Das Fahrzeug startet, fährt und bremst; es wird als Restaurierungsobjekt verkauft und sollte in diesem Zustand nicht wieder am Straßenverkehr teilnehmen."
+          ],
+          "caracteristiques": {
+            "Motor": "Vierzylinder, 2.2",
+            "Hinterachse": "Einzelradaufhängung (IRS)",
+            "Farbe": "British Racing Green",
+            "Innenraum": "Schwarz, Holzarmaturenbrett",
+            "Rahmen": "Gesund, ohne Korrosion"
+          },
+          "travaux": [
+            "Kotflügel und Schweller",
+            "Kupplung, Achse und Fahrwerk zu prüfen",
+            "Lackierung"
+          ]
+        },
+        "pt": {
+          "accroche": "Verde inglês, interior preto, chassis perfeitamente são.",
+          "prix_note": "Vendido no estado atual, como projeto de restauro.",
+          "description": [
+            "Triumph TR4A com suspensão traseira independente, verde inglês, interior preto, tablier em madeira, capota e armação presentes.",
+            "Chassis e pisos perfeitamente sãos: sem corrosão, sem sinais de acidente nem de reparação anterior. Corrosão nos guarda-lamas e junto aos faróis; embaladeiras a substituir, disponíveis em reprodução nova.",
+            "Recolocado em funcionamento na nossa oficina: mudança de óleo, filtro, velas, níveis da caixa e do diferencial, carburadores e ignição, travões, bomba e cilindro da embraiagem. O automóvel arranca, anda e trava; é vendido como projeto de restauro e não deve voltar à estrada no estado atual."
+          ],
+          "caracteristiques": {
+            "Motor": "Quatro cilindros, 2.2",
+            "Suspensão traseira": "Independente (IRS)",
+            "Cor": "Verde inglês",
+            "Interior": "Preto, tablier em madeira",
+            "Chassis": "São, sem corrosão"
+          },
+          "travaux": [
+            "Guarda-lamas e embaladeiras",
+            "Embraiagem, diferencial e suspensões a verificar",
+            "Pintura"
+          ]
+        }
+      }
     }
   ],
   "pieces": [
-    {"nom": "Boîte de vitesses 4 rapports", "detail": "Révisée — Jaguar Type-E 3.8", "prix": "Nous consulter", "photos": ["img/p-boite.jpg"]},
-    {"nom": "Culasse six cylindres", "detail": "Reconditionnée — moteur XK 3.8", "prix": "Nous consulter", "photos": ["img/p-culasse.jpg"]},
-    {"nom": "Paire de carburateurs SU", "detail": "Refaits à neuf, prêts à monter", "prix": "Nous consulter", "photos": ["img/p-carbus.jpg"]},
-    {"nom": "Roue fil 72 rayons", "detail": "Chromée, moyeu à papillon", "prix": "Nous consulter", "photos": ["img/p-roue.jpg"]}
+    {
+      "nom": "Boîte de vitesses 4 rapports",
+      "detail": "Révisée — Jaguar Type-E 3.8",
+      "prix": "Nous consulter",
+      "photos": [
+        "img/p-boite.jpg"
+      ],
+      "trad": {
+        "en": {
+          "nom": "Four-speed gearbox",
+          "detail": "Rebuilt — Jaguar E-Type 3.8"
+        },
+        "de": {
+          "nom": "Viergang-Getriebe",
+          "detail": "Überholt — Jaguar E-Type 3.8"
+        },
+        "pt": {
+          "nom": "Caixa de velocidades de 4 relações",
+          "detail": "Revista — Jaguar E-Type 3.8"
+        }
+      }
+    },
+    {
+      "nom": "Culasse six cylindres",
+      "detail": "Reconditionnée — moteur XK 3.8",
+      "prix": "Nous consulter",
+      "photos": [
+        "img/p-culasse.jpg"
+      ],
+      "trad": {
+        "en": {
+          "nom": "Six-cylinder cylinder head",
+          "detail": "Reconditioned — XK 3.8 engine"
+        },
+        "de": {
+          "nom": "Sechszylinder-Zylinderkopf",
+          "detail": "Überholt — XK-Motor 3.8"
+        },
+        "pt": {
+          "nom": "Cabeça de motor de seis cilindros",
+          "detail": "Recondicionada — motor XK 3.8"
+        }
+      }
+    },
+    {
+      "nom": "Paire de carburateurs SU",
+      "detail": "Refaits à neuf, prêts à monter",
+      "prix": "Nous consulter",
+      "photos": [
+        "img/p-carbus.jpg"
+      ],
+      "trad": {
+        "en": {
+          "nom": "Pair of SU carburettors",
+          "detail": "Fully rebuilt, ready to fit"
+        },
+        "de": {
+          "nom": "Paar SU-Vergaser",
+          "detail": "Neuwertig überholt, einbaufertig"
+        },
+        "pt": {
+          "nom": "Par de carburadores SU",
+          "detail": "Refeitos a novo, prontos a montar"
+        }
+      }
+    },
+    {
+      "nom": "Roue fil 72 rayons",
+      "detail": "Chromée, moyeu à papillon",
+      "prix": "Nous consulter",
+      "photos": [
+        "img/p-roue.jpg"
+      ],
+      "trad": {
+        "en": {
+          "nom": "72-spoke wire wheel",
+          "detail": "Chromed, knock-off hub"
+        },
+        "de": {
+          "nom": "Speichenrad mit 72 Speichen",
+          "detail": "Verchromt, Zentralverschluss"
+        },
+        "pt": {
+          "nom": "Jante de raios com 72 raios",
+          "detail": "Cromada, cubo de fecho central"
+        }
+      }
+    }
   ]
+}
+</script>
+
+<!-- Textes de l'interface traduits (fr = textes générés par le script ; les autres langues couvrent aussi les textes de la page) -->
+<script id="traductions" type="application/json">
+{
+ "fr": {
+  "e.vente": "Disponible",
+  "e.reserve": "Réservé",
+  "e.vendu": "Vendu",
+  "e.projet": "Projet disponible",
+  "voir": "Voir la fiche",
+  "vide": "Aucune voiture dans cette catégorie pour le moment.",
+  "ret.veh": "Nos voitures",
+  "ret.proj": "Autos à restaurer",
+  "tr.veh": "Travaux réalisés",
+  "tr.proj": "Travaux à prévoir",
+  "consulter": "Nous consulter",
+  "pvide": "Aucune pièce en vente actuellement.",
+  "l.tel": "Téléphone",
+  "l.mail": "E-mail",
+  "l.atelier": "Atelier",
+  "atelier.val": "Yvelines, sur rendez-vous uniquement",
+  "prix": "Prix",
+  "mention": "Photographies sur demande",
+  "b.rech": "Nous confier une recherche",
+  "b.info": "Demander des informations",
+  "n.visite": "Visite à l'atelier sur rendez-vous uniquement.",
+  "msg.rech": "Je recherche une auto comparable à : ",
+  "msg.int": "Je suis intéressé par : ",
+  "merci": "Merci. Pour finaliser l'envoi, <a href=\"{lien}\">ouvrez votre messagerie</a>, ou écrivez-nous directement à {mail}.",
+  "ph.prec": "Photo précédente",
+  "ph.suiv": "Photo suivante",
+  "titre": "MCC Motors — Automobiles de collection"
+ },
+ "en": {
+  "nav.veh": "Cars",
+  "nav.proj": "Projects",
+  "nav.pie": "Parts",
+  "nav.rest": "Restoration",
+  "nav.cont": "Contact",
+  "passer": "Skip",
+  "hero.sur": "Classic British cars",
+  "hero.h1a": "Classic",
+  "hero.h1b": "<em>motor cars</em>",
+  "mot1": "Buying &amp; selling",
+  "mot2": "Restoration projects",
+  "mot3": "Restoration management",
+  "mot4": "Parts sourcing, across Europe and beyond",
+  "hero.l1": "Our cars",
+  "defiler": "Scroll",
+  "p1.t": "Buy",
+  "p1.p": "Cars that drive, inspected and documented.",
+  "p2.t": "Restore",
+  "p2.p": "One of our projects or your own car, overseen in our partner workshops.",
+  "p3.t": "Find a part",
+  "p3.p": "A sourcing service reserved for our clients, across Europe and beyond.",
+  "m.eb": "The house",
+  "m.gros": "A classic car is <em>chosen</em>, understood, then <em>handed on</em>. Our job is to secure every step<span class=\"r\">.</span>",
+  "m.comp": "MCC Motors brings together long experience of classic cars, British ones in particular, a network of partner workshops in France and across Europe, and full command of French registration procedures for historic vehicles.",
+  "m.s1": "<i>01</i><b>Choose</b><span>Cars selected for a sound base and a clear history, their condition described exactly as it is.</span>",
+  "m.s2": "<i>02</i><b>Restore</b><span>A specification, a budget, proven partner workshops and photographic follow-up at every stage.</span>",
+  "m.s3": "<i>03</i><b>Hand on</b><span>A complete file — invoices, measurements, certificates — and a registration in good order.</span>",
+  "v.h2": "Our <em>cars</em>",
+  "v.chapo": "Cars that drive, inspected and documented. <em>Each listing describes the car's actual condition</em>; the full history is available on request.",
+  "pr.h2": "Cars <em>to restore</em>",
+  "pr.chapo": "Sound bases, chosen for their potential. <em>Buy them as they stand</em>, or reserve one to be restored to your specification, under our supervision.",
+  "f.dispo": "Available",
+  "f.vendu": "Sold",
+  "pi.h2": "Spare <em>parts</em>",
+  "pi.chapo": "A service <em>reserved for our clients</em>, particularly those who have bought one of our projects.",
+  "pi.e1": "We support our clients throughout their restoration: <strong>monitoring the work, finding and ordering parts</strong>, in France and abroad, from suppliers with whom we hold trade accounts.",
+  "pi.e2": "We do not sell parts retail, <strong>except for those shown below</strong>, which come from our projects or our stock and are checked before sale.",
+  "pi.label": "Parts for sale",
+  "s.h2": "Your car, <em>our workshops</em>",
+  "s.grand": "We are your <em>single point of contact</em>: we commission the work, follow it, check it and document it, from the first inspection to the final file.",
+  "s.d1": "Our partner workshops were chosen because they meet <strong>demanding standards</strong>, in how they work with clients as much as in the quality of their work.",
+  "s.d2": "They adapt to each client's budget and expected level of finish. Above all, <strong>we have already worked with every one of them</strong>: their references are known, their work verified.",
+  "s.meth": "Method",
+  "s.meth.h": "Five steps, one point of contact",
+  "s.e1": "<div><b>Inspection and specification</b><span>Assessment of the car, intended use, expected level of finish.</span></div>",
+  "s.e2": "<div><b>Budget and choice of workshops</b><span>Quotes compared, the right partner workshop chosen for each trade.</span></div>",
+  "s.e3": "<div><b>Parts sourcing</b><span>Grouped orders, in France, in Europe and worldwide.</span></div>",
+  "s.e4": "<div><b>Follow-up and inspection</b><span>Workshop visits, photographed milestones, sign-off before each payment.</span></div>",
+  "s.e5": "<div><b>Restoration file</b><span>Photographs, invoices, measurements and certificates gathered; registration formalities where needed.</span></div>",
+  "s.met": "Trades",
+  "s.met.h": "Nine crafts, <em style=\"color:#c9bea4\">coordinated</em>",
+  "s.met.p": "Each trade entrusted to the partner workshop best suited to your car.",
+  "g.mot": "Engine",
+  "g.cai": "Body",
+  "g.int": "Interior",
+  "me1.t": "Metrology",
+  "me1.p": "Full measurement of engine components before any decision.",
+  "me2.t": "Engine machining",
+  "me2.p": "Reboring, crankshaft, cylinder head, balancing.",
+  "me3.t": "Mechanics",
+  "me3.p": "Engine, gearbox and axle rebuild, running gear, brakes.",
+  "me4.t": "Bodywork",
+  "me4.p": "Panel work, panel replacement, fitting of doors and lids.",
+  "me5.t": "Paint",
+  "me5.p": "Primers, original or bespoke colour, finishing.",
+  "me6.t": "Chrome plating",
+  "me6.p": "Bumpers, surrounds and brightwork re-chromed.",
+  "me7.t": "Upholstery",
+  "me7.p": "Seats, trim, carpets, period-correct leathers.",
+  "me8.t": "Hood fitting",
+  "me8.p": "Made-to-measure hoods, adjustment and weatherproofing.",
+  "me9.t": "Interior refurbishment",
+  "me9.p": "Dashboard, instruments, woodwork, wiring loom.",
+  "cit": "From the Triumph TR3 to the Aston Martin DB6, <i>the right budget for every car.</i>",
+  "cit.l": "French and European workshops · Parts sourced worldwide",
+  "c.h2": "Let's talk about <em>your car</em>",
+  "c.chapo": "Buying, selling, restoration or a part: tell us about your project and we will reply personally.",
+  "c.nom": "Name",
+  "c.joindre": "Phone or e-mail",
+  "c.objet": "Subject",
+  "o.achat": "Buying a car",
+  "o.resa": "Reserving a project",
+  "o.pieces": "Spare parts",
+  "o.vente": "Selling my car",
+  "c.msg": "Message",
+  "c.env": "Send",
+  "foot.a": "Classic motor cars",
+  "foot.b": "Cars · Projects · Parts · Restoration management",
+  "e.vente": "Available",
+  "e.reserve": "Reserved",
+  "e.vendu": "Sold",
+  "e.projet": "Project available",
+  "voir": "View details",
+  "vide": "No cars in this category at the moment.",
+  "ret.veh": "Our cars",
+  "ret.proj": "Cars to restore",
+  "tr.veh": "Work carried out",
+  "tr.proj": "Work required",
+  "consulter": "Price on request",
+  "pvide": "No parts for sale at the moment.",
+  "l.tel": "Phone",
+  "l.mail": "E-mail",
+  "l.atelier": "Workshop",
+  "atelier.val": "Yvelines (west of Paris), by appointment only",
+  "prix": "Price",
+  "mention": "Photographs on request",
+  "b.rech": "Ask us to find one",
+  "b.info": "Request information",
+  "n.visite": "Workshop visits by appointment only.",
+  "msg.rech": "I am looking for a car similar to: ",
+  "msg.int": "I am interested in: ",
+  "merci": "Thank you. To send your message, <a href=\"{lien}\">open your e-mail</a>, or write to us directly at {mail}.",
+  "ph.prec": "Previous photo",
+  "ph.suiv": "Next photo",
+  "titre": "MCC Motors — Classic motor cars"
+ },
+ "de": {
+  "nav.veh": "Fahrzeuge",
+  "nav.proj": "Projekte",
+  "nav.pie": "Teile",
+  "nav.rest": "Restaurierung",
+  "nav.cont": "Kontakt",
+  "passer": "Überspringen",
+  "hero.sur": "Klassische britische Automobile",
+  "hero.h1a": "Klassische",
+  "hero.h1b": "<em>Automobile</em>",
+  "mot1": "An- &amp; Verkauf",
+  "mot2": "Restaurierungsobjekte",
+  "mot3": "Restaurierungsbegleitung",
+  "mot4": "Teilebeschaffung, in Europa und darüber hinaus",
+  "hero.l1": "Unsere Fahrzeuge",
+  "defiler": "Scrollen",
+  "p1.t": "Kaufen",
+  "p1.p": "Fahrbereite Fahrzeuge, geprüft und dokumentiert.",
+  "p2.t": "Restaurieren",
+  "p2.p": "Eines unserer Projekte oder Ihr eigenes Fahrzeug, begleitet in unseren Partnerwerkstätten.",
+  "p3.t": "Ein Teil finden",
+  "p3.p": "Teilebeschaffung exklusiv für unsere Kunden, in Europa und darüber hinaus.",
+  "m.eb": "Das Haus",
+  "m.gros": "Ein klassisches Automobil wird <em>ausgewählt</em>, verstanden und schließlich <em>weitergegeben</em>. Unsere Aufgabe ist es, jeden dieser Schritte abzusichern<span class=\"r\">.</span>",
+  "m.comp": "MCC Motors vereint langjährige Erfahrung mit klassischen Fahrzeugen, insbesondere britischen, ein Netz von Partnerwerkstätten in Frankreich und Europa sowie fundierte Kenntnis der französischen Zulassungsverfahren für historische Fahrzeuge.",
+  "m.s1": "<i>01</i><b>Auswählen</b><span>Fahrzeuge mit gesunder Basis und nachvollziehbarer Historie, deren Zustand genau so beschrieben wird, wie er ist.</span>",
+  "m.s2": "<i>02</i><b>Restaurieren</b><span>Ein Lastenheft, ein Budget, bewährte Partnerwerkstätten und eine fotografische Dokumentation jedes Schritts.</span>",
+  "m.s3": "<i>03</i><b>Weitergeben</b><span>Eine vollständige Akte — Rechnungen, Messprotokolle, Zertifikate — und eine ordnungsgemäße Zulassung.</span>",
+  "v.h2": "Unsere <em>Fahrzeuge</em>",
+  "v.chapo": "Fahrbereite Fahrzeuge, geprüft und dokumentiert. <em>Jede Beschreibung gibt den tatsächlichen Zustand wieder</em>; die vollständige Historie erhalten Sie auf Anfrage.",
+  "pr.h2": "Fahrzeuge <em>zum Restaurieren</em>",
+  "pr.chapo": "Gesunde Basisfahrzeuge, ausgewählt für ihr Potenzial. <em>Kaufen Sie sie im aktuellen Zustand</em> oder reservieren Sie sie für eine Restaurierung nach Ihrem Lastenheft, unter unserer Leitung.",
+  "f.dispo": "Verfügbar",
+  "f.vendu": "Verkauft",
+  "pi.h2": "<em>Ersatzteile</em>",
+  "pi.chapo": "Ein Service <em>exklusiv für unsere Kunden</em>, insbesondere für Käufer eines unserer Projekte.",
+  "pi.e1": "Wir begleiten unsere Kunden während der gesamten Restaurierung: <strong>Überwachung der Arbeiten, Suche und Bestellung der Teile</strong>, in Frankreich wie im Ausland, bei Lieferanten, bei denen wir Händlerkonten führen.",
+  "pi.e2": "Wir verkaufen keine Teile im Einzelhandel, <strong>mit Ausnahme der unten aufgeführten</strong>, die aus unseren Projekten oder Beständen stammen und vor dem Verkauf geprüft werden.",
+  "pi.label": "Teile zum Verkauf",
+  "s.h2": "Ihr Fahrzeug, <em>unsere Werkstätten</em>",
+  "s.grand": "Wir sind Ihr <em>einziger Ansprechpartner</em>: Wir beauftragen die Arbeiten, begleiten, kontrollieren und dokumentieren sie, von der ersten Begutachtung bis zur abschließenden Akte.",
+  "s.d1": "Unsere Partnerwerkstätten wurden ausgewählt, weil sie <strong>hohe Anforderungen</strong> erfüllen, in der Betreuung ebenso wie in der Qualität der Arbeit.",
+  "s.d2": "Sie richten sich nach dem Budget und dem gewünschten Finish jedes Kunden. Vor allem <strong>haben wir mit jeder von ihnen bereits zusammengearbeitet</strong>: Ihre Referenzen sind bekannt, ihre Arbeiten geprüft.",
+  "s.meth": "Methode",
+  "s.meth.h": "Fünf Schritte, ein Ansprechpartner",
+  "s.e1": "<div><b>Begutachtung und Lastenheft</b><span>Zustandsaufnahme, geplante Nutzung, gewünschtes Finish.</span></div>",
+  "s.e2": "<div><b>Budget und Wahl der Werkstätten</b><span>Vergleich der Angebote, Wahl der passenden Partnerwerkstatt für jedes Gewerk.</span></div>",
+  "s.e3": "<div><b>Teilebeschaffung</b><span>Sammelbestellungen, in Frankreich, in Europa und weltweit.</span></div>",
+  "s.e4": "<div><b>Begleitung und Kontrolle</b><span>Werkstattbesuche, fotografierte Zwischenstände, Freigabe vor jeder Zahlung.</span></div>",
+  "s.e5": "<div><b>Restaurierungsakte</b><span>Fotos, Rechnungen, Messprotokolle und Zertifikate gesammelt; Zulassungsformalitäten bei Bedarf.</span></div>",
+  "s.met": "Gewerke",
+  "s.met.h": "Neun Handwerke, <em style=\"color:#c9bea4\">koordiniert</em>",
+  "s.met.p": "Jedes Gewerk der Partnerwerkstatt anvertraut, die am besten zu Ihrem Fahrzeug passt.",
+  "g.mot": "Motor",
+  "g.cai": "Karosserie",
+  "g.int": "Innenraum",
+  "me1.t": "Messtechnik",
+  "me1.p": "Vollständige Vermessung der Motorteile vor jeder Entscheidung.",
+  "me2.t": "Motoreninstandsetzung",
+  "me2.p": "Aufbohren, Kurbelwelle, Zylinderkopf, Auswuchten.",
+  "me3.t": "Mechanik",
+  "me3.p": "Montage von Motor, Getriebe und Achse, Fahrwerk, Bremsen.",
+  "me4.t": "Karosserie",
+  "me4.p": "Blecharbeiten, Austausch von Teilen, Einpassen von Türen und Hauben.",
+  "me5.t": "Lackierung",
+  "me5.p": "Grundierung, Original- oder Wunschfarbton, Finish.",
+  "me6.t": "Verchromung",
+  "me6.p": "Stoßstangen, Zierrahmen und Chromteile neu verchromt.",
+  "me7.t": "Sattlerei",
+  "me7.p": "Sitze, Verkleidungen, Teppiche, zeitgenössische Leder.",
+  "me8.t": "Verdeckmontage",
+  "me8.p": "Maßgefertigte Verdecke, Einstellung und Abdichtung.",
+  "me9.t": "Innenraumaufbereitung",
+  "me9.p": "Armaturenbrett, Instrumente, Holzteile, Kabelbaum.",
+  "cit": "Vom Triumph TR3 bis zum Aston Martin DB6, <i>ein angemessenes Budget für jedes Fahrzeug.</i>",
+  "cit.l": "Französische und europäische Werkstätten · Teilebeschaffung weltweit",
+  "c.h2": "Sprechen wir über <em>Ihr Fahrzeug</em>",
+  "c.chapo": "Kauf, Verkauf, Restaurierung oder ein Teil: Beschreiben Sie uns Ihr Vorhaben, wir antworten Ihnen persönlich.",
+  "c.nom": "Name",
+  "c.joindre": "Telefon oder E-Mail",
+  "c.objet": "Betreff",
+  "o.achat": "Kauf eines Fahrzeugs",
+  "o.resa": "Reservierung eines Projekts",
+  "o.pieces": "Ersatzteile",
+  "o.vente": "Verkauf meines Fahrzeugs",
+  "c.msg": "Nachricht",
+  "c.env": "Senden",
+  "foot.a": "Klassische Automobile",
+  "foot.b": "Fahrzeuge · Projekte · Teile · Restaurierungsbegleitung",
+  "e.vente": "Verfügbar",
+  "e.reserve": "Reserviert",
+  "e.vendu": "Verkauft",
+  "e.projet": "Projekt verfügbar",
+  "voir": "Details ansehen",
+  "vide": "Derzeit keine Fahrzeuge in dieser Kategorie.",
+  "ret.veh": "Unsere Fahrzeuge",
+  "ret.proj": "Fahrzeuge zum Restaurieren",
+  "tr.veh": "Durchgeführte Arbeiten",
+  "tr.proj": "Erforderliche Arbeiten",
+  "consulter": "Preis auf Anfrage",
+  "pvide": "Derzeit keine Teile zum Verkauf.",
+  "l.tel": "Telefon",
+  "l.mail": "E-Mail",
+  "l.atelier": "Werkstatt",
+  "atelier.val": "Yvelines (westlich von Paris), nur nach Vereinbarung",
+  "prix": "Preis",
+  "mention": "Fotos auf Anfrage",
+  "b.rech": "Suchauftrag erteilen",
+  "b.info": "Informationen anfordern",
+  "n.visite": "Besichtigung in der Werkstatt nur nach Vereinbarung.",
+  "msg.rech": "Ich suche ein vergleichbares Fahrzeug wie: ",
+  "msg.int": "Ich interessiere mich für: ",
+  "merci": "Vielen Dank. Um die Nachricht zu senden, <a href=\"{lien}\">öffnen Sie Ihr E-Mail-Programm</a> oder schreiben Sie uns direkt an {mail}.",
+  "ph.prec": "Vorheriges Foto",
+  "ph.suiv": "Nächstes Foto",
+  "titre": "MCC Motors — Klassische Automobile"
+ },
+ "pt": {
+  "nav.veh": "Veículos",
+  "nav.proj": "Projetos",
+  "nav.pie": "Peças",
+  "nav.rest": "Restauro",
+  "nav.cont": "Contacto",
+  "passer": "Saltar",
+  "hero.sur": "Automóveis clássicos britânicos",
+  "hero.h1a": "Automóveis",
+  "hero.h1b": "<em>de coleção</em>",
+  "mot1": "Compra &amp; venda",
+  "mot2": "Automóveis para restaurar",
+  "mot3": "Supervisão de restauro",
+  "mot4": "Procura de peças, na Europa e não só",
+  "hero.l1": "Os nossos veículos",
+  "defiler": "Deslizar",
+  "p1.t": "Comprar",
+  "p1.p": "Automóveis em circulação, inspecionados e documentados.",
+  "p2.t": "Restaurar",
+  "p2.p": "Um dos nossos projetos ou o seu automóvel, acompanhado nas nossas oficinas parceiras.",
+  "p3.t": "Encontrar uma peça",
+  "p3.p": "Um serviço de procura reservado aos nossos clientes, na Europa e não só.",
+  "m.eb": "A casa",
+  "m.gros": "Um automóvel clássico <em>escolhe-se</em>, compreende-se e depois <em>transmite-se</em>. O nosso trabalho é garantir cada uma dessas etapas<span class=\"r\">.</span>",
+  "m.comp": "A MCC Motors reúne uma longa experiência com automóveis clássicos, em particular britânicos, uma rede de oficinas parceiras em França e na Europa e o domínio dos procedimentos franceses de matrícula de veículos históricos.",
+  "m.s1": "<i>01</i><b>Escolher</b><span>Automóveis selecionados pela base sã e pelo historial, com o estado descrito tal como é.</span>",
+  "m.s2": "<i>02</i><b>Restaurar</b><span>Um caderno de encargos, um orçamento, oficinas parceiras comprovadas e acompanhamento fotográfico em cada etapa.</span>",
+  "m.s3": "<i>03</i><b>Transmitir</b><span>Um dossiê completo — faturas, medições, certificados — e uma matrícula em ordem.</span>",
+  "v.h2": "Os nossos <em>automóveis</em>",
+  "v.chapo": "Automóveis em circulação, inspecionados e documentados. <em>Cada ficha descreve o estado real do automóvel</em>; o historial completo é enviado a pedido.",
+  "pr.h2": "Automóveis <em>para restaurar</em>",
+  "pr.chapo": "Bases sãs, escolhidas pelo seu potencial. <em>Compram-se no estado em que se encontram</em>, ou reservam-se para serem restauradas segundo o seu caderno de encargos, sob a nossa supervisão.",
+  "f.dispo": "Disponíveis",
+  "f.vendu": "Vendidos",
+  "pi.h2": "Peças <em>sobressalentes</em>",
+  "pi.chapo": "Um serviço <em>reservado aos nossos clientes</em>, em especial aos que adquiriram um dos nossos projetos.",
+  "pi.e1": "Acompanhamos os nossos clientes ao longo de todo o restauro: <strong>acompanhamento dos trabalhos, procura e encomenda de peças</strong>, em França e no estrangeiro, junto de fornecedores onde temos contas profissionais.",
+  "pi.e2": "Não vendemos peças a retalho, <strong>com exceção das apresentadas abaixo</strong>, provenientes dos nossos projetos ou do nosso stock e verificadas antes da venda.",
+  "pi.label": "Peças à venda",
+  "s.h2": "O seu automóvel, <em>as nossas oficinas</em>",
+  "s.grand": "Somos o seu <em>interlocutor único</em>: encomendamos os trabalhos, acompanhamo-los, controlamo-los e documentamo-los, da primeira peritagem ao dossiê final.",
+  "s.d1": "As nossas oficinas parceiras foram escolhidas por cumprirem <strong>um caderno de encargos exigente</strong>, tanto no acompanhamento do cliente como na qualidade do trabalho.",
+  "s.d2": "Adaptam-se ao orçamento e ao nível de acabamento pretendido por cada cliente. Sobretudo, <strong>já trabalhámos com cada uma delas</strong>: as suas referências são conhecidas e os seus trabalhos verificados.",
+  "s.meth": "Método",
+  "s.meth.h": "Cinco etapas, um só interlocutor",
+  "s.e1": "<div><b>Peritagem e caderno de encargos</b><span>Avaliação do automóvel, utilização prevista, nível de acabamento pretendido.</span></div>",
+  "s.e2": "<div><b>Orçamento e escolha das oficinas</b><span>Orçamentos comparados, escolha da oficina parceira mais adequada para cada especialidade.</span></div>",
+  "s.e3": "<div><b>Procura de peças</b><span>Encomendas agrupadas, em França, na Europa e no mundo.</span></div>",
+  "s.e4": "<div><b>Acompanhamento e controlo</b><span>Visitas à oficina, etapas fotografadas, validação antes de cada pagamento.</span></div>",
+  "s.e5": "<div><b>Dossiê de restauro</b><span>Fotografias, faturas, medições e certificados reunidos; formalidades de matrícula, se necessário.</span></div>",
+  "s.met": "Especialidades",
+  "s.met.h": "Nove ofícios, <em style=\"color:#c9bea4\">coordenados</em>",
+  "s.met.p": "Cada especialidade confiada à oficina parceira mais adequada ao seu automóvel.",
+  "g.mot": "Motor",
+  "g.cai": "Carroçaria",
+  "g.int": "Interior",
+  "me1.t": "Metrologia",
+  "me1.p": "Medição completa das peças do motor antes de qualquer decisão.",
+  "me2.t": "Retificação de motores",
+  "me2.p": "Mandrilagem, cambota, cabeça do motor, equilibragem.",
+  "me3.t": "Mecânica",
+  "me3.p": "Montagem de motor, caixa e diferencial, suspensões, travões.",
+  "me4.t": "Bate-chapa",
+  "me4.p": "Trabalho de chapa, substituição de painéis, ajuste de portas e capôs.",
+  "me5.t": "Pintura",
+  "me5.p": "Primários, cor original ou personalizada, acabamento.",
+  "me6.t": "Cromagem",
+  "me6.p": "Para-choques, frisos e cromados recromados.",
+  "me7.t": "Estofos",
+  "me7.p": "Bancos, forras, alcatifas, couros de época.",
+  "me8.t": "Montagem de capotas",
+  "me8.p": "Capotas por medida, afinação e estanquidade.",
+  "me9.t": "Recuperação de habitáculo",
+  "me9.p": "Tablier, instrumentos, madeiras, cablagem.",
+  "cit": "Do Triumph TR3 ao Aston Martin DB6, <i>um orçamento justo para cada automóvel.</i>",
+  "cit.l": "Oficinas francesas e europeias · Procura de peças em todo o mundo",
+  "c.h2": "Falemos do <em>seu automóvel</em>",
+  "c.chapo": "Compra, venda, restauro ou uma peça: descreva-nos o seu projeto e responderemos pessoalmente.",
+  "c.nom": "Nome",
+  "c.joindre": "Telefone ou e-mail",
+  "c.objet": "Assunto",
+  "o.achat": "Compra de um veículo",
+  "o.resa": "Reserva de um projeto",
+  "o.pieces": "Peças",
+  "o.vente": "Venda do meu veículo",
+  "c.msg": "Mensagem",
+  "c.env": "Enviar",
+  "foot.a": "Automóveis de coleção",
+  "foot.b": "Veículos · Projetos · Peças · Supervisão de restauro",
+  "e.vente": "Disponível",
+  "e.reserve": "Reservado",
+  "e.vendu": "Vendido",
+  "e.projet": "Projeto disponível",
+  "voir": "Ver ficha",
+  "vide": "De momento, não há automóveis nesta categoria.",
+  "ret.veh": "Os nossos automóveis",
+  "ret.proj": "Automóveis para restaurar",
+  "tr.veh": "Trabalhos realizados",
+  "tr.proj": "Trabalhos a prever",
+  "consulter": "Preço sob consulta",
+  "pvide": "De momento, não há peças à venda.",
+  "l.tel": "Telefone",
+  "l.mail": "E-mail",
+  "l.atelier": "Oficina",
+  "atelier.val": "Yvelines (oeste de Paris), apenas por marcação",
+  "prix": "Preço",
+  "mention": "Fotografias a pedido",
+  "b.rech": "Confie-nos uma procura",
+  "b.info": "Pedir informações",
+  "n.visite": "Visita à oficina apenas por marcação.",
+  "msg.rech": "Procuro um automóvel semelhante a: ",
+  "msg.int": "Tenho interesse em: ",
+  "merci": "Obrigado. Para concluir o envio, <a href=\"{lien}\">abra o seu e-mail</a> ou escreva-nos diretamente para {mail}.",
+  "ph.prec": "Foto anterior",
+  "ph.suiv": "Foto seguinte",
+  "titre": "MCC Motors — Automóveis de coleção"
+ }
 }
 </script>
 
@@ -546,11 +1713,12 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       <i></i><b>MCC</b><em>MOTORS</em>
     </a>
     <nav id="menu">
-      <a href="#vehicules">Véhicules</a>
-      <a href="#projets">Projets</a>
-      <a href="#pieces">Pièces</a>
-      <a href="#supervision">Restauration</a>
-      <a href="#contact">Contact</a>
+      <a href="#vehicules" data-i18n="nav.veh">Véhicules</a>
+      <a href="#projets" data-i18n="nav.proj">Projets</a>
+      <a href="#pieces" data-i18n="nav.pie">Pièces</a>
+      <a href="#supervision" data-i18n="nav.rest">Restauration</a>
+      <a href="#contact" data-i18n="nav.cont">Contact</a>
+      <div class="langues" id="langues"><button data-l="fr">FR</button><button data-l="en">EN</button><button data-l="de">DE</button><button data-l="pt">PT</button></div>
     </nav>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
@@ -562,30 +1730,30 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     <div class="cadre"><div class="fondimg"></div><div class="reflet"></div>
       <div class="intro-anim" id="introAnim" aria-hidden="true">
         <video id="introVid" muted playsinline preload="auto" poster="img/intro-poster.jpg"><source src="img/intro.mp4" type="video/mp4"></video>
-        <button class="passer" id="passer">Passer</button>
+        <button class="passer" id="passer" data-i18n="passer">Passer</button>
       </div>
     </div>
     <div class="wrap">
-      <div class="surtitre"><i></i><span>Voitures classiques anglaises</span></div>
-      <h1><span class="ligne"><span>Automobiles</span></span><span class="ligne"><span><em>de collection</em></span></span></h1>
+      <div class="surtitre"><i></i><span data-i18n="hero.sur">Voitures classiques anglaises</span></div>
+      <h1><span class="ligne"><span data-i18n="hero.h1a">Automobiles</span></span><span class="ligne"><span data-i18n="hero.h1b"><em>de collection</em></span></span></h1>
       <div class="bas-hero">
         <div class="metiers-defile" id="defile" aria-live="polite">
-          <span class="mot on">Achat &amp; vente</span>
-          <span class="mot">Autos à restaurer</span>
-          <span class="mot">Supervision de restauration</span>
-          <span class="mot">Sourcing de pièces, en Europe et au-delà</span>
+          <span class="mot on" data-i18n="mot1">Achat &amp; vente</span>
+          <span class="mot" data-i18n="mot2">Autos à restaurer</span>
+          <span class="mot" data-i18n="mot3">Supervision de restauration</span>
+          <span class="mot" data-i18n="mot4">Sourcing de pièces, en Europe et au-delà</span>
         </div>
-        <div class="liens"><a class="lien" href="#vehicules">Nos véhicules</a><a class="lien" href="#supervision">Restauration</a></div>
+        <div class="liens"><a class="lien" href="#vehicules" data-i18n="hero.l1">Nos véhicules</a><a class="lien" href="#supervision" data-i18n="nav.rest">Restauration</a></div>
       </div>
     </div>
-    <div class="defile-ind">Défiler</div>
+    <div class="defile-ind" data-i18n="defiler">Défiler</div>
   </div>
 
   <div class="portes">
     <div class="wrap">
-      <a class="porte rv" href="#vehicules"><div class="img"><img src="img/porte-acheter.jpg" alt=""></div><div class="txt"><div><div class="num">I</div><h3>Acheter</h3><p>Des voitures qui roulent, contrôlées et documentées.</p></div><span class="fl">→</span></div></a>
-      <a class="porte rv" href="#supervision"><div class="img"><img src="img/porte-restaurer.jpg" alt=""></div><div class="txt"><div><div class="num">II</div><h3>Restaurer</h3><p>Un projet ou votre auto, suivis par nos ateliers partenaires.</p></div><span class="fl">→</span></div></a>
-      <a class="porte rv" href="#pieces"><div class="img"><img src="img/porte-pieces.jpg" alt=""></div><div class="txt"><div><div class="num">III</div><h3>Trouver une pièce</h3><p>Un sourcing réservé à nos clients, en Europe et au-delà.</p></div><span class="fl">→</span></div></a>
+      <a class="porte rv" href="#vehicules"><div class="img"><img src="img/porte-acheter.jpg" alt=""></div><div class="txt"><div><div class="num">I</div><h3 data-i18n="p1.t">Acheter</h3><p data-i18n="p1.p">Des voitures qui roulent, contrôlées et documentées.</p></div><span class="fl">→</span></div></a>
+      <a class="porte rv" href="#supervision"><div class="img"><img src="img/porte-restaurer.jpg" alt=""></div><div class="txt"><div><div class="num">II</div><h3 data-i18n="p2.t">Restaurer</h3><p data-i18n="p2.p">Un projet ou votre auto, suivis par nos ateliers partenaires.</p></div><span class="fl">→</span></div></a>
+      <a class="porte rv" href="#pieces"><div class="img"><img src="img/porte-pieces.jpg" alt=""></div><div class="txt"><div><div class="num">III</div><h3 data-i18n="p3.t">Trouver une pièce</h3><p data-i18n="p3.p">Un sourcing réservé à nos clients, en Europe et au-delà.</p></div><span class="fl">→</span></div></a>
     </div>
   </div>
 
@@ -593,13 +1761,13 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     <div class="wrap">
       <div class="photo rv"><img src="img/maison.jpg" alt=""></div>
       <div>
-        <div class="eyebrow rv"><span class="num">—</span>La maison</div>
-        <p class="gros rv">Une voiture ancienne <em>se choisit</em>, se comprend, puis <em>se transmet</em>. Notre métier est d'en garantir chaque étape<span class="r">.</span></p>
-        <p class="complement rv">MCC Motors réunit une longue pratique des voitures classiques, anglaises en particulier, un réseau d'ateliers partenaires en France et en Europe, et la maîtrise des démarches d'immatriculation des véhicules de collection.</p>
+        <div class="eyebrow rv"><span class="num">—</span><span data-i18n="m.eb">La maison</span></div>
+        <p class="gros rv" data-i18n="m.gros">Une voiture ancienne <em>se choisit</em>, se comprend, puis <em>se transmet</em>. Notre métier est d'en garantir chaque étape<span class="r">.</span></p>
+        <p class="complement rv" data-i18n="m.comp">MCC Motors réunit une longue pratique des voitures classiques, anglaises en particulier, un réseau d'ateliers partenaires en France et en Europe, et la maîtrise des démarches d'immatriculation des véhicules de collection.</p>
         <div class="signature rv">
-          <div><i>01</i><b>Choisir</b><span>Des autos sélectionnées pour leur base saine et leur historique, dont l'état est décrit tel qu'il est.</span></div>
-          <div><i>02</i><b>Restaurer</b><span>Un cahier des charges, un budget, des ateliers partenaires éprouvés, un suivi photographié à chaque étape.</span></div>
-          <div><i>03</i><b>Transmettre</b><span>Un dossier complet — factures, mesures, certificats — et une immatriculation en règle.</span></div>
+          <div data-i18n="m.s1"><i>01</i><b>Choisir</b><span>Des autos sélectionnées pour leur base saine et leur historique, dont l'état est décrit tel qu'il est.</span></div>
+          <div data-i18n="m.s2"><i>02</i><b>Restaurer</b><span>Un cahier des charges, un budget, des ateliers partenaires éprouvés, un suivi photographié à chaque étape.</span></div>
+          <div data-i18n="m.s3"><i>03</i><b>Transmettre</b><span>Un dossier complet — factures, mesures, certificats — et une immatriculation en règle.</span></div>
         </div>
       </div>
     </div>
@@ -609,13 +1777,13 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     <div class="wrap">
       <div class="entete-s">
         <div>
-          <div class="eyebrow"><span class="num">I</span>Véhicules</div>
-          <h2>Nos <em>voitures</em></h2>
-          <p class="chapo">Des voitures qui roulent, contrôlées et documentées. <em>Chaque fiche décrit l'état réel de l'auto</em> ; l'historique complet est communiqué sur demande.</p>
+          <div class="eyebrow"><span class="num">I</span><span data-i18n="nav.veh">Véhicules</span></div>
+          <h2 data-i18n="v.h2">Nos <em>voitures</em></h2>
+          <p class="chapo" data-i18n="v.chapo">Des voitures qui roulent, contrôlées et documentées. <em>Chaque fiche décrit l'état réel de l'auto</em> ; l'historique complet est communiqué sur demande.</p>
         </div>
         <div class="filtres" data-liste="vehicules">
-          <button class="on" data-f="vente">Disponibles<span class="nb"></span></button>
-          <button data-f="vendu">Vendues<span class="nb"></span></button>
+          <button class="on" data-f="vente"><span data-i18n="f.dispo">Disponibles</span><span class="nb"></span></button>
+          <button data-f="vendu"><span data-i18n="f.vendu">Vendues</span><span class="nb"></span></button>
         </div>
       </div>
       <div class="grille" id="grilleVehicules"></div>
@@ -626,13 +1794,13 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     <div class="wrap">
       <div class="entete-s">
         <div>
-          <div class="eyebrow"><span class="num">II</span>Projets</div>
-          <h2>Autos <em>à restaurer</em></h2>
-          <p class="chapo">Des bases saines, choisies pour leur potentiel. <em>Elles s'achètent en l'état</em>, ou se réservent pour être restaurées selon votre cahier des charges, sous notre supervision.</p>
+          <div class="eyebrow"><span class="num">II</span><span data-i18n="nav.proj">Projets</span></div>
+          <h2 data-i18n="pr.h2">Autos <em>à restaurer</em></h2>
+          <p class="chapo" data-i18n="pr.chapo">Des bases saines, choisies pour leur potentiel. <em>Elles s'achètent en l'état</em>, ou se réservent pour être restaurées selon votre cahier des charges, sous notre supervision.</p>
         </div>
         <div class="filtres" data-liste="projets">
-          <button class="on" data-f="vente">Disponibles<span class="nb"></span></button>
-          <button data-f="vendu">Vendues<span class="nb"></span></button>
+          <button class="on" data-f="vente"><span data-i18n="f.dispo">Disponibles</span><span class="nb"></span></button>
+          <button data-f="vendu"><span data-i18n="f.vendu">Vendues</span><span class="nb"></span></button>
         </div>
       </div>
       <div class="grille" id="grilleProjets"></div>
@@ -643,16 +1811,16 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     <div class="wrap">
       <div class="entete-s">
         <div>
-          <div class="eyebrow"><span class="num">III</span>Pièces</div>
-          <h2>Pièces <em>détachées</em></h2>
-          <p class="chapo">Un service <em>réservé à nos clients</em>, en particulier à ceux qui ont acquis l'un de nos projets.</p>
+          <div class="eyebrow"><span class="num">III</span><span data-i18n="nav.pie">Pièces</span></div>
+          <h2 data-i18n="pi.h2">Pièces <em>détachées</em></h2>
+          <p class="chapo" data-i18n="pi.chapo">Un service <em>réservé à nos clients</em>, en particulier à ceux qui ont acquis l'un de nos projets.</p>
         </div>
       </div>
       <div class="encadre rv">
-        <p>Nous accompagnons nos clients tout au long de leur restauration : <strong>suivi des travaux, recherche et commande des pièces</strong>, en France comme à l'étranger, auprès de fournisseurs chez qui nous disposons de comptes professionnels.</p>
-        <p>Nous ne vendons pas de pièces au détail, <strong>à l'exception de celles présentées ci-dessous</strong>, issues de nos projets ou de nos stocks, contrôlées avant la vente.</p>
+        <p data-i18n="pi.e1">Nous accompagnons nos clients tout au long de leur restauration : <strong>suivi des travaux, recherche et commande des pièces</strong>, en France comme à l'étranger, auprès de fournisseurs chez qui nous disposons de comptes professionnels.</p>
+        <p data-i18n="pi.e2">Nous ne vendons pas de pièces au détail, <strong>à l'exception de celles présentées ci-dessous</strong>, issues de nos projets ou de nos stocks, contrôlées avant la vente.</p>
       </div>
-      <div class="label" style="margin-bottom:26px">Pièces en vente</div>
+      <div class="label" style="margin-bottom:26px" data-i18n="pi.label">Pièces en vente</div>
       <div class="pieces-grille" id="listePieces"></div>
     </div>
   </section>
@@ -661,52 +1829,52 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     <div class="wrap">
       <div class="entete-s">
         <div>
-          <div class="eyebrow"><span class="num">IV</span>Supervision de restauration</div>
-          <h2 style="white-space:nowrap">Votre auto, <em>nos ateliers</em></h2>
+          <div class="eyebrow"><span class="num">IV</span><span data-i18n="mot3">Supervision de restauration</span></div>
+          <h2 style="white-space:nowrap" data-i18n="s.h2">Votre auto, <em>nos ateliers</em></h2>
         </div>
       </div>
       <div class="intro rv">
-        <p class="grand">Nous sommes votre <em>intermédiaire unique</em> : nous commandons les travaux, nous les suivons, nous les contrôlons et nous les documentons, de la première expertise au dossier final.</p>
+        <p class="grand" data-i18n="s.grand">Nous sommes votre <em>intermédiaire unique</em> : nous commandons les travaux, nous les suivons, nous les contrôlons et nous les documentons, de la première expertise au dossier final.</p>
         <div class="droite">
-          <p>Nos ateliers partenaires ont été choisis parce qu'ils respectent <strong>un cahier des charges exigeant</strong>, tant sur le suivi humain que sur la qualité du travail.</p>
-          <p>Ils savent s'adapter au budget et au degré de finition attendu par chaque client. Surtout, <strong>nous avons déjà travaillé avec chacun d'entre eux</strong> : leurs références sont connues, leurs réalisations vérifiées.</p>
+          <p data-i18n="s.d1">Nos ateliers partenaires ont été choisis parce qu'ils respectent <strong>un cahier des charges exigeant</strong>, tant sur le suivi humain que sur la qualité du travail.</p>
+          <p data-i18n="s.d2">Ils savent s'adapter au budget et au degré de finition attendu par chaque client. Surtout, <strong>nous avons déjà travaillé avec chacun d'entre eux</strong> : leurs références sont connues, leurs réalisations vérifiées.</p>
         </div>
       </div>
 
       <div class="methode rv">
         <div class="img"><img src="img/methode.jpg" alt=""></div>
         <div>
-          <div class="eyebrow"><span class="num">i</span>Méthode</div>
-          <h3>Cinq étapes, un seul interlocuteur</h3>
+          <div class="eyebrow"><span class="num">i</span><span data-i18n="s.meth">Méthode</span></div>
+          <h3 data-i18n="s.meth.h">Cinq étapes, un seul interlocuteur</h3>
           <ol class="etapes">
-            <li><div><b>Expertise et cahier des charges</b><span>État des lieux de l'auto, usage envisagé, niveau de finition attendu.</span></div></li>
-            <li><div><b>Budget et choix des ateliers</b><span>Devis comparés, choix de l'atelier partenaire le plus juste pour chaque métier.</span></div></li>
-            <li><div><b>Sourcing des pièces</b><span>Commandes groupées, en France, en Europe et dans le monde.</span></div></li>
-            <li><div><b>Suivi et contrôle</b><span>Visites en atelier, points d'étape photographiés, validation avant chaque règlement.</span></div></li>
-            <li><div><b>Dossier de restauration</b><span>Photographies, factures, mesures et certificats réunis ; démarches d'immatriculation si nécessaire.</span></div></li>
+            <li data-i18n="s.e1"><div><b>Expertise et cahier des charges</b><span>État des lieux de l'auto, usage envisagé, niveau de finition attendu.</span></div></li>
+            <li data-i18n="s.e2"><div><b>Budget et choix des ateliers</b><span>Devis comparés, choix de l'atelier partenaire le plus juste pour chaque métier.</span></div></li>
+            <li data-i18n="s.e3"><div><b>Sourcing des pièces</b><span>Commandes groupées, en France, en Europe et dans le monde.</span></div></li>
+            <li data-i18n="s.e4"><div><b>Suivi et contrôle</b><span>Visites en atelier, points d'étape photographiés, validation avant chaque règlement.</span></div></li>
+            <li data-i18n="s.e5"><div><b>Dossier de restauration</b><span>Photographies, factures, mesures et certificats réunis ; démarches d'immatriculation si nécessaire.</span></div></li>
           </ol>
         </div>
       </div>
 
       <div class="metiers-titre">
-        <div><div class="eyebrow"><span class="num">ii</span>Métiers</div><h3>Neuf savoir-faire, <em style="color:#c9bea4">coordonnés</em></h3></div>
-        <p>Chaque métier confié à l'atelier partenaire le plus juste pour votre auto.</p>
+        <div><div class="eyebrow"><span class="num">ii</span><span data-i18n="s.met">Métiers</span></div><h3 data-i18n="s.met.h">Neuf savoir-faire, <em style="color:#c9bea4">coordonnés</em></h3></div>
+        <p data-i18n="s.met.p">Chaque métier confié à l'atelier partenaire le plus juste pour votre auto.</p>
       </div>
       <div class="metiers">
-        <div class="metier rv"><img src="img/m-metrologie.jpg" alt=""><span class="grp">Moteur</span><div class="t"><div class="n">01</div><h4>Métrologie</h4><p>Mesure complète des pièces moteur avant toute décision.</p></div></div>
-        <div class="metier rv"><img src="img/m-rectification.jpg" alt=""><span class="grp">Moteur</span><div class="t"><div class="n">02</div><h4>Rectification moteur</h4><p>Réalésage, vilebrequin, culasse, équilibrage.</p></div></div>
-        <div class="metier rv"><img src="img/m-mecanique.jpg" alt=""><span class="grp">Moteur</span><div class="t"><div class="n">03</div><h4>Mécanique</h4><p>Remontage moteur, boîte, pont, trains roulants, freinage.</p></div></div>
-        <div class="metier rv"><img src="img/m-carrosserie.jpg" alt=""><span class="grp">Caisse</span><div class="t"><div class="n">04</div><h4>Carrosserie</h4><p>Tôlerie, remplacement de panneaux, ajustage des ouvrants.</p></div></div>
-        <div class="metier rv"><img src="img/m-peinture.jpg" alt=""><span class="grp">Caisse</span><div class="t"><div class="n">05</div><h4>Peinture</h4><p>Apprêts, teinte d'origine ou personnalisée, finition.</p></div></div>
-        <div class="metier rv"><img src="img/m-chromage.jpg" alt=""><span class="grp">Caisse</span><div class="t"><div class="n">06</div><h4>Chromage</h4><p>Pare-chocs, entourages et accastillage rechromés.</p></div></div>
-        <div class="metier rv"><img src="img/m-sellerie.jpg" alt=""><span class="grp">Intérieur</span><div class="t"><div class="n">07</div><h4>Sellerie</h4><p>Sièges, garnitures, moquettes, cuirs d'époque.</p></div></div>
-        <div class="metier rv"><img src="img/m-capote.jpg" alt=""><span class="grp">Intérieur</span><div class="t"><div class="n">08</div><h4>Pose de capote</h4><p>Capotes sur mesure, réglage et étanchéité.</p></div></div>
-        <div class="metier rv"><img src="img/m-habitacle.jpg" alt=""><span class="grp">Intérieur</span><div class="t"><div class="n">09</div><h4>Réfection d'habitacle</h4><p>Planche de bord, instruments, boiseries, faisceau.</p></div></div>
+        <div class="metier rv"><img src="img/m-metrologie.jpg" alt=""><span class="grp" data-i18n="g.mot">Moteur</span><div class="t"><div class="n">01</div><h4 data-i18n="me1.t">Métrologie</h4><p data-i18n="me1.p">Mesure complète des pièces moteur avant toute décision.</p></div></div>
+        <div class="metier rv"><img src="img/m-rectification.jpg" alt=""><span class="grp" data-i18n="g.mot">Moteur</span><div class="t"><div class="n">02</div><h4 data-i18n="me2.t">Rectification moteur</h4><p data-i18n="me2.p">Réalésage, vilebrequin, culasse, équilibrage.</p></div></div>
+        <div class="metier rv"><img src="img/m-mecanique.jpg" alt=""><span class="grp" data-i18n="g.mot">Moteur</span><div class="t"><div class="n">03</div><h4 data-i18n="me3.t">Mécanique</h4><p data-i18n="me3.p">Remontage moteur, boîte, pont, trains roulants, freinage.</p></div></div>
+        <div class="metier rv"><img src="img/m-carrosserie.jpg" alt=""><span class="grp" data-i18n="g.cai">Caisse</span><div class="t"><div class="n">04</div><h4 data-i18n="me4.t">Carrosserie</h4><p data-i18n="me4.p">Tôlerie, remplacement de panneaux, ajustage des ouvrants.</p></div></div>
+        <div class="metier rv"><img src="img/m-peinture.jpg" alt=""><span class="grp" data-i18n="g.cai">Caisse</span><div class="t"><div class="n">05</div><h4 data-i18n="me5.t">Peinture</h4><p data-i18n="me5.p">Apprêts, teinte d'origine ou personnalisée, finition.</p></div></div>
+        <div class="metier rv"><img src="img/m-chromage.jpg" alt=""><span class="grp" data-i18n="g.cai">Caisse</span><div class="t"><div class="n">06</div><h4 data-i18n="me6.t">Chromage</h4><p data-i18n="me6.p">Pare-chocs, entourages et accastillage rechromés.</p></div></div>
+        <div class="metier rv"><img src="img/m-sellerie.jpg" alt=""><span class="grp" data-i18n="g.int">Intérieur</span><div class="t"><div class="n">07</div><h4 data-i18n="me7.t">Sellerie</h4><p data-i18n="me7.p">Sièges, garnitures, moquettes, cuirs d'époque.</p></div></div>
+        <div class="metier rv"><img src="img/m-capote.jpg" alt=""><span class="grp" data-i18n="g.int">Intérieur</span><div class="t"><div class="n">08</div><h4 data-i18n="me8.t">Pose de capote</h4><p data-i18n="me8.p">Capotes sur mesure, réglage et étanchéité.</p></div></div>
+        <div class="metier rv"><img src="img/m-habitacle.jpg" alt=""><span class="grp" data-i18n="g.int">Intérieur</span><div class="t"><div class="n">09</div><h4 data-i18n="me9.t">Réfection d'habitacle</h4><p data-i18n="me9.p">Planche de bord, instruments, boiseries, faisceau.</p></div></div>
       </div>
 
       <div class="citation rv">
-        <p>De la Triumph TR3 à l'Aston Martin DB6, <i>un budget juste pour chaque auto.</i></p>
-        <span class="label">Ateliers français et européens · Sourcing de pièces dans le monde entier</span>
+        <p data-i18n="cit">De la Triumph TR3 à l'Aston Martin DB6, <i>un budget juste pour chaque auto.</i></p>
+        <span class="label" data-i18n="cit.l">Ateliers français et européens · Sourcing de pièces dans le monde entier</span>
       </div>
     </div>
   </section>
@@ -714,24 +1882,24 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   <section id="contact">
     <div class="wrap contact">
       <div class="coord">
-        <div class="eyebrow"><span class="num">V</span>Contact</div>
-        <h2>Parlons de <em>votre auto</em></h2>
-        <p class="chapo">Achat, vente, restauration ou pièce : décrivez-nous votre projet, nous vous répondons personnellement.</p>
+        <div class="eyebrow"><span class="num">V</span><span data-i18n="nav.cont">Contact</span></div>
+        <h2 data-i18n="c.h2">Parlons de <em>votre auto</em></h2>
+        <p class="chapo" data-i18n="c.chapo">Achat, vente, restauration ou pièce : décrivez-nous votre projet, nous vous répondons personnellement.</p>
         <dl id="coordonnees"></dl>
       </div>
       <form id="formulaire">
-        <label>Nom<input name="nom" required></label>
-        <label>Téléphone ou e-mail<input name="joindre" required></label>
-        <label>Objet
+        <label><span data-i18n="c.nom">Nom</span><input name="nom" required></label>
+        <label><span data-i18n="c.joindre">Téléphone ou e-mail</span><input name="joindre" required></label>
+        <label><span data-i18n="c.objet">Objet</span>
           <select name="sujet" id="sujet">
-            <option>Achat d'un véhicule</option>
-            <option>Réservation d'un projet</option>
-            <option>Supervision de restauration</option>
-            <option>Pièces détachées</option>
-            <option>Vente de mon véhicule</option>
+            <option value="achat" data-i18n="o.achat">Achat d'un véhicule</option>
+            <option value="reservation" data-i18n="o.resa">Réservation d'un projet</option>
+            <option value="supervision" data-i18n="mot3">Supervision de restauration</option>
+            <option value="pieces" data-i18n="o.pieces">Pièces détachées</option>
+            <option value="vente" data-i18n="o.vente">Vente de mon véhicule</option>
           </select></label>
-        <label>Message<textarea name="message" id="message" required></textarea></label>
-        <button class="bouton" type="submit">Envoyer</button>
+        <label><span data-i18n="c.msg">Message</span><textarea name="message" id="message" required></textarea></label>
+        <button class="bouton" type="submit" data-i18n="c.env">Envoyer</button>
         <div class="retour-msg" id="retour"></div>
       </form>
     </div>
@@ -739,8 +1907,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
 
   <footer>
     <div class="wrap">
-      <span>© <span id="an"></span> MCC Motors — Automobiles de collection</span>
-      <span>Véhicules · Projets · Pièces · Supervision de restauration</span>
+      <span>© <span id="an"></span> MCC Motors — <span data-i18n="foot.a">Automobiles de collection</span></span>
+      <span data-i18n="foot.b">Véhicules · Projets · Pièces · Supervision de restauration</span>
     </div>
   </footer>
 </div>
@@ -750,45 +1918,74 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
 <script>
 (function(){
   var D = JSON.parse(document.getElementById('donnees').textContent);
+  var T = JSON.parse(document.getElementById('traductions').textContent);
   var GEN = D.visuel_generique;
-  var ETAT = {vente:'Disponible', reserve:'Réservé', vendu:'Vendu'};
+  var LANGUES = ['fr','en','de','pt'];
+
+  // ---- Langue ----
+  var FR = {};
+  document.querySelectorAll('[data-i18n]').forEach(function(el){ var k=el.dataset.i18n; if(!(k in FR)) FR[k]=el.innerHTML; });
+  function choisirLangue(){
+    var q=(location.search.match(/[?&]lang=(\w\w)/)||[])[1];
+    if(q&&LANGUES.indexOf(q)>=0) return q;
+    try{ var m=localStorage.getItem('mccLang'); if(m&&LANGUES.indexOf(m)>=0) return m; }catch(e){}
+    var n=(navigator.language||'fr').slice(0,2).toLowerCase();
+    return LANGUES.indexOf(n)>=0?n:'fr';
+  }
+  var LANG = choisirLangue();
+  function t(k){ var d=T[LANG]; if(d&&d[k]!=null) return d[k]; if(T.fr[k]!=null) return T.fr[k]; return FR[k]!=null?FR[k]:k; }
+  function tr(o,champ){ var x=o.trad&&o.trad[LANG]; return (LANG!=='fr'&&x&&x[champ]!=null)?x[champ]:o[champ]; }
+  function traduirePage(){
+    document.documentElement.lang=LANG;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ var k=el.dataset.i18n; el.innerHTML = LANG==='fr'?FR[k]:((T[LANG]&&T[LANG][k]!=null)?T[LANG][k]:FR[k]); });
+    document.querySelectorAll('#langues button').forEach(function(b){ b.classList.toggle('on', b.dataset.l===LANG); });
+    document.title=t('titre');
+  }
+
+  var ETAT = function(s){return t('e.'+s);};
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function photo1(v){return v.vignette||(v.photos&&v.photos[0])||GEN;}
   function galerie(v){var g=[]; if(v.vignette) g.push(v.vignette); (v.photos||[]).forEach(function(p){g.push(p);}); return g;}
-  var SECTION={vehicules:{pref:'vehicule',grille:'grilleVehicules',retour:'Nos voitures',travaux:'Travaux réalisés'},projets:{pref:'projet',grille:'grilleProjets',retour:'Autos à restaurer',travaux:'Travaux à prévoir'}};
-  function prixTxt(v){return v.statut==='vendu'?'Vendu':(v.prix||'Nous consulter');}
+  var SECTION={vehicules:{pref:'vehicule',grille:'grilleVehicules',retour:'ret.veh',travaux:'tr.veh'},projets:{pref:'projet',grille:'grilleProjets',retour:'ret.proj',travaux:'tr.proj'}};
+  function prix(p){ return (!p||p==='Nous consulter')?t('consulter'):p; }
+  function prixTxt(v){return v.statut==='vendu'?ETAT('vendu'):prix(v.prix);}
+  function modele(v){return tr(v,'modele');}
 
   function carte(v,pref){
     var cl = v.statut==='vendu'?'vendu':(v.statut==='reserve'?'reserve':'');
     return '<a class="carte" href="#'+pref+'-'+esc(v.id)+'">'+
-      '<div class="img"><img loading="lazy" src="'+esc(photo1(v))+'" alt="'+esc(v.marque+' '+v.modele)+'"><span class="etat '+cl+'">'+(pref==='projet'&&v.statut==='vente'?'Projet disponible':ETAT[v.statut])+'</span></div>'+
+      '<div class="img"><img loading="lazy" src="'+esc(photo1(v))+'" alt="'+esc(v.marque+' '+modele(v))+'"><span class="etat '+cl+'">'+(pref==='projet'&&v.statut==='vente'?t('e.projet'):ETAT(v.statut))+'</span></div>'+
       '<div class="label marque">'+esc(v.marque)+(v.annee?' · '+esc(v.annee):'')+'</div>'+
-      '<h3>'+esc(v.modele)+'</h3><p class="acc">'+esc(v.accroche)+'</p>'+
-      '<div class="bas"><span class="prix'+(v.statut==='vendu'?' v':'')+'">'+esc(prixTxt(v))+'</span><span class="voir">Voir la fiche</span></div></a>';
+      '<h3>'+esc(modele(v))+'</h3><p class="acc">'+esc(tr(v,'accroche'))+'</p>'+
+      '<div class="bas"><span class="prix'+(v.statut==='vendu'?' v':'')+'">'+esc(prixTxt(v))+'</span><span class="voir">'+t('voir')+'</span></div></a>';
   }
-  function grille(id,liste,pref,f){
-    var it = D[liste].filter(function(v){return !v.masque && (!f || (f==='vendu'?v.statut==='vendu':v.statut!=='vendu'));});
-    document.getElementById(id).innerHTML = it.length ? it.map(function(v){return carte(v,pref);}).join('') : '<div class="vide">Aucune voiture dans cette catégorie pour le moment.</div>';
+  var filtre={vehicules:'vente',projets:'vente'};
+  function grille(liste){
+    var S=SECTION[liste], f=filtre[liste];
+    var it = D[liste].filter(function(v){return !v.masque && (f==='vendu'?v.statut==='vendu':v.statut!=='vendu');});
+    document.getElementById(S.grille).innerHTML = it.length ? it.map(function(v){return carte(v,S.pref);}).join('') : '<div class="vide">'+t('vide')+'</div>';
   }
   document.querySelectorAll('.filtres').forEach(function(bloc){
-    var liste=bloc.dataset.liste, S=SECTION[liste], L=D[liste];
-    L=L.filter(function(v){return !v.masque;}); var nbDispo=L.filter(function(v){return v.statut!=='vendu';}).length;
+    var liste=bloc.dataset.liste, L=D[liste].filter(function(v){return !v.masque;});
+    var nbDispo=L.filter(function(v){return v.statut!=='vendu';}).length;
     var bt=bloc.querySelectorAll('button');
     bt[0].querySelector('.nb').textContent=nbDispo; bt[1].querySelector('.nb').textContent=L.length-nbDispo;
-    grille(S.grille,liste,S.pref,'vente');
-    bt.forEach(function(b){ b.onclick=function(){bt.forEach(function(x){x.classList.remove('on');});b.classList.add('on');grille(S.grille,liste,S.pref,b.dataset.f);if(window.__observer)window.__observer();}; });
+    bt.forEach(function(b){ b.onclick=function(){bt.forEach(function(x){x.classList.remove('on');});b.classList.add('on');filtre[liste]=b.dataset.f;grille(liste);if(window.__observer)window.__observer();}; });
   });
 
-  var P = D.pieces||[];
-  document.getElementById('listePieces').innerHTML = P.length ? P.map(function(p){
-    return '<div class="piece"><div class="img"><img loading="lazy" src="'+esc((p.photos&&p.photos[0])||GEN)+'" alt="'+esc(p.nom)+'"></div><h3>'+esc(p.nom)+'</h3><small>'+esc(p.detail||'')+'</small><div class="prix">'+esc(p.prix||'Nous consulter')+'</div></div>';
-  }).join('') : '<div class="vide">Aucune pièce en vente actuellement.</div>';
-
-  var C = D.contact, dl='';
-  if(C.telephone) dl+='<div><dt>Téléphone</dt><dd>'+esc(C.telephone)+'</dd></div>';
-  if(C.email) dl+='<div><dt>E-mail</dt><dd>'+esc(C.email)+'</dd></div>';
-  if(C.atelier) dl+='<div><dt>Atelier</dt><dd>'+esc(C.atelier)+'</dd></div>';
-  document.getElementById('coordonnees').innerHTML = dl;
+  var C = D.contact;
+  function rendreListes(){
+    grille('vehicules'); grille('projets');
+    var P = D.pieces||[];
+    document.getElementById('listePieces').innerHTML = P.length ? P.map(function(p){
+      return '<div class="piece"><div class="img"><img loading="lazy" src="'+esc((p.photos&&p.photos[0])||GEN)+'" alt="'+esc(tr(p,'nom'))+'"></div><h3>'+esc(tr(p,'nom'))+'</h3><small>'+esc(tr(p,'detail')||'')+'</small><div class="prix">'+esc(prix(p.prix))+'</div></div>';
+    }).join('') : '<div class="vide">'+t('pvide')+'</div>';
+    var dl='';
+    if(C.telephone) dl+='<div><dt>'+t('l.tel')+'</dt><dd>'+esc(C.telephone)+'</dd></div>';
+    if(C.email) dl+='<div><dt>'+t('l.mail')+'</dt><dd>'+esc(C.email)+'</dd></div>';
+    if(C.atelier) dl+='<div><dt>'+t('l.atelier')+'</dt><dd>'+esc(tr(C,'atelier'))+'</dd></div>';
+    document.getElementById('coordonnees').innerHTML = dl;
+  }
   document.getElementById('an').textContent = new Date().getFullYear();
 
   var courante=null, idx=0;
@@ -804,28 +2001,29 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     var c = document.getElementById('compteur'); if(c) c.textContent=(idx+1)+' / '+ph.length;
     document.querySelectorAll('.vignettes img').forEach(function(im,i){im.classList.toggle('on',i===idx);});
   }
-  function rendreFiche(f){
-    courante=f; idx=0;
+  function rendreFiche(f, garderIdx){
+    courante=f; if(!garderIdx) idx=0;
     var v=f.v, ph=galerie(v), multi=ph.length>1, S=SECTION[f.ancre];
-    var rows=''; Object.keys(v.caracteristiques||{}).forEach(function(k){rows+='<tr><td>'+esc(k)+'</td><td>'+esc(v.caracteristiques[k])+'</td></tr>';});
-    var etat = f.type==='projet'&&v.statut==='vente'?'Projet disponible':ETAT[v.statut];
+    var car=tr(v,'caracteristiques')||{}, rows=''; Object.keys(car).forEach(function(k){rows+='<tr><td>'+esc(k)+'</td><td>'+esc(car[k])+'</td></tr>';});
+    var etat = f.type==='projet'&&v.statut==='vente'?t('e.projet'):ETAT(v.statut);
+    var leg=tr(v,'legendes'), trav=tr(v,'travaux'), note=tr(v,'prix_note');
     document.getElementById('fiche').innerHTML =
-      '<div class="fil"><a class="ret" href="#'+f.ancre+'">'+S.retour+'</a><span class="label">'+esc(etat)+'</span></div>'+
-      '<div class="principale"><img id="grandeImg" src="'+esc(ph[0]||GEN)+'" alt="'+esc(v.marque+' '+v.modele)+'">'+
-      (multi?'<button class="nav-ph prec" aria-label="Photo précédente">‹</button><button class="nav-ph suiv" aria-label="Photo suivante">›</button><span class="compteur" id="compteur"></span>':'')+
-      (ph.length?'':'<span class="mention">Photographies sur demande</span>')+'</div>'+
+      '<div class="fil"><a class="ret" href="#'+f.ancre+'">'+t(S.retour)+'</a><span class="label">'+esc(etat)+'</span></div>'+
+      '<div class="principale"><img id="grandeImg" src="'+esc(ph[0]||GEN)+'" alt="'+esc(v.marque+' '+modele(v))+'">'+
+      (multi?'<button class="nav-ph prec" aria-label="'+t('ph.prec')+'">‹</button><button class="nav-ph suiv" aria-label="'+t('ph.suiv')+'">›</button><span class="compteur" id="compteur"></span>':'')+
+      (ph.length?'':'<span class="mention">'+t('mention')+'</span>')+'</div>'+
       (multi?'<div class="vignettes">'+ph.map(function(p,i){return '<img src="'+esc(p)+'" data-i="'+i+'" alt="">';}).join('')+'</div>':'')+
       '<div class="fiche-corps"><div>'+
         '<div class="label r">'+esc(v.marque)+(v.annee?' · '+esc(v.annee):'')+'</div>'+
-        '<h1>'+esc(v.marque)+' '+esc(v.modele)+'</h1><p class="accroche">'+esc(v.accroche)+'</p>'+
-        '<div class="desc">'+(v.description||[]).map(function(t){return '<p>'+esc(t)+'</p>';}).join('')+'</div>'+
-        (v.videos&&v.videos.length?'<div class="videos">'+v.videos.map(function(x){return '<figure><video controls playsinline preload="metadata"'+(x.affiche?' poster="'+esc(x.affiche)+'"':'')+'><source src="'+esc(x.src)+'" type="video/mp4"></video>'+(x.legende?'<figcaption class="label">'+esc(x.legende)+'</figcaption>':'')+'</figure>';}).join('')+'</div>':'')+
-        (v.travaux&&v.travaux.length?'<div class="travaux"><div class="label">'+S.travaux+'</div><ul>'+v.travaux.map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul></div>':'')+
-      '</div><aside class="encart"><div class="label">Prix</div><div class="prix">'+esc(prixTxt(v))+'</div>'+
-        (v.prix_note&&v.statut!=='vendu'?'<p class="note" style="margin:-18px 0 30px">'+esc(v.prix_note)+'</p>':'')+
+        '<h1>'+esc(v.marque)+' '+esc(modele(v))+'</h1><p class="accroche">'+esc(tr(v,'accroche'))+'</p>'+
+        '<div class="desc">'+(tr(v,'description')||[]).map(function(x){return '<p>'+esc(x)+'</p>';}).join('')+'</div>'+
+        (v.videos&&v.videos.length?'<div class="videos">'+v.videos.map(function(x,i){var lg=(leg&&leg[i])||x.legende; return '<figure><video controls playsinline preload="metadata"'+(x.affiche?' poster="'+esc(x.affiche)+'"':'')+'><source src="'+esc(x.src)+'" type="video/mp4"></video>'+(lg?'<figcaption class="label">'+esc(lg)+'</figcaption>':'')+'</figure>';}).join('')+'</div>':'')+
+        (trav&&trav.length?'<div class="travaux"><div class="label">'+t(S.travaux)+'</div><ul>'+trav.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>':'')+
+      '</div><aside class="encart"><div class="label">'+t('prix')+'</div><div class="prix">'+esc(prixTxt(v))+'</div>'+
+        (note&&v.statut!=='vendu'?'<p class="note" style="margin:-18px 0 30px">'+esc(note)+'</p>':'')+
         '<table>'+rows+'</table>'+
-        '<a class="bouton r" href="#contact" id="demande">'+(v.statut==='vendu'?'Nous confier une recherche':'Demander des informations')+'</a>'+
-        '<p class="note">Visite à l\'atelier sur rendez-vous uniquement.</p></aside></div>';
+        '<a class="bouton r" href="#contact" id="demande">'+(v.statut==='vendu'?t('b.rech'):t('b.info'))+'</a>'+
+        '<p class="note">'+t('n.visite')+'</p></aside></div>';
     if(multi){
       document.querySelector('.prec').onclick=function(){idx=(idx-1+ph.length)%ph.length;afficherPhoto();};
       document.querySelector('.suiv').onclick=function(){idx=(idx+1)%ph.length;afficherPhoto();};
@@ -833,8 +2031,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       afficherPhoto();
     }
     document.getElementById('demande').onclick=function(){
-      document.getElementById('sujet').value = f.type==='projet'&&v.statut!=='vendu'?"Réservation d'un projet":"Achat d'un véhicule";
-      document.getElementById('message').value = (v.statut==='vendu'?'Je recherche une auto comparable à : ':'Je suis intéressé par : ')+v.marque+' '+v.modele+(v.annee?' ('+v.annee+')':'')+'.\n';
+      document.getElementById('sujet').value = f.type==='projet'&&v.statut!=='vendu'?'reservation':'achat';
+      document.getElementById('message').value = (v.statut==='vendu'?t('msg.rech'):t('msg.int'))+v.marque+' '+modele(v)+(v.annee?' ('+v.annee+')':'')+'.\n';
     };
   }
   document.addEventListener('keydown',function(e){
@@ -864,12 +2062,25 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   document.getElementById('burger').onclick=function(){menu.classList.toggle('ouvert');};
   menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('ouvert');});});
 
+  // Changement de langue
+  function appliquerLangue(){
+    traduirePage(); rendreListes();
+    if(courante && document.body.classList.contains('fiche')) rendreFiche(courante,true);
+    if(window.__observer) window.__observer();
+    document.querySelectorAll('.carte,.piece').forEach(function(e){e.classList.add('vu');});
+  }
+  document.querySelectorAll('#langues button').forEach(function(b){
+    b.onclick=function(){ LANG=b.dataset.l; try{localStorage.setItem('mccLang',LANG);}catch(e){}
+      if(/[?&]lang=/.test(location.search)) history.replaceState(null,'',location.pathname+location.hash);
+      appliquerLangue(); menu.classList.remove('ouvert'); };
+  });
+
   document.getElementById('formulaire').addEventListener('submit',function(e){
     e.preventDefault();
-    var f=e.target, corps=f.message.value+'\n\n'+f.nom.value+' — '+f.joindre.value;
-    var lien='mailto:'+C.email+'?subject='+encodeURIComponent('[Site MCC Motors] '+f.sujet.value)+'&body='+encodeURIComponent(corps);
+    var f=e.target, sel=f.sujet.options[f.sujet.selectedIndex], corps=f.message.value+'\n\n'+f.nom.value+' — '+f.joindre.value;
+    var lien='mailto:'+C.email+'?subject='+encodeURIComponent('[Site MCC Motors] '+sel.text)+'&body='+encodeURIComponent(corps);
     var r=document.getElementById('retour'); r.style.display='block';
-    r.innerHTML='Merci. Pour finaliser l\'envoi, <a href="'+lien+'">ouvrez votre messagerie</a>, ou écrivez-nous directement à '+esc(C.email)+'.';
+    r.innerHTML=t('merci').replace('{lien}',lien).replace('{mail}',esc(C.email));
   });
 
   // Accueil : défilement des activités
@@ -904,7 +2115,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     if(v.readyState>=4) jouer(); else { v.addEventListener('canplaythrough',jouer); setTimeout(jouer,2500); }
     setTimeout(finir,11000);
   }
-  route(); observer();
+  traduirePage(); rendreListes(); route(); observer();
 })();
 </script>
 </body>
