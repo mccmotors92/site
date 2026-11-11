@@ -3,7 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MCC Motors</title>
+<title>MCC Motors — Automobiles de collection anglaises, Yvelines</title>
+<meta name="description" content="MCC Motors : achat et vente de voitures classiques anglaises (Jaguar Type-E, Triumph, Austin Healey, Land Rover), autos à restaurer et supervision de restauration. Yvelines, sur rendez-vous.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MCC Motors">
+<meta property="og:title" content="MCC Motors — Automobiles de collection">
+<meta property="og:description" content="Voitures classiques anglaises : achat, vente, autos à restaurer et supervision de restauration. Yvelines, sur rendez-vous.">
+<meta property="og:image" content="https://mccmotors.fr/img/partage.jpg">
+<meta property="og:url" content="https://mccmotors.fr/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mccmotors.fr/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0f241b">
 <link rel="preload" href="img/intro.mp4" as="video" type="video/mp4">
 <link rel="preload" href="img/intro-poster.jpg" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,6 +183,7 @@ textarea{min-height:110px;resize:vertical}
 .bouton.r{border-color:var(--rouge);background:var(--rouge);color:#0f241b;font-weight:600}
 .bouton.r:hover{background:var(--rouge2);border-color:var(--rouge2)}
 .retour-msg{display:none;color:var(--gris);font-size:14.5px;border-left:1px solid var(--rouge);padding-left:16px}
+.partager{display:block;width:100%;margin:14px 0 0;background:none;border:1px solid var(--trait2);color:#c9bea4;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;padding:15px;cursor:pointer;transition:border-color .2s,color .2s}.partager:hover{border-color:var(--rouge);color:var(--ivoire)}
 .lien-ml{border-bottom:1px solid var(--trait)}.lien-ml:hover{color:var(--ivoire)}
 .mentions{max-width:820px;padding:150px 0 130px}.mentions h1{font-size:clamp(44px,6vw,72px);margin:28px 0 50px}.mentions h2{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--rouge2);margin:44px 0 14px}.mentions p{color:#cfc6b0;font-size:15.5px;margin:0 0 12px}.mentions a{border-bottom:1px solid var(--rouge)}
 .retour-msg a{color:var(--ivoire);border-bottom:1px solid var(--rouge)}
@@ -1361,7 +1374,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "envoi": "Envoi en cours…",
   "envoye": "Merci, votre message a bien été envoyé. Nous vous répondons personnellement dans les meilleurs délais.",
   "erreur": "L'envoi n'a pas abouti. Écrivez-nous directement à <a href=\"mailto:{mail}\">{mail}</a>.",
-  "retour": "Retour au site"
+  "retour": "Retour au site",
+  "partager": "Partager cette auto",
+  "copie": "Lien copié"
  },
  "en": {
   "nav.veh": "Cars",
@@ -1484,7 +1499,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "envoi": "Sending…",
   "envoye": "Thank you, your message has been sent. We will reply to you personally as soon as possible.",
   "erreur": "Your message could not be sent. Please write to us directly at <a href=\"mailto:{mail}\">{mail}</a>.",
-  "retour": "Back to the site"
+  "retour": "Back to the site",
+  "partager": "Share this car",
+  "copie": "Link copied"
  },
  "de": {
   "nav.veh": "Fahrzeuge",
@@ -1607,7 +1624,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "envoi": "Wird gesendet…",
   "envoye": "Vielen Dank, Ihre Nachricht wurde gesendet. Wir antworten Ihnen persönlich und so schnell wie möglich.",
   "erreur": "Die Nachricht konnte nicht gesendet werden. Schreiben Sie uns bitte direkt an <a href=\"mailto:{mail}\">{mail}</a>.",
-  "retour": "Zurück zur Website"
+  "retour": "Zurück zur Website",
+  "partager": "Fahrzeug teilen",
+  "copie": "Link kopiert"
  },
  "pt": {
   "nav.veh": "Veículos",
@@ -1730,7 +1749,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "envoi": "A enviar…",
   "envoye": "Obrigado, a sua mensagem foi enviada. Responder-lhe-emos pessoalmente com a maior brevidade.",
   "erreur": "Não foi possível enviar a mensagem. Escreva-nos diretamente para <a href=\"mailto:{mail}\">{mail}</a>.",
-  "retour": "Voltar ao site"
+  "retour": "Voltar ao site",
+  "partager": "Partilhar este automóvel",
+  "copie": "Ligação copiada"
  }
 }
 </script>
@@ -2054,6 +2075,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         (note&&v.statut!=='vendu'?'<p class="note" style="margin:-18px 0 30px">'+esc(note)+'</p>':'')+
         '<table>'+rows+'</table>'+
         '<a class="bouton r" href="#contact" id="demande">'+(v.statut==='vendu'?t('b.rech'):t('b.info'))+'</a>'+
+        '<button class="partager" id="partager">'+t('partager')+'</button>'+
         '<p class="note">'+t('n.visite')+'</p></aside></div>';
     if(multi){
       document.querySelector('.prec').onclick=function(){idx=(idx-1+ph.length)%ph.length;afficherPhoto();};
@@ -2061,6 +2083,11 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       document.querySelectorAll('.vignettes img').forEach(function(im){im.onclick=function(){idx=+im.dataset.i;afficherPhoto();};});
       afficherPhoto();
     }
+    document.getElementById('partager').onclick=function(){
+      var u='https://mccmotors.fr/v/'+v.id+'.html', b=this, titre=v.marque+' '+modele(v);
+      if(navigator.share){ navigator.share({title:titre, url:u}).catch(function(){}); return; }
+      (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){ b.textContent=t('copie'); setTimeout(function(){b.textContent=t('partager');},2500); },function(){ window.prompt(t('partager'),u); });
+    };
     document.getElementById('demande').onclick=function(){
       document.getElementById('sujet').value = f.type==='projet'&&v.statut!=='vendu'?'reservation':'achat';
       document.getElementById('message').value = (v.statut==='vendu'?t('msg.rech'):t('msg.int'))+v.marque+' '+modele(v)+(v.annee?' ('+v.annee+')':'')+'.\n';
