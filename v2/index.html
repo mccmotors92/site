@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MCC Motors — prototype nouvelle version</title>
+<link rel="icon" href="../favicon.png" type="image/png">
+<link rel="preload" href="fonts/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Bodoni;font-weight:400;font-display:swap;src:url(fonts/bodoni-moda-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Bodoni;font-weight:400;font-style:italic;font-display:swap;src:url(fonts/bodoni-moda-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:Bodoni;font-weight:500;font-display:swap;src:url(fonts/bodoni-moda-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Bodoni;font-weight:500;font-style:italic;font-display:swap;src:url(fonts/bodoni-moda-latin-500-italic.woff2) format("woff2")}
+@font-face{font-family:Tight;font-weight:300;font-display:swap;src:url(fonts/inter-tight-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:Tight;font-weight:400;font-display:swap;src:url(fonts/inter-tight-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Tight;font-weight:500;font-display:swap;src:url(fonts/inter-tight-latin-500-normal.woff2) format("woff2")}
+
+:root{
+  --nuit:#07130d; --vert:#0c1f16; --vert2:#143325; --racing:#1d5a40; --trait:rgba(237,227,204,.14);
+  --laiton:#cfa670; --laiton2:#e6c592; --ivoire:#f3ecd9; --gris:#8f9a8f;
+  --d:Bodoni,"Bodoni 72",Didot,serif; --t:Tight,system-ui,sans-serif;
+  --pad:clamp(20px,4.4vw,72px); --e:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--nuit)}
+body{background:var(--nuit);color:var(--ivoire);font-family:var(--t);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+em{font-style:italic;color:var(--laiton)}
+.lab{font-size:11px;font-weight:500;letter-spacing:.34em;text-transform:uppercase}
+::selection{background:var(--laiton);color:var(--nuit)}
+
+/* En-tête */
+header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px var(--pad);transition:background .4s,backdrop-filter .4s,padding .4s}
+header.plein{background:rgba(7,19,13,.72);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);padding-block:12px}
+header img{height:46px;width:auto}
+header nav{display:flex;gap:clamp(18px,3vw,44px);align-items:center}
+header nav a{font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;position:relative;padding:6px 0;color:#dcd4bf}
+header nav a:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--laiton);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--e)}
+header nav a:hover:after{transform:scaleX(1);transform-origin:left}
+header .proto{font-size:10px;letter-spacing:.2em;border:1px solid var(--laiton);color:var(--laiton);padding:5px 9px;border-radius:99px}
+@media (max-width:760px){header nav a:not(.keep){display:none}header img{height:36px}}
+
+/* Accueil : ouverture */
+.ouverture{position:relative;height:100svh;min-height:620px;overflow:hidden}
+.ouverture video,.ouverture .fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ouverture:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,19,13,.7) 0,rgba(7,19,13,0) 26%,rgba(7,19,13,0) 48%,rgba(7,19,13,.94) 100%)}
+.ouverture .txt{position:absolute;z-index:2;left:var(--pad);right:var(--pad);bottom:clamp(34px,7vh,84px);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+h1{font-family:var(--d);font-weight:400;font-size:clamp(54px,11.2vw,190px);line-height:.86;letter-spacing:-.035em}
+h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
+h1 .l span{display:block;transform:translateY(105%);animation:monte 1.25s var(--e) forwards}
+h1 .l:nth-child(2) span{animation-delay:.14s}
+@keyframes monte{to{transform:none}}
+.ouverture .sous{max-width:330px;font-size:15px;line-height:1.6;color:#d6cdb7;opacity:0;animation:fondu 1.2s .7s forwards}
+.ouverture .sous b{display:block;margin-bottom:16px;color:var(--laiton)}
+@keyframes fondu{to{opacity:1}}
+.defile{position:absolute;z-index:2;left:50%;bottom:22px;width:1px;height:46px;background:linear-gradient(var(--laiton),transparent);animation:goutte 2.4s infinite var(--e)}
+@keyframes goutte{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* Collection : une auto par écran */
+.intro-col{padding:clamp(80px,13vh,150px) var(--pad) clamp(30px,5vh,60px);display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.intro-col h2{font-family:var(--d);font-weight:400;font-size:clamp(40px,6.4vw,104px);line-height:.95;letter-spacing:-.03em}
+.intro-col p{max-width:360px;color:var(--gris);font-size:15px;line-height:1.6}
+.auto{position:relative;display:block;height:100svh;min-height:600px;overflow:hidden;background:radial-gradient(90% 75% at 50% 46%,var(--racing) 0,var(--vert) 58%,var(--nuit) 100%);border-top:1px solid var(--trait)}
+.auto .fant{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);white-space:nowrap;font-family:var(--d);font-style:italic;font-size:clamp(120px,27vw,470px);line-height:1;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(207,166,112,.34);pointer-events:none;user-select:none}
+.auto .ph{position:absolute;left:50%;top:47%;width:min(118vw,1500px);aspect-ratio:3/2;transform:translate(-50%,-50%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 58%,transparent 100%)}
+.auto .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--e)}
+.auto:hover .ph img{transform:scale(1.035)}
+.auto .rang{position:absolute;left:var(--pad);top:clamp(96px,14vh,130px);display:flex;align-items:baseline;gap:16px;color:var(--laiton)}
+.auto .rang b{font-family:var(--d);font-weight:400;font-size:clamp(34px,4vw,60px);color:var(--ivoire);letter-spacing:-.02em}
+.auto .bas{position:absolute;left:var(--pad);right:var(--pad);bottom:clamp(28px,6vh,64px);display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.auto h3{font-family:var(--d);font-weight:400;font-size:clamp(46px,8.6vw,150px);line-height:.88;letter-spacing:-.035em}
+.auto h3.long{font-size:clamp(38px,5.6vw,96px)}
+.auto .acc{margin-top:14px;font-size:clamp(14px,1.25vw,18px);color:#d6cdb7;max-width:520px}
+.auto .dr{text-align:right;flex-shrink:0}
+.auto .prix{font-family:var(--d);font-size:clamp(24px,3vw,46px);letter-spacing:-.02em}
+.rond{display:inline-flex;align-items:center;gap:14px;margin-top:16px;font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase}
+.rond i{width:54px;height:54px;border-radius:50%;border:1px solid var(--laiton);display:grid;place-items:center;font-style:normal;font-size:18px;transition:background .4s,color .4s,transform .6s var(--e)}
+.auto:hover .rond i,.rond:hover i{background:var(--laiton);color:var(--nuit);transform:rotate(-45deg)}
+@media (max-width:760px){.auto .bas{flex-direction:column;align-items:flex-start}.auto .dr{text-align:left}.auto .ph{width:150vw;top:42%}}
+
+/* Animations liées au défilement (navigateurs récents) */
+@supports (animation-timeline: view()){
+  .auto .ph{animation:approche linear both;animation-timeline:view();animation-range:entry 0% cover 34%}
+  @keyframes approche{from{scale:.84;opacity:.35}to{scale:1;opacity:1}}
+  .auto .fant{animation:glisse linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  @keyframes glisse{from{translate:16vw 0}to{translate:-16vw 0}}
+  .rev{animation:rev linear both;animation-timeline:view();animation-range:entry 5% cover 32%}
+  @keyframes rev{from{opacity:0;translate:0 46px}to{opacity:1;translate:0 0}}
+  .manif p{background:linear-gradient(90deg,var(--ivoire) 50%,rgba(243,236,217,.16) 50%) 100% 0/200% 100% no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;animation:lit linear both;animation-timeline:view();animation-range:cover 12% cover 62%}
+  @keyframes lit{to{background-position:0 0}}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 .l span{transform:none}.ouverture .sous{opacity:1}}
+
+/* Compteur latéral */
+.compteur{position:fixed;right:calc(var(--pad) - 6px);top:50%;z-index:40;transform:translateY(-50%);writing-mode:vertical-rl;font-size:11px;font-weight:500;letter-spacing:.34em;color:var(--laiton);opacity:0;transition:opacity .5s;pointer-events:none}
+.compteur.on{opacity:1}
+@media (max-width:760px){.compteur{display:none}}
+
+/* Vendues */
+.vendues{padding:clamp(80px,12vh,140px) var(--pad)}
+.vendues .lab{color:var(--laiton);margin-bottom:26px}
+.vendues li{list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:20px;border-top:1px solid var(--trait);padding:22px 0;font-family:var(--d);font-size:clamp(26px,4vw,62px);letter-spacing:-.03em;color:rgba(243,236,217,.42);transition:color .4s,padding .5s var(--e)}
+.vendues li:last-child{border-bottom:1px solid var(--trait)}
+.vendues li:hover{color:var(--ivoire);padding-left:18px}
+.vendues li span{font-family:var(--t);font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--laiton)}
+
+/* Manifeste */
+.manif{padding:clamp(90px,16vh,200px) var(--pad);background:var(--vert)}
+.manif .lab{color:var(--laiton);margin-bottom:34px}
+.manif p{font-family:var(--d);font-size:clamp(30px,5vw,84px);line-height:1.06;letter-spacing:-.03em;max-width:1400px}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--trait);margin-top:clamp(60px,10vh,120px);border:1px solid var(--trait)}
+.trois div{background:var(--vert);padding:34px 30px 40px}
+.trois i{font-family:var(--d);font-style:italic;color:var(--laiton);font-size:22px}
+.trois b{display:block;font-family:var(--d);font-weight:400;font-size:34px;letter-spacing:-.02em;margin:18px 0 10px}
+.trois span{color:var(--gris);font-size:14.5px;line-height:1.6}
+@media (max-width:860px){.trois{grid-template-columns:1fr}}
+
+/* Métiers : bandeau défilant */
+.metiers{overflow:hidden;border-block:1px solid var(--trait);padding:26px 0;background:var(--nuit)}
+.metiers div{display:flex;gap:56px;width:max-content;animation:file 46s linear infinite;font-family:var(--d);font-style:italic;font-size:clamp(26px,3.4vw,50px);letter-spacing:-.02em;color:rgba(243,236,217,.55)}
+.metiers span:nth-child(even){color:var(--laiton);font-style:normal;font-size:.5em;align-self:center}
+@keyframes file{to{transform:translateX(-50%)}}
+
+/* Contact */
+.contact{padding:clamp(100px,18vh,220px) var(--pad) clamp(60px,9vh,110px);text-align:center;background:radial-gradient(70% 90% at 50% 100%,var(--vert2),var(--nuit) 70%)}
+.contact h2{font-family:var(--d);font-weight:400;font-size:clamp(46px,9.4vw,170px);line-height:.9;letter-spacing:-.04em}
+.contact .bts{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:54px}
+.bt{display:inline-flex;align-items:center;gap:12px;padding:20px 34px;border-radius:99px;border:1px solid var(--laiton);font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;transition:background .4s,color .4s}
+.bt:hover,.bt.plein{background:var(--laiton);color:var(--nuit)}
+.bt.plein:hover{background:var(--laiton2)}
+footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:26px var(--pad);border-top:1px solid var(--trait);font-size:12px;color:var(--gris)}
+
+/* Fiche */
+.f-haut{position:relative;height:88svh;min-height:520px;overflow:hidden;background:radial-gradient(90% 75% at 50% 46%,var(--racing),var(--vert) 60%,var(--nuit))}
+.f-haut img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.f-haut:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,19,13,.6),rgba(7,19,13,0) 24%,rgba(7,19,13,0) 50%,var(--nuit) 100%)}
+.f-haut .t{position:absolute;z-index:2;left:var(--pad);right:var(--pad);bottom:28px}
+.f-haut .lab{color:var(--laiton)}
+.f-haut h1{font-size:clamp(50px,10vw,170px);margin-top:14px}
+.retour{position:absolute;z-index:3;left:var(--pad);top:96px;font-size:11px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:#dcd4bf}
+.f-corps{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:clamp(34px,6vw,110px);padding:clamp(40px,7vh,90px) var(--pad) clamp(60px,9vh,110px);align-items:start}
+.f-corps .acc{font-family:var(--d);font-style:italic;font-size:clamp(24px,2.6vw,40px);line-height:1.15;letter-spacing:-.02em;color:var(--laiton2);margin-bottom:34px}
+.f-corps .desc p{font-size:17px;line-height:1.75;color:#d6cdb7;margin-bottom:18px;max-width:680px}
+.f-corps h4{margin:44px 0 16px;color:var(--laiton)}
+.f-corps ul{list-style:none;max-width:680px}
+.f-corps li{border-top:1px solid var(--trait);padding:15px 0;display:flex;gap:18px;font-size:16px}
+.f-corps li:before{content:counter(n,decimal-leading-zero);counter-increment:n;font-family:var(--d);font-style:italic;color:var(--laiton)}
+.f-corps ul{counter-reset:n}
+.panneau{position:sticky;top:96px;border:1px solid var(--trait);border-radius:18px;padding:30px;background:rgba(20,51,37,.38);backdrop-filter:blur(10px)}
+.panneau .prix{font-family:var(--d);font-size:46px;letter-spacing:-.03em;margin:8px 0 6px}
+.panneau .note{font-size:13px;color:var(--gris);line-height:1.5;margin-bottom:10px}
+.panneau table{width:100%;border-collapse:collapse;margin:18px 0 24px;font-size:14px}
+.panneau td{padding:13px 0;border-top:1px solid var(--trait);vertical-align:top}
+.panneau td:first-child{color:var(--gris);padding-right:14px;white-space:nowrap}
+.panneau td:last-child{text-align:right}
+.panneau .bt{width:100%;justify-content:center;margin-top:10px}
+@media (max-width:980px){.f-corps{grid-template-columns:1fr}.panneau{position:static}}
+
+/* Galerie horizontale */
+.gal-t{display:flex;justify-content:space-between;align-items:baseline;padding:0 var(--pad) 22px}
+.gal-t h4{color:var(--laiton)}
+.gal-t span{font-family:var(--d);font-size:22px}
+.gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 26px;scrollbar-width:thin;scrollbar-color:var(--laiton) transparent}
+.gal img{height:min(68svh,620px);width:auto;max-width:86vw;object-fit:cover;scroll-snap-align:center;border-radius:6px;cursor:zoom-in;transition:opacity .4s}
+.gal:hover img:not(:hover){opacity:.62}
+.f-video{padding:30px var(--pad) 0}.f-video video{width:min(100%,980px);border-radius:8px}
+.suivante{display:block;border-top:1px solid var(--trait);margin-top:clamp(50px,8vh,100px);padding:clamp(50px,9vh,110px) var(--pad);text-align:center}
+.suivante .lab{color:var(--laiton)}
+.suivante b{display:block;font-family:var(--d);font-weight:400;font-size:clamp(44px,8vw,140px);letter-spacing:-.04em;line-height:1;margin-top:16px;transition:letter-spacing .7s var(--e)}
+.suivante:hover b{letter-spacing:-.01em}
+
+/* Visionneuse */
+dialog{border:0;padding:0;background:rgba(4,10,7,.96);width:100vw;height:100dvh;max-width:none;max-height:none;color:var(--ivoire)}
+dialog::backdrop{background:rgba(4,10,7,.96)}
+dialog img{position:absolute;inset:0;margin:auto;max-width:94vw;max-height:88dvh;object-fit:contain}
+dialog button{position:absolute;z-index:2;width:56px;height:56px;border-radius:50%;border:1px solid var(--trait);font-size:20px;display:grid;place-items:center;transition:background .3s,color .3s}
+dialog button:hover{background:var(--laiton);color:var(--nuit)}
+dialog .x{right:22px;top:22px}dialog .p{left:22px;top:50%;translate:0 -50%}dialog .s{right:22px;top:50%;translate:0 -50%}
+dialog .n{position:absolute;left:50%;bottom:20px;translate:-50% 0;font-size:11px;letter-spacing:.3em;color:var(--laiton)}
+
+/* Transitions entre pages */
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.5s}
+::view-transition-group(auto){animation-duration:.8s;animation-timing-function:var(--e)}
+::view-transition-old(auto),::view-transition-new(auto){height:100%;object-fit:cover}
+</style>
+</head>
+<body>
+<header id="tete">
+  <a href="#/"><img src="../img/logo-mcc.png" alt="MCC Motors" width="720" height="171"></a>
+  <nav>
+    <a href="#/" data-ancre="collection">Collection</a>
+    <a href="#/" data-ancre="maison">La maison</a>
+    <a href="#/" data-ancre="contact" class="keep">Contact</a>
+    <span class="proto">PROTOTYPE</span>
+  </nav>
+</header>
+<main id="app"></main>
+<div class="compteur" id="compteur"></div>
+<dialog id="vis"><button class="x" aria-label="Fermer">✕</button><button class="p" aria-label="Précédente">←</button><button class="s" aria-label="Suivante">→</button><img alt=""><div class="n"></div></dialog>
+
+<script>
+(async function(){
+  // Le contenu vient du site en ligne : une seule source, toujours à jour.
+  var src = await fetch('../index.html',{cache:'no-cache'}).then(function(r){return r.text();});
+  var D = JSON.parse(src.match(/<script id="donnees" type="application\/json">\s*([\s\S]*?)\s*<\/script>/)[1]);
+  var C = D.contact, app = document.getElementById('app'), tete = document.getElementById('tete'), cpt = document.getElementById('compteur');
+  function e(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function im(p){return '../'+p;}
+  var TOUT = [];
+  ['vehicules','projets'].forEach(function(l){ D[l].forEach(function(v){ if(!v.masque) TOUT.push(Object.assign({liste:l},v)); }); });
+  var DISPO = TOUT.filter(function(v){return v.statut!=='vendu';}), VENDU = TOUT.filter(function(v){return v.statut==='vendu';});
+  function prix(v){ return v.statut==='vendu'?'Vendue':(v.prix||'Nous consulter'); }
+  function etat(v){ return v.liste==='projets'?'Projet à restaurer':'Disponible'; }
+  function wa(v){ var m='Bonjour, je vous contacte depuis le site MCC Motors.'+(v?' Je suis intéressé par : '+v.marque+' '+v.modele+(v.annee?' ('+v.annee+')':'')+'.':''); return 'https://wa.me/'+C.whatsapp+'?text='+encodeURIComponent(m); }
+  function deux(n){return (n<10?'0':'')+n;}
+
+  function accueil(){
+    var h = '<section class="ouverture"><video class="fond" src="../img/intro.mp4" poster="../img/hero.jpg" autoplay muted playsinline></video>'+
+      '<div class="txt"><h1><span class="l"><span>Automobiles</span></span><span class="l"><span><em>de collection</em></span></span></h1>'+
+      '<p class="sous"><b class="lab">Voitures classiques anglaises</b>Achat et vente, autos à restaurer et supervision de restauration. Yvelines, sur rendez-vous.</p></div><i class="defile"></i></section>';
+    h += '<div class="intro-col" id="collection"><h2 class="rev">La <em>collection</em></h2><p class="rev">'+DISPO.length+' autos disponibles. Chaque fiche décrit l\'état réel de l\'auto ; l\'historique complet est communiqué sur demande.</p></div>';
+    DISPO.forEach(function(v,i){
+      h += '<a class="auto" href="#/auto/'+e(v.id)+'" data-i="'+(i+1)+'">'+
+        '<div class="fant">'+e(v.modele)+'</div>'+
+        '<div class="ph"><img loading="'+(i?'lazy':'eager')+'" src="'+im(v.vignette||D.visuel_generique)+'" alt="'+e(v.marque+' '+v.modele)+'" data-vt="'+e(v.id)+'"></div>'+
+        '<div class="rang"><b>'+deux(i+1)+'</b><span class="lab">'+e(v.marque)+(v.annee?' · '+e(v.annee):'')+' · '+etat(v)+'</span></div>'+
+        '<div class="bas"><div><h3'+(v.modele.length>12?' class="long"':'')+'>'+e(v.modele)+'</h3><p class="acc">'+e(v.accroche)+'</p></div>'+
+        '<div class="dr"><div class="prix">'+e(prix(v))+'</div><span class="rond">Découvrir <i>→</i></span></div></div></a>';
+    });
+    if(VENDU.length) h += '<section class="vendues"><div class="lab rev">Dernières ventes</div><ul>'+VENDU.map(function(v){return '<li class="rev"><a href="#/auto/'+e(v.id)+'">'+e(v.marque+' '+v.modele)+'</a><span>'+(v.annee?e(v.annee)+' · ':'')+'Vendue</span></li>';}).join('')+'</ul></section>';
+    h += '<section class="manif" id="maison"><div class="lab">La maison</div><p>Une automobile de collection se choisit, se comprend, puis se transmet. Notre métier est de sécuriser chacune de ces étapes.</p>'+
+      '<div class="trois"><div class="rev"><i>01</i><b>Choisir</b><span>Des autos sélectionnées pour leur base saine et leur historique, dont l\'état est décrit tel qu\'il est.</span></div>'+
+      '<div class="rev"><i>02</i><b>Restaurer</b><span>Un cahier des charges, un budget, des ateliers partenaires éprouvés et un suivi photographique à chaque étape.</span></div>'+
+      '<div class="rev"><i>03</i><b>Transmettre</b><span>Un dossier complet — factures, relevés, certificats — et une immatriculation en règle.</span></div></div></section>';
+    var m = ['Métrologie','Rectification moteur','Mécanique','Carrosserie','Peinture','Chromage','Sellerie','Pose de capote','Réfection d\'habitacle'];
+    var bande = m.map(function(x){return '<span>'+x+'</span><span>✦</span>';}).join('');
+    h += '<div class="metiers"><div>'+bande+bande+'</div></div>';
+    h += '<section class="contact" id="contact"><h2 class="rev">Parlons de<br><em>votre auto</em></h2><div class="bts rev"><a class="bt plein" target="_blank" rel="noopener" href="'+wa()+'">WhatsApp</a><a class="bt" href="mailto:'+e(C.email)+'">'+e(C.email)+'</a></div></section>';
+    h += '<footer><span>© '+new Date().getFullYear()+' MCC Motors — Yvelines, sur rendez-vous uniquement</span><span>Prototype de la nouvelle version · <a href="../" style="border-bottom:1px solid">site actuel</a></span></footer>';
+    app.innerHTML = h;
+    var v = app.querySelector('video'); if(v) v.play().catch(function(){});
+    majCompteur();
+  }
+
+  var photos=[], ip=0, vis=document.getElementById('vis');
+  function montrer(i){ ip=(i+photos.length)%photos.length; vis.querySelector('img').src=im(photos[ip]); vis.querySelector('.n').textContent=deux(ip+1)+' / '+deux(photos.length); }
+  vis.querySelector('.x').onclick=function(){vis.close();};
+  vis.querySelector('.p').onclick=function(){montrer(ip-1);};
+  vis.querySelector('.s').onclick=function(){montrer(ip+1);};
+  vis.addEventListener('click',function(ev){ if(ev.target===vis) vis.close(); });
+  document.addEventListener('keydown',function(ev){ if(!vis.open) return; if(ev.key==='ArrowRight') montrer(ip+1); if(ev.key==='ArrowLeft') montrer(ip-1); });
+
+  function fiche(id){
+    var v = TOUT.filter(function(x){return x.id===id;})[0]; if(!v){ accueil(); return; }
+    cpt.classList.remove('on');
+    photos = (v.vignette?[v.vignette]:[]).concat(v.photos||[]); if(!photos.length) photos=[D.visuel_generique];
+    var car = v.caracteristiques||{}, rows = Object.keys(car).map(function(k){return '<tr><td>'+e(k)+'</td><td>'+e(car[k])+'</td></tr>';}).join('');
+    var i = DISPO.indexOf(DISPO.filter(function(x){return x.id===id;})[0]), suiv = DISPO[(i+1)%DISPO.length] || DISPO[0];
+    var h = '<section class="f-haut"><a class="retour" href="#/">← Collection</a><img src="'+im(photos[0])+'" alt="" style="view-transition-name:auto">'+
+      '<div class="t"><div class="lab">'+e(v.marque)+(v.annee?' · '+e(v.annee):'')+' · '+(v.statut==='vendu'?'Vendue':etat(v))+'</div><h1><span class="l"><span>'+e(v.modele)+'</span></span></h1></div></section>'+
+      '<section class="f-corps"><div><p class="acc">'+e(v.accroche)+'</p><div class="desc">'+(v.description||[]).map(function(x){return '<p>'+e(x)+'</p>';}).join('')+'</div>'+
+      (v.travaux&&v.travaux.length?'<h4 class="lab">'+(v.liste==='projets'?'Travaux à prévoir':'Travaux réalisés')+'</h4><ul>'+v.travaux.map(function(x){return '<li>'+e(x)+'</li>';}).join('')+'</ul>':'')+'</div>'+
+      '<aside class="panneau"><div class="lab" style="color:var(--laiton)">Prix</div><div class="prix">'+e(prix(v))+'</div>'+(v.prix_note&&v.statut!=='vendu'?'<p class="note">'+e(v.prix_note)+'</p>':'')+
+      '<table>'+rows+'</table><a class="bt plein" target="_blank" rel="noopener" href="'+wa(v)+'">Écrire sur WhatsApp</a><a class="bt" href="mailto:'+e(C.email)+'?subject='+encodeURIComponent(v.marque+' '+v.modele)+'">Demander des informations</a>'+
+      '<p class="note" style="margin:16px 0 0;text-align:center">Visite à l\'atelier sur rendez-vous uniquement.</p></aside></section>';
+    if(photos.length>1) h += '<div class="gal-t"><h4 class="lab">Photographies</h4><span>'+deux(photos.length)+'</span></div><div class="gal">'+photos.map(function(p,k){return '<img loading="lazy" src="'+im(p)+'" data-k="'+k+'" alt="">';}).join('')+'</div>';
+    if(v.videos&&v.videos.length) h += '<div class="f-video">'+v.videos.map(function(x){return '<video controls playsinline preload="metadata"'+(x.affiche?' poster="'+im(x.affiche)+'"':'')+' src="'+im(x.src)+'"></video>';}).join('')+'</div>';
+    if(suiv&&suiv.id!==id) h += '<a class="suivante" href="#/auto/'+e(suiv.id)+'"><span class="lab">Auto suivante</span><b>'+e(suiv.marque+' '+suiv.modele)+'</b></a>';
+    h += '<footer><span>© '+new Date().getFullYear()+' MCC Motors</span><span>Prototype de la nouvelle version</span></footer>';
+    app.innerHTML = h;
+    app.querySelectorAll('.gal img').forEach(function(g){ g.onclick=function(){ montrer(+g.dataset.k); vis.showModal(); }; });
+  }
+
+  var ancre=null, precedent='';
+  function rendre(){
+    var m = location.hash.match(/^#\/auto\/(.+)$/);
+    if(m){ fiche(decodeURIComponent(m[1])); window.scrollTo(0,0); }
+    else { accueil(); var cible = ancre && document.getElementById(ancre); if(cible) cible.scrollIntoView(); else if(precedent){ var a=app.querySelector('.auto[href="#/auto/'+precedent+'"]'); if(a) a.scrollIntoView(); else window.scrollTo(0,0);} ancre=null; }
+    majTete();
+  }
+  function route(){
+    var m = location.hash.match(/^#\/auto\/(.+)$/), id = m?decodeURIComponent(m[1]):'';
+    // L'image de l'auto se transforme d'une page à l'autre
+    var img = id ? app.querySelector('img[data-vt="'+id+'"]') : null;
+    if(img) img.style.viewTransitionName='auto';
+    if(!id && precedent){ /* retour : l'image de la fiche rejoint sa place */ }
+    var faire = function(){ rendre(); if(!id&&precedent){ var r=app.querySelector('img[data-vt="'+precedent+'"]'); if(r){ r.style.viewTransitionName='auto'; setTimeout(function(){r.style.viewTransitionName='';},900);} } precedent = id; };
+    if(document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.startViewTransition(faire); else faire();
+  }
+  function majCompteur(){ var t=null; app.querySelectorAll('.auto').forEach(function(a){ var r=a.getBoundingClientRect(); if(r.top<innerHeight*.5&&r.bottom>innerHeight*.5) t=a; }); if(t){ cpt.textContent=deux(+t.dataset.i)+' — '+deux(DISPO.length); cpt.classList.add('on'); } else cpt.classList.remove('on'); }
+  function majTete(){ tete.classList.toggle('plein', scrollY>40); majCompteur(); }
+  addEventListener('scroll',majTete,{passive:true});
+  addEventListener('hashchange',route);
+  document.querySelectorAll('[data-ancre]').forEach(function(a){ a.addEventListener('click',function(ev){ ancre=a.dataset.ancre; if(!/^#\/auto\//.test(location.hash)){ ev.preventDefault(); document.getElementById(ancre).scrollIntoView({behavior:'smooth'}); ancre=null; } else { precedent=''; } }); });
+  rendre(); precedent = (location.hash.match(/^#\/auto\/(.+)$/)||[])[1]||'';
+})();
+</script>
+</body>
+</html>
