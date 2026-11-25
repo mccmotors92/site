@@ -217,6 +217,17 @@ body.fiche #page-fiche{display:block}
 .principale .agrandir{position:absolute;left:18px;bottom:16px;font:500 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;background:rgba(15,36,27,.6);color:var(--ivoire);border:0;padding:6px 12px;cursor:pointer}
 .travaux h4{font:500 11px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--rouge2);margin:30px 0 2px}
 .travaux h4+ul{margin-top:4px}
+.pieces-r{margin-top:40px}
+.pieces-r table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
+.pieces-r th{font:500 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gris2);text-align:left;padding:0 10px 10px 0;border-bottom:1px solid var(--trait)}
+.pieces-r td{padding:9px 10px 9px 0;border-bottom:1px solid var(--trait);color:#d6cbb0;vertical-align:top}
+.pieces-r .n{text-align:right;white-space:nowrap;padding-right:0}
+.pieces-r th.n{padding-right:0}
+.pieces-r .ref{color:var(--gris2);font-size:12.5px;white-space:nowrap}
+.pieces-r tfoot td{color:var(--ivoire);font-weight:500;border-bottom:0;padding-top:14px}
+.pieces-r .note{color:var(--gris2);font-size:13px;margin-top:10px}
+.pieces-r .q{padding-right:18px!important}
+@media (max-width:640px){.pieces-r .ref{display:none}.pieces-r table{font-size:13px}.pieces-r th{letter-spacing:.12em}}
 .atelier{margin-top:40px}
 .atelier .grille-at{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 .atelier figure{margin:0;cursor:zoom-in}
@@ -495,28 +506,27 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "statut": "vente",
       "prix": "Nous consulter",
       "prix_note": "",
-      "accroche": "Roadster restauré aux États-Unis par un membre du TR Register, remis en route et à la route dans notre atelier.",
+      "accroche": "Une « black plate » californienne restaurée par un membre du TR Register, remise en route et à la route dans notre atelier.",
       "description": [
-        "Triumph TR3A de 1961, châssis TS78580L, conduite à gauche. Teinte blanche, sellerie noire passepoilée de blanc, moquette noire, porte-bagages chromé sur le coffre. Une auto de Californie, qui a conservé sa plaque noire californienne d'époque.",
-        "Elle a été restaurée aux États-Unis par un membre du TR Register, dont elle porte toujours le badge sur la barre d'emblèmes. Après le décès de son propriétaire, elle est restée trois ans à l'arrêt, le temps de la succession.",
-        "Elle a été rapatriée en Europe par notre partenaire néerlandais, avec qui l'un de nos associés travaille chaque semaine depuis dix-neuf ans. Ce passionné de près de soixante-dix ans a toujours su dénicher les bonnes autos aux États-Unis, notamment au sein des clubs de marque et de voitures anciennes.",
-        "À l'atelier, nous avons assuré sa remise en route, puis sa remise à la route (détail et photos ci-dessous). Ce travail confirme une belle auto : pas une restauration de l'année, mais une restauration qui a peu roulé. Compressions bonnes et homogènes sur les quatre cylindres, soubassements sains, peinture bien réalisée, habitacle sans défaut notable.",
-        "Contrôle technique favorable, en cours de validité.",
-        "Documents à jour pour l'importation. En qualité de professionnel, nous prenons en charge l'ensemble des démarches d'immatriculation en carte grise française de collection, au nom de l'acquéreur. Cette prestation est incluse dans le prix."
+        "Elle a conservé sa « California Black Plate » : ces plaques noires à caractères jaunes que la Californie a délivrées de 1963 à 1969. Elles ne restent valables que sur l'auto à laquelle elles ont été attribuées, et à condition qu'elle soit restée immatriculée sans interruption. Pour les amateurs, c'est le signe d'une auto restée en Californie depuis les années soixante, sous un climat sec qui épargne les carrosseries.",
+        "Elle a été restaurée aux États-Unis par un membre du TR Register, dont elle porte toujours le badge sur la barre d'emblèmes. Ces autos de membres de club, suivies par des passionnés qui en connaissent chaque détail, se présentent rarement : elles changent de mains entre initiés ou restent dans la famille. Après le décès de son propriétaire, celle-ci est restée trois ans à l'arrêt, le temps de la succession.",
+        "C'est notre partenaire néerlandais qui a su la faire venir. Professionnel de l'achat et de l'importation d'autos aux États-Unis depuis près de cinquante ans, il travaille avec les mêmes correspondants américains presque depuis ses débuts, et l'un de nos associés échange avec lui chaque semaine depuis dix-neuf ans. C'est ce réseau, tissé au fil des clubs de marque et de voitures anciennes, qui ouvre l'accès à des autos comme celle-ci.",
+        "Les TR3, nous les connaissons bien. Après trois ans d'immobilisation, nous avons choisi une remise en route prudente et méthodique : plutôt que d'attendre que les faiblesses connues se manifestent, nous avons remplacé à neuf ce qui s'use ou se fatigue pendant un stockage et qui cède en général dans les premières centaines de kilomètres. Le freinage d'abord, de l'étrier au maître-cylindre ; puis l'alimentation, l'allumage et l'embrayage.",
+        "Ce travail confirme une belle auto. Ce n'est pas une restauration de l'année, mais une restauration qui a peu roulé : compressions bonnes et homogènes sur les quatre cylindres, soubassements sains, peinture bien réalisée, habitacle sans défaut notable.",
+        "Documents à jour pour l'importation. En qualité de professionnel, nous prenons en charge l'ensemble des démarches d'immatriculation en carte grise française de collection, au nom de l'acquéreur ; cette prestation est incluse."
       ],
       "caracteristiques": {
         "Année": "1961",
         "Châssis": "TS78580L",
-        "Moteur": "Quatre cylindres, 2.0, deux carburateurs SU",
-        "Boîte": "Manuelle, quatre rapports",
+        "Moteur": "Quatre cylindres, 1 991 cm³, deux carburateurs SU",
+        "Boîte": "Manuelle, quatre rapports, sans overdrive",
         "Carrosserie": "Roadster",
         "Conduite": "À gauche",
         "Teinte": "Blanc",
-        "Intérieur": "Noir, passepoil blanc",
+        "Intérieur": "Sellerie noire passepoilée de blanc, moquette noire",
+        "Équipement": "Porte-bagages chromé",
         "Compteur": "21 125 miles (compteur à cinq chiffres)",
-        "Restauration": "États-Unis, par un membre du TR Register",
-        "Contrôle technique": "Favorable, en cours de validité",
-        "Immatriculation": "Carte grise française de collection, démarches incluses"
+        "Contrôle technique": "Favorable, en cours de validité"
       },
       "travaux": [
         {
@@ -577,34 +587,33 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         {
           "src": "img/tr3b-moteur.mp4",
           "affiche": "img/tr3b-moteur.jpg",
-          "legende": "Moteur au ralenti, à la remise en route"
+          "legende": "Moteur au ralenti, après la réfection des carburateurs et avant le nettoyage du compartiment moteur"
         }
       ],
       "trad": {
         "en": {
           "modele": "TR3A",
-          "accroche": "Roadster restored in the United States by a TR Register member, recommissioned and made road-ready in our workshop.",
+          "accroche": "A California \"black plate\" car restored by a TR Register member, recommissioned and made road-ready in our workshop.",
           "description": [
-            "1961 Triumph TR3A, chassis TS78580L, left-hand drive. White, with black upholstery and white piping, black carpets and a chrome luggage rack on the boot lid. A California car that still wears its period black California plate.",
-            "It was restored in the United States by a member of the TR Register, whose badge it still carries on the grille badge bar. After its owner passed away, the car stood unused for three years while the estate was settled.",
-            "It was brought back to Europe by our Dutch partner, with whom one of our partners has worked every week for nineteen years. Now nearly seventy, he has always had a knack for finding the right cars in the United States, notably through marque and classic car clubs.",
-            "In our workshop we recommissioned the car and made it fully road-ready (details and photos below). This work confirmed a fine car: not a fresh restoration, but a restoration that has covered few miles. Good, even compression on all four cylinders, sound underside, well-executed paintwork, an interior with no notable flaws.",
-            "French roadworthiness test passed and currently valid.",
-            "Import paperwork is complete. As a professional dealer, we handle the entire French historic-vehicle registration (carte grise de collection) in the buyer's name. This service is included in the price."
+            "It has kept its \"California Black Plate\": the black plates with yellow characters that California issued from 1963 to 1969. They remain valid only on the car they were issued to, and only if it has been registered without interruption. For enthusiasts, it is the mark of a car that has stayed in California since the sixties, in a dry climate that spares bodywork.",
+            "It was restored in the United States by a member of the TR Register, whose badge it still carries on the grille badge bar. Club members' cars, looked after by enthusiasts who know every detail of them, rarely come up: they change hands among insiders or stay in the family. After its owner passed away, this one stood unused for three years while the estate was settled.",
+            "Our Dutch partner was the one who brought it over. A professional who has been buying and importing cars from the United States for nearly fifty years, he has worked with the same American contacts almost from the start, and one of our partners has spoken with him every week for nineteen years. That network, built up through marque and classic car clubs, is what opens the door to cars like this one.",
+            "We know TR3s well. After three years off the road, we chose a careful, methodical recommissioning: rather than wait for the known weaknesses to show, we replaced with new parts everything that wears or deteriorates during storage and usually fails within the first few hundred kilometres. Brakes first, from caliper to master cylinder; then fuel system, ignition and clutch.",
+            "This work confirmed a fine car. Not a fresh restoration, but a restoration that has covered few miles: good, even compression on all four cylinders, sound underside, well-executed paintwork, an interior with no notable flaws.",
+            "Import paperwork is complete. As a professional dealer, we handle the entire French historic-vehicle registration (carte grise de collection) in the buyer's name; this service is included."
           ],
           "caracteristiques": {
             "Year": "1961",
             "Chassis": "TS78580L",
-            "Engine": "Four-cylinder, 2.0, twin SU carburettors",
-            "Gearbox": "Manual, four-speed",
+            "Engine": "Four-cylinder, 1,991 cc, twin SU carburettors",
+            "Gearbox": "Manual, four-speed, no overdrive",
             "Body": "Roadster",
             "Drive": "Left-hand",
             "Colour": "White",
-            "Interior": "Black, white piping",
+            "Interior": "Black upholstery with white piping, black carpets",
+            "Equipment": "Chrome luggage rack",
             "Odometer": "21,125 miles (five-digit)",
-            "Restoration": "United States, by a TR Register member",
-            "Roadworthiness test": "Passed, currently valid",
-            "Registration": "French historic registration, paperwork included"
+            "Roadworthiness test": "Passed, currently valid"
           },
           "travaux": [
             {
@@ -646,7 +655,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "legendes": [
-            "Engine idling at recommissioning"
+            "Engine idling, after the carburettor rebuild and before the engine bay was cleaned"
           ],
           "atelier_leg": [
             "Compression readings on all four cylinders",
@@ -661,32 +670,62 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Headlamp bowl: seals replaced",
             "Engine bay after recommissioning",
             "Cabin after a full clean"
+          ],
+          "pieces_rempl_leg": [
+            "SU carburettor rebuild kit (twin)",
+            "Carburettor sealing washers",
+            "SU carburettor gaskets",
+            "SU carburettor cork washers",
+            "Air filters",
+            "Mechanical fuel pump",
+            "Contact points",
+            "Oil filters",
+            "Rocker cover gasket",
+            "Brake and clutch master cylinders",
+            "Clutch slave cylinder",
+            "Front caliper repair kits",
+            "Front caliper pistons",
+            "Rear brake shoes (set)",
+            "Rear wheel cylinders",
+            "Brake shoe springs",
+            "Brake shoe springs",
+            "Brake hoses",
+            "Brake hose",
+            "Rubber grommet and bung kit",
+            "Hose clips",
+            "Bonnet hinges (pair)",
+            "Lucas 406 door mirror",
+            "Mirror gasket",
+            "Headlamp bowl seals",
+            "Headlamp bowl finishing seals",
+            "Rear lamp lens seals",
+            "Rear lamp body seals",
+            "Number-plate lamp seal"
           ]
         },
         "de": {
           "modele": "TR3A",
-          "accroche": "In den USA von einem Mitglied des TR Register restauriert, in unserer Werkstatt wieder in Betrieb genommen und straßenfertig gemacht.",
+          "accroche": "Ein kalifornisches „Black Plate“-Fahrzeug, restauriert von einem Mitglied des TR Register, in unserer Werkstatt wieder in Betrieb genommen und straßenfertig gemacht.",
           "description": [
-            "Triumph TR3A von 1961, Fahrgestell TS78580L, Linkslenker. Weiß, schwarze Ausstattung mit weißen Kedern, schwarze Teppiche, verchromter Gepäckträger auf dem Kofferraumdeckel. Ein Fahrzeug aus Kalifornien, das noch sein schwarzes kalifornisches Originalkennzeichen trägt.",
-            "Es wurde in den USA von einem Mitglied des TR Register restauriert, dessen Plakette es noch heute am Emblemhalter trägt. Nach dem Tod des Besitzers stand der Wagen während der Nachlassregelung drei Jahre still.",
-            "Unser niederländischer Partner, mit dem einer unserer Gesellschafter seit neunzehn Jahren wöchentlich zusammenarbeitet, hat ihn nach Europa zurückgeholt. Der fast Siebzigjährige hat schon immer die richtigen Autos in den USA aufgespürt, vor allem über Marken- und Oldtimerclubs.",
-            "In unserer Werkstatt haben wir den Wagen wieder in Betrieb genommen und straßenfertig gemacht (Einzelheiten und Fotos unten). Dabei hat sich ein schönes Fahrzeug bestätigt: keine frische Restaurierung, aber eine Restaurierung mit wenig Laufleistung. Gute, gleichmäßige Kompression auf allen vier Zylindern, gesunder Unterboden, sauber ausgeführte Lackierung, Innenraum ohne nennenswerte Mängel.",
-            "Französische Hauptuntersuchung bestanden und gültig.",
-            "Die Einfuhrpapiere sind vollständig. Als Fachhändler übernehmen wir sämtliche Formalitäten für die französische Oldtimerzulassung (carte grise de collection) auf den Namen des Käufers. Diese Leistung ist im Preis inbegriffen."
+            "Er trägt noch seine „California Black Plate“: die schwarzen Kennzeichen mit gelben Zeichen, die Kalifornien von 1963 bis 1969 ausgab. Sie bleiben nur an dem Fahrzeug gültig, für das sie ausgegeben wurden, und nur, wenn es ohne Unterbrechung zugelassen war. Für Kenner ist das das Zeichen eines Autos, das seit den Sechzigern in Kalifornien geblieben ist, in einem trockenen Klima, das Karosserien schont.",
+            "Er wurde in den USA von einem Mitglied des TR Register restauriert, dessen Plakette er noch heute am Emblemhalter trägt. Solche Fahrzeuge von Clubmitgliedern, gepflegt von Liebhabern, die jedes Detail kennen, kommen selten auf den Markt: Sie wechseln unter Kennern den Besitzer oder bleiben in der Familie. Nach dem Tod des Besitzers stand dieser Wagen während der Nachlassregelung drei Jahre still.",
+            "Unser niederländischer Partner hat ihn zu uns geholt. Er kauft und importiert seit fast fünfzig Jahren Fahrzeuge aus den USA, arbeitet fast von Anfang an mit denselben amerikanischen Partnern, und einer unserer Gesellschafter steht seit neunzehn Jahren jede Woche mit ihm in Kontakt. Dieses über Marken- und Oldtimerclubs gewachsene Netzwerk öffnet den Zugang zu Fahrzeugen wie diesem.",
+            "Den TR3 kennen wir gut. Nach drei Jahren Standzeit haben wir uns für eine vorsichtige, methodische Wiederinbetriebnahme entschieden: Statt abzuwarten, bis sich die bekannten Schwachstellen zeigen, haben wir alles erneuert, was sich bei Standzeit abnutzt oder ermüdet und meist auf den ersten paar hundert Kilometern versagt. Zuerst die Bremsen, vom Sattel bis zum Hauptzylinder; dann Kraftstoffversorgung, Zündung und Kupplung.",
+            "Diese Arbeit bestätigt ein schönes Fahrzeug. Keine frische Restaurierung, aber eine Restaurierung mit wenig Laufleistung: gute, gleichmäßige Kompression auf allen vier Zylindern, gesunder Unterboden, sauber ausgeführte Lackierung, Innenraum ohne nennenswerte Mängel.",
+            "Die Einfuhrpapiere sind vollständig. Als Fachhändler übernehmen wir sämtliche Formalitäten für die französische Oldtimerzulassung (carte grise de collection) auf den Namen des Käufers; diese Leistung ist inbegriffen."
           ],
           "caracteristiques": {
             "Baujahr": "1961",
             "Fahrgestell": "TS78580L",
-            "Motor": "Vierzylinder, 2.0, zwei SU-Vergaser",
-            "Getriebe": "Manuell, vier Gänge",
+            "Motor": "Vierzylinder, 1.991 cm³, zwei SU-Vergaser",
+            "Getriebe": "Manuell, vier Gänge, ohne Overdrive",
             "Karosserie": "Roadster",
             "Lenkung": "Links",
             "Farbe": "Weiß",
-            "Innenraum": "Schwarz, weiße Keder",
+            "Innenraum": "Schwarze Polsterung mit weißen Kedern, schwarze Teppiche",
+            "Ausstattung": "Verchromter Gepäckträger",
             "Tachostand": "21.125 Meilen (fünfstellig)",
-            "Restaurierung": "USA, durch ein Mitglied des TR Register",
-            "Hauptuntersuchung": "Bestanden, gültig",
-            "Zulassung": "Französische Oldtimerzulassung, Formalitäten inbegriffen"
+            "Hauptuntersuchung": "Bestanden, gültig"
           },
           "travaux": [
             {
@@ -728,7 +767,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "legendes": [
-            "Motor im Leerlauf bei der Wiederinbetriebnahme"
+            "Motor im Leerlauf, nach der Vergaserüberholung und vor der Reinigung des Motorraums"
           ],
           "atelier_leg": [
             "Kompressionsmessung an allen vier Zylindern",
@@ -743,32 +782,62 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Scheinwerfertopf: Dichtungen ersetzt",
             "Motorraum nach der Überholung",
             "Innenraum nach der kompletten Reinigung"
+          ],
+          "pieces_rempl_leg": [
+            "Reparatursatz SU-Vergaser (doppelt)",
+            "Vergaser-Dichtscheiben",
+            "SU-Vergaserdichtungen",
+            "Korkscheiben SU-Vergaser",
+            "Luftfilter",
+            "Mechanische Benzinpumpe",
+            "Unterbrecherkontakte",
+            "Ölfilter",
+            "Ventildeckeldichtung",
+            "Hauptzylinder Bremse und Kupplung",
+            "Kupplungsnehmerzylinder",
+            "Reparatursätze vordere Bremssättel",
+            "Kolben vordere Bremssättel",
+            "Hintere Bremsbacken (Satz)",
+            "Hintere Radbremszylinder",
+            "Bremsbackenfedern",
+            "Bremsbackenfedern",
+            "Bremsschläuche",
+            "Bremsschlauch",
+            "Gummitüllen- und Stopfensatz",
+            "Schlauchschellen",
+            "Motorhaubenscharniere (Paar)",
+            "Außenspiegel Lucas 406",
+            "Spiegeldichtung",
+            "Scheinwerfertopf-Dichtungen",
+            "Scheinwerfertopf-Abschlussdichtungen",
+            "Rückleuchten-Glasdichtungen",
+            "Rückleuchten-Karosseriedichtungen",
+            "Kennzeichenleuchten-Dichtung"
           ]
         },
         "pt": {
           "modele": "TR3A",
-          "accroche": "Roadster restaurado nos Estados Unidos por um membro do TR Register, reposto a funcionar e pronto para a estrada na nossa oficina.",
+          "accroche": "Um carro californiano de \"black plate\" restaurado por um membro do TR Register, reposto a funcionar e pronto para a estrada na nossa oficina.",
           "description": [
-            "Triumph TR3A de 1961, chassis TS78580L, volante à esquerda. Branco, estofos pretos com debrum branco, alcatifas pretas e porta-bagagens cromado na tampa da mala. Um carro da Califórnia, que conserva a sua matrícula preta californiana de época.",
-            "Foi restaurado nos Estados Unidos por um membro do TR Register, cujo emblema ainda traz na barra de emblemas da grelha. Após a morte do proprietário, ficou três anos parado durante a partilha da herança.",
-            "Foi trazido de volta para a Europa pelo nosso parceiro holandês, com quem um dos nossos sócios trabalha todas as semanas há dezanove anos. Com quase setenta anos, sempre soube encontrar os bons carros nos Estados Unidos, sobretudo nos clubes de marca e de clássicos.",
-            "Na oficina, pusemo-lo de novo a funcionar e preparámo-lo para a estrada (pormenores e fotografias abaixo). Este trabalho confirmou um belo carro: não é um restauro recente, mas um restauro que rodou pouco. Compressões boas e homogéneas nos quatro cilindros, fundos sãos, pintura bem executada, habitáculo sem defeitos de relevo.",
-            "Inspeção técnica francesa aprovada e válida.",
-            "Documentação de importação em ordem. Enquanto profissionais, tratamos de todo o processo de matrícula francesa de clássico (carte grise de collection) em nome do comprador. Este serviço está incluído no preço."
+            "Conserva a sua \"California Black Plate\": as matrículas pretas com caracteres amarelos que a Califórnia emitiu de 1963 a 1969. Só continuam válidas no carro a que foram atribuídas, e desde que este tenha permanecido matriculado sem interrupção. Para os entusiastas, é o sinal de um carro que ficou na Califórnia desde os anos sessenta, num clima seco que poupa as carroçarias.",
+            "Foi restaurado nos Estados Unidos por um membro do TR Register, cujo emblema ainda traz na barra de emblemas da grelha. Estes carros de membros de clube, acompanhados por entusiastas que lhes conhecem cada pormenor, raramente aparecem: mudam de mãos entre conhecedores ou ficam na família. Após a morte do proprietário, este ficou três anos parado durante a partilha da herança.",
+            "Foi o nosso parceiro holandês quem o conseguiu trazer. Profissional da compra e importação de automóveis dos Estados Unidos há quase cinquenta anos, trabalha com os mesmos correspondentes americanos praticamente desde o início, e um dos nossos sócios fala com ele todas as semanas há dezanove anos. É esta rede, construída nos clubes de marca e de clássicos, que dá acesso a carros como este.",
+            "Conhecemos bem os TR3. Depois de três anos imobilizado, optámos por um regresso ao funcionamento prudente e metódico: em vez de esperar que as fraquezas conhecidas se manifestassem, substituímos por peças novas tudo o que se desgasta ou se degrada durante um armazenamento e que costuma falhar nas primeiras centenas de quilómetros. Primeiro os travões, da pinça à bomba; depois a alimentação, a ignição e a embraiagem.",
+            "Este trabalho confirma um belo carro. Não é um restauro recente, mas um restauro que rodou pouco: compressões boas e homogéneas nos quatro cilindros, fundos sãos, pintura bem executada, habitáculo sem defeitos de relevo.",
+            "Documentação de importação em ordem. Enquanto profissionais, tratamos de todo o processo de matrícula francesa de clássico (carte grise de collection) em nome do comprador; este serviço está incluído."
           ],
           "caracteristiques": {
             "Ano": "1961",
             "Chassis": "TS78580L",
-            "Motor": "Quatro cilindros, 2.0, dois carburadores SU",
-            "Caixa": "Manual, quatro velocidades",
+            "Motor": "Quatro cilindros, 1991 cm³, dois carburadores SU",
+            "Caixa": "Manual, quatro velocidades, sem overdrive",
             "Carroçaria": "Roadster",
             "Volante": "À esquerda",
             "Cor": "Branco",
-            "Interior": "Preto, debrum branco",
+            "Interior": "Estofos pretos com debrum branco, alcatifas pretas",
+            "Equipamento": "Porta-bagagens cromado",
             "Conta-quilómetros": "21 125 milhas (cinco dígitos)",
-            "Restauro": "Estados Unidos, por um membro do TR Register",
-            "Inspeção técnica": "Aprovada, válida",
-            "Matrícula": "Matrícula francesa de clássico, processo incluído"
+            "Inspeção técnica": "Aprovada, válida"
           },
           "travaux": [
             {
@@ -810,7 +879,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "legendes": [
-            "Motor ao ralenti, no regresso ao funcionamento"
+            "Motor ao ralenti, depois da reconstrução dos carburadores e antes da limpeza do compartimento do motor"
           ],
           "atelier_leg": [
             "Compressões medidas nos quatro cilindros",
@@ -825,6 +894,37 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Farol: vedantes substituídos",
             "Compartimento do motor após a revisão",
             "Habitáculo após limpeza completa"
+          ],
+          "pieces_rempl_leg": [
+            "Kit de reparação de carburadores SU (duplo)",
+            "Anilhas de vedação do carburador",
+            "Juntas de carburador SU",
+            "Anilhas de cortiça do carburador SU",
+            "Filtros de ar",
+            "Bomba de gasolina mecânica",
+            "Platinados",
+            "Filtros de óleo",
+            "Junta da tampa das válvulas",
+            "Bombas de travão e de embraiagem",
+            "Cilindro recetor de embraiagem",
+            "Kits de reparação das pinças dianteiras",
+            "Pistões das pinças dianteiras",
+            "Maxilas de travão traseiras (jogo)",
+            "Cilindros de roda traseiros",
+            "Molas das maxilas",
+            "Molas das maxilas",
+            "Tubos flexíveis de travão",
+            "Tubo flexível de travão",
+            "Kit de bujões e passa-cabos de borracha",
+            "Abraçadeiras",
+            "Dobradiças do capot (par)",
+            "Retrovisor exterior Lucas 406",
+            "Junta do retrovisor",
+            "Vedantes das taças dos faróis",
+            "Vedantes de acabamento dos faróis",
+            "Vedantes das lentes dos farolins",
+            "Vedantes dos farolins à carroçaria",
+            "Vedante da luz da matrícula"
           ]
         }
       },
@@ -876,6 +976,182 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         {
           "src": "img/tr3b-at-12.jpg",
           "legende": "Habitacle après nettoyage complet"
+        }
+      ],
+      "pieces_rempl": [
+        {
+          "ref": "CSK41TWIN",
+          "qte": 1,
+          "prix": 184.0,
+          "designation": "Kit de réfection de carburateurs SU (double)"
+        },
+        {
+          "ref": "AUC1534",
+          "qte": 12,
+          "prix": 44.21,
+          "designation": "Rondelles d'étanchéité de carburateur"
+        },
+        {
+          "ref": "GUG705817GM",
+          "qte": 2,
+          "prix": 5.93,
+          "designation": "Joints de carburateur SU"
+        },
+        {
+          "ref": "AUC2120",
+          "qte": 4,
+          "prix": 2.59,
+          "designation": "Rondelles liège de carburateur SU"
+        },
+        {
+          "ref": "SGPF102",
+          "qte": 2,
+          "prix": 43.8,
+          "designation": "Filtres à air"
+        },
+        {
+          "ref": "109637",
+          "qte": 1,
+          "prix": 73.0,
+          "designation": "Pompe à essence mécanique"
+        },
+        {
+          "ref": "GCS2101",
+          "qte": 2,
+          "prix": 12.19,
+          "designation": "Vis platinées"
+        },
+        {
+          "ref": "GFE104",
+          "qte": 2,
+          "prix": 16.87,
+          "designation": "Filtres à huile"
+        },
+        {
+          "ref": "GEG437",
+          "qte": 1,
+          "prix": 5.51,
+          "designation": "Joint de cache-culbuteurs"
+        },
+        {
+          "ref": "122167",
+          "qte": 2,
+          "prix": 109.99,
+          "designation": "Maîtres-cylindres de frein et d'embrayage"
+        },
+        {
+          "ref": "516788",
+          "qte": 1,
+          "prix": 49.0,
+          "designation": "Récepteur d'embrayage"
+        },
+        {
+          "ref": "18G8837",
+          "qte": 2,
+          "prix": 64.8,
+          "designation": "Kits de réparation d'étriers avant"
+        },
+        {
+          "ref": "510792",
+          "qte": 4,
+          "prix": 81.2,
+          "designation": "Pistons d'étriers avant"
+        },
+        {
+          "ref": "GBS778AF",
+          "qte": 1,
+          "prix": 39.1,
+          "designation": "Mâchoires de frein arrière (jeu)"
+        },
+        {
+          "ref": "GWC1112Z",
+          "qte": 2,
+          "prix": 57.2,
+          "designation": "Cylindres de roue arrière"
+        },
+        {
+          "ref": "505081",
+          "qte": 2,
+          "prix": 3.26,
+          "designation": "Ressorts de mâchoires de frein"
+        },
+        {
+          "ref": "508817",
+          "qte": 2,
+          "prix": 9.43,
+          "designation": "Ressorts de mâchoires de frein"
+        },
+        {
+          "ref": "GBH206",
+          "qte": 2,
+          "prix": 27.91,
+          "designation": "Flexibles de frein"
+        },
+        {
+          "ref": "GBH122",
+          "qte": 1,
+          "prix": 16.62,
+          "designation": "Flexible de frein"
+        },
+        {
+          "ref": "NSSK069",
+          "qte": 1,
+          "prix": 92.0,
+          "designation": "Kit de bouchons et passe-câbles caoutchouc"
+        },
+        {
+          "ref": "CS4025",
+          "qte": 2,
+          "prix": 3.26,
+          "designation": "Colliers de durite"
+        },
+        {
+          "ref": "650021/2",
+          "qte": 1,
+          "prix": 73.0,
+          "designation": "Charnières de capot (paire)"
+        },
+        {
+          "ref": "MRL01C",
+          "qte": 1,
+          "prix": 20.1,
+          "designation": "Rétroviseur extérieur Lucas 406"
+        },
+        {
+          "ref": "280-140",
+          "qte": 1,
+          "prix": 2.72,
+          "designation": "Joint de rétroviseur"
+        },
+        {
+          "ref": "9403",
+          "qte": 2,
+          "prix": 5.57,
+          "designation": "Joints de bols de phares"
+        },
+        {
+          "ref": "512222",
+          "qte": 2,
+          "prix": 9.43,
+          "designation": "Joints de bols de phares (finition)"
+        },
+        {
+          "ref": "AJA5071",
+          "qte": 2,
+          "prix": 5.9,
+          "designation": "Joints de cabochons de feux arrière"
+        },
+        {
+          "ref": "AJA5073",
+          "qte": 2,
+          "prix": 6.24,
+          "designation": "Joints de feux arrière sur caisse"
+        },
+        {
+          "ref": "57H5368",
+          "qte": 1,
+          "prix": 7.4,
+          "designation": "Joint d'éclairage de plaque"
         }
       ]
     },
@@ -1727,6 +2003,13 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "ph.agr": "Agrandir",
   "lb.fermer": "Fermer",
   "tr.at": "À l'atelier",
+  "pr.titre": "Pièces remplacées",
+  "pr.des": "Désignation",
+  "pr.ref": "Réf.",
+  "pr.qte": "Qté",
+  "pr.prix": "Prix public TTC",
+  "pr.total": "Total",
+  "pr.note": "Prix publics TTC des pièces neuves montées, d'après le tarif du fournisseur.",
   "titre": "MCC Motors — Automobiles de collection",
   "mentions": "<h1>Mentions légales</h1><h2>Éditeur du site</h2><p>MCC Motors, société par actions simplifiée au capital de 1 000 €<br>Siège social : 31 rue Lavoisier, 92800 Puteaux, France<br>RCS Nanterre 984 835 777 — SIRET 984 835 777 00017<br>N° TVA intracommunautaire : FR57 984 835 777<br>Contact : <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a></p><h2>Directeur de la publication</h2><p>Christophe Da Costa, président de MCC Motors.</p><h2>Hébergement</h2><p>GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, États-Unis — github.com</p><h2>Propriété intellectuelle</h2><p>L'ensemble des textes, photographies et éléments graphiques de ce site est la propriété de MCC Motors, sauf mention contraire. Toute reproduction sans autorisation écrite préalable est interdite. Certains visuels d'illustration (atelier, métiers, pièces de démonstration) ont été créés à l'aide d'outils d'intelligence artificielle ; les photographies des véhicules à vendre sont celles des autos présentées.</p><h2>Informations sur les véhicules</h2><p>Les descriptions et prix sont donnés à titre indicatif et ne constituent pas une offre contractuelle. Les caractéristiques, l'état et la disponibilité de chaque véhicule sont confirmés lors de la prise de contact et de la visite.</p><h2>Données personnelles</h2><p>Les informations transmises par le formulaire de contact (nom, coordonnées, message) servent uniquement à répondre à votre demande. Elles sont acheminées par e-mail via le service FormSubmit et ne sont ni cédées ni utilisées à des fins de prospection. Elles sont conservées le temps nécessaire au traitement de votre demande et à la relation commerciale qui peut en découler.</p><p>Conformément au règlement (UE) 2016/679 (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition, que vous pouvez exercer en écrivant à <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a>. Vous pouvez également adresser une réclamation à la CNIL (cnil.fr).</p><h2>Cookies</h2><p>Ce site n'utilise ni cookie publicitaire ni outil de mesure d'audience. Seul votre choix de langue est conservé dans votre navigateur, pour vous éviter de le refaire à chaque visite.</p>",
   "foot.ml": "Mentions légales",
@@ -1858,6 +2141,13 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "ph.agr": "Enlarge",
   "lb.fermer": "Close",
   "tr.at": "In the workshop",
+  "pr.titre": "Parts replaced",
+  "pr.des": "Part",
+  "pr.ref": "Ref.",
+  "pr.qte": "Qty",
+  "pr.prix": "Public price incl. VAT",
+  "pr.total": "Total",
+  "pr.note": "Public retail prices, VAT included, of the new parts fitted, from the supplier's price list.",
   "titre": "MCC Motors — Classic motor cars",
   "mentions": "<h1>Legal notice</h1><h2>Publisher</h2><p>MCC Motors, simplified joint-stock company (SAS) with a share capital of 1 000 €<br>Registered office : 31 rue Lavoisier, 92800 Puteaux, France<br>RCS Nanterre 984 835 777 — SIRET 984 835 777 00017<br>EU VAT number : FR57 984 835 777<br>Contact : <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a></p><h2>Publication director</h2><p>Christophe Da Costa, President of MCC Motors.</p><h2>Hosting</h2><p>GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, United States — github.com</p><h2>Intellectual property</h2><p>All texts, photographs and graphic elements on this site are the property of MCC Motors unless otherwise stated. Any reproduction without prior written permission is prohibited. Some illustrative images (workshop, trades, demonstration parts) were created using artificial intelligence tools; photographs of the cars for sale are of the actual cars.</p><h2>Vehicle information</h2><p>Descriptions and prices are given for information only and do not constitute a contractual offer. The specification, condition and availability of each car are confirmed when you contact us and visit.</p><h2>Personal data</h2><p>Information sent through the contact form (name, contact details, message) is used solely to reply to your enquiry. It is delivered by e-mail via the FormSubmit service and is never sold or used for marketing. It is kept for as long as needed to handle your enquiry and any resulting business relationship.</p><p>Under the EU General Data Protection Regulation (GDPR) and French data protection law, you have the right to access, rectify, erase and object to the processing of your data by writing to <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a>. You may also lodge a complaint with the CNIL (cnil.fr).</p><h2>Cookies</h2><p>This site uses no advertising cookies and no audience measurement tools. Only your choice of language is stored in your browser, so you do not have to select it again on each visit.</p>",
   "foot.ml": "Legal notice",
@@ -1989,6 +2279,13 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "ph.agr": "Vergrößern",
   "lb.fermer": "Schließen",
   "tr.at": "In der Werkstatt",
+  "pr.titre": "Ersetzte Teile",
+  "pr.des": "Teil",
+  "pr.ref": "Art.-Nr.",
+  "pr.qte": "Menge",
+  "pr.prix": "Listenpreis inkl. MwSt.",
+  "pr.total": "Summe",
+  "pr.note": "Listenpreise inkl. MwSt. der eingebauten Neuteile laut Preisliste des Lieferanten.",
   "titre": "MCC Motors — Klassische Automobile",
   "mentions": "<h1>Impressum</h1><h2>Herausgeber</h2><p>MCC Motors, vereinfachte Aktiengesellschaft (SAS) mit einem Stammkapital von 1 000 €<br>Sitz : 31 rue Lavoisier, 92800 Puteaux, Frankreich<br>RCS Nanterre 984 835 777 — SIRET 984 835 777 00017<br>USt-IdNr. : FR57 984 835 777<br>Kontakt : <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a></p><h2>Verantwortlich für den Inhalt</h2><p>Christophe Da Costa, Präsident von MCC Motors.</p><h2>Hosting</h2><p>GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, USA — github.com</p><h2>Urheberrecht</h2><p>Sämtliche Texte, Fotos und grafischen Elemente dieser Website sind, sofern nicht anders angegeben, Eigentum von MCC Motors. Jede Vervielfältigung ohne vorherige schriftliche Genehmigung ist untersagt. Einige Illustrationen (Werkstatt, Gewerke, Beispielteile) wurden mithilfe von Werkzeugen der künstlichen Intelligenz erstellt; die Fotos der angebotenen Fahrzeuge zeigen die tatsächlichen Fahrzeuge.</p><h2>Fahrzeuginformationen</h2><p>Beschreibungen und Preise sind unverbindlich und stellen kein vertragliches Angebot dar. Ausstattung, Zustand und Verfügbarkeit jedes Fahrzeugs werden bei der Kontaktaufnahme und Besichtigung bestätigt.</p><h2>Datenschutz</h2><p>Die über das Kontaktformular übermittelten Angaben (Name, Kontaktdaten, Nachricht) dienen ausschließlich der Beantwortung Ihrer Anfrage. Sie werden per E-Mail über den Dienst FormSubmit zugestellt und weder weitergegeben noch zu Werbezwecken verwendet. Sie werden so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage und eine daraus entstehende Geschäftsbeziehung erforderlich ist.</p><p>Gemäß der Datenschutz-Grundverordnung (DSGVO) haben Sie das Recht auf Auskunft, Berichtigung, Löschung und Widerspruch; schreiben Sie dazu an <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a>. Sie können außerdem Beschwerde bei der französischen Datenschutzbehörde CNIL (cnil.fr) einlegen.</p><h2>Cookies</h2><p>Diese Website verwendet weder Werbe-Cookies noch Analysewerkzeuge. Lediglich Ihre Sprachauswahl wird in Ihrem Browser gespeichert, damit Sie sie nicht bei jedem Besuch erneut treffen müssen.</p>",
   "foot.ml": "Impressum",
@@ -2120,6 +2417,13 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "ph.agr": "Ampliar",
   "lb.fermer": "Fechar",
   "tr.at": "Na oficina",
+  "pr.titre": "Peças substituídas",
+  "pr.des": "Peça",
+  "pr.ref": "Ref.",
+  "pr.qte": "Qtd.",
+  "pr.prix": "Preço público c/ IVA",
+  "pr.total": "Total",
+  "pr.note": "Preços públicos com IVA das peças novas montadas, segundo a tabela do fornecedor.",
   "titre": "MCC Motors — Automóveis de coleção",
   "mentions": "<h1>Informações legais</h1><h2>Editor do site</h2><p>MCC Motors, sociedade por ações simplificada (SAS) com capital social de 1 000 €<br>Sede : 31 rue Lavoisier, 92800 Puteaux, França<br>RCS Nanterre 984 835 777 — SIRET 984 835 777 00017<br>N.º IVA intracomunitário : FR57 984 835 777<br>Contacto : <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a></p><h2>Diretor da publicação</h2><p>Christophe Da Costa, presidente da MCC Motors.</p><h2>Alojamento</h2><p>GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, Estados Unidos — github.com</p><h2>Propriedade intelectual</h2><p>Todos os textos, fotografias e elementos gráficos deste site são propriedade da MCC Motors, salvo indicação em contrário. É proibida qualquer reprodução sem autorização prévia por escrito. Algumas imagens ilustrativas (oficina, especialidades, peças de demonstração) foram criadas com ferramentas de inteligência artificial; as fotografias dos veículos à venda são dos próprios automóveis.</p><h2>Informação sobre os veículos</h2><p>As descrições e os preços são indicativos e não constituem uma oferta contratual. As características, o estado e a disponibilidade de cada veículo são confirmados no contacto e na visita.</p><h2>Dados pessoais</h2><p>As informações enviadas pelo formulário de contacto (nome, contactos, mensagem) servem unicamente para responder ao seu pedido. São encaminhadas por e-mail através do serviço FormSubmit e não são cedidas nem utilizadas para fins de prospeção. São conservadas pelo tempo necessário ao tratamento do pedido e à relação comercial que dele possa resultar.</p><p>Nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD), tem direito de acesso, retificação, apagamento e oposição, que pode exercer escrevendo para <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a>. Pode também apresentar reclamação junto da CNIL (cnil.fr).</p><h2>Cookies</h2><p>Este site não utiliza cookies publicitários nem ferramentas de medição de audiência. Apenas a sua escolha de idioma é guardada no navegador, para não ter de a repetir a cada visita.</p>",
   "foot.ml": "Informações legais",
@@ -2437,6 +2741,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     var c = document.getElementById('compteur'); if(c) c.textContent=(idx+1)+' / '+ph.length;
     document.querySelectorAll('.vignettes img').forEach(function(im,i){im.classList.toggle('on',i===idx);});
   }
+  function euro(n){ try{ return new Intl.NumberFormat(LANG==='en'?'en-GB':LANG,{style:'currency',currency:'EUR'}).format(n); }catch(e){ return n.toFixed(2)+' €'; } }
   function listeTravaux(tv){
     var h='', ul=[];
     function vider(){ if(ul.length){ h+='<ul>'+ul.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>'; ul=[]; } }
@@ -2469,7 +2774,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     var v=f.v, ph=galerie(v), multi=ph.length>1, S=SECTION[f.ancre];
     var car=tr(v,'caracteristiques')||{}, rows=''; Object.keys(car).forEach(function(k){rows+='<tr><td>'+esc(k)+'</td><td>'+esc(car[k])+'</td></tr>';});
     var etat = f.type==='projet'&&v.statut==='vente'?t('e.projet'):ETAT(v.statut);
-    var leg=tr(v,'legendes'), trav=tr(v,'travaux'), note=tr(v,'prix_note'), at=v.atelier||[], atTr=tr(v,'atelier_leg')||[], atLeg=at.map(function(x,i){return atTr[i]||x.legende||'';});
+    var leg=tr(v,'legendes'), trav=tr(v,'travaux'), note=tr(v,'prix_note'), at=v.atelier||[], atTr=tr(v,'atelier_leg')||[], pr=v.pieces_rempl||[], prLeg=tr(v,'pieces_rempl_leg')||[], atLeg=at.map(function(x,i){return atTr[i]||x.legende||'';});
     document.getElementById('fiche').innerHTML =
       '<div class="fil"><a class="ret" href="#'+f.ancre+'">'+t(S.retour)+'</a><span class="label">'+esc(etat)+'</span></div>'+
       '<div class="principale"><img class="flou" id="flouImg" src="'+esc(ph[0]||GEN)+'" alt="" aria-hidden="true"><img id="grandeImg" src="'+esc(ph[0]||GEN)+'" alt="'+esc(v.marque+' '+modele(v))+'">'+(ph.length?'<button class="agrandir" id="agrandir">'+t('ph.agr')+'</button>':'')+
@@ -2482,6 +2787,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         '<div class="desc">'+(tr(v,'description')||[]).map(function(x){return '<p>'+esc(x)+'</p>';}).join('')+'</div>'+
         (v.videos&&v.videos.length?'<div class="videos">'+v.videos.map(function(x,i){var lg=(leg&&leg[i])||x.legende; return '<figure><video controls playsinline preload="metadata"'+(x.affiche?' poster="'+esc(x.affiche)+'"':'')+'><source src="'+esc(x.src)+'" type="video/mp4"></video>'+(lg?'<figcaption class="label">'+esc(lg)+'</figcaption>':'')+'</figure>';}).join('')+'</div>':'')+
         (trav&&trav.length?'<div class="travaux"><div class="label">'+t(S.travaux)+'</div>'+listeTravaux(trav)+'</div>':'')+
+        (pr.length?'<div class="pieces-r"><div class="label">'+t('pr.titre')+'</div><table><thead><tr><th>'+t('pr.des')+'</th><th class="ref">'+t('pr.ref')+'</th><th class="n q">'+t('pr.qte')+'</th><th class="n">'+t('pr.prix')+'</th></tr></thead><tbody>'+pr.map(function(x,i){return '<tr><td>'+esc(prLeg[i]||x.designation)+'</td><td class="ref">'+esc(x.ref)+'</td><td class="n q">'+esc(x.qte)+'</td><td class="n">'+euro(x.prix)+'</td></tr>';}).join('')+'</tbody><tfoot><tr><td>'+t('pr.total')+'</td><td class="ref"></td><td class="n q"></td><td class="n">'+euro(pr.reduce(function(a,x){return a+x.prix;},0))+'</td></tr></tfoot></table><p class="note">'+t('pr.note')+'</p></div>':'')+
         (at.length?'<div class="atelier"><div class="label">'+t('tr.at')+'</div><div class="grille-at">'+at.map(function(x,i){return '<figure data-i="'+i+'"><img loading="lazy" src="'+esc(x.src)+'" alt="'+esc(atLeg[i]||'')+'">'+(atLeg[i]?'<figcaption>'+esc(atLeg[i])+'</figcaption>':'')+'</figure>';}).join('')+'</div></div>':'')+
       '</div><aside class="encart"><div class="label">'+t('prix')+'</div><div class="prix">'+esc(prixTxt(v))+'</div>'+
         (note&&v.statut!=='vendu'?'<p class="note" style="margin:-18px 0 30px">'+esc(note)+'</p>':'')+
