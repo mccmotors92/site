@@ -233,6 +233,8 @@ body.fiche #page-fiche{display:block}
 .atelier figure{margin:0;cursor:zoom-in}
 .atelier img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:opacity .2s}
 .atelier figure:hover img{opacity:.85}
+.atelier .sous-at{font-family:var(--serif,'Cormorant Garamond',serif);font-size:20px;margin-top:22px;color:inherit}
+.atelier .sous-at+.grille-at{margin-top:10px}
 .atelier figcaption{font-size:12.5px;line-height:1.4;color:var(--gris2);margin-top:7px}
 .lb{position:fixed;inset:0;z-index:2000;background:rgba(5,12,9,.97);display:none;align-items:center;justify-content:center;touch-action:pan-y}
 .lb.ouvert{display:flex}
@@ -1163,10 +1165,11 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "statut": "vente",
       "prix": "Nous consulter",
       "prix_note": "",
-      "accroche": "Roadster rouge, intérieur noir, prête à rouler.",
+      "accroche": "Importée par nos soins des États-Unis, entièrement reprise en mécanique, planchers neufs.",
       "description": [
-        "Triumph TR3 roadster, teinte rouge, intérieur noir, porte-bagages chromé sur le coffre.",
-        "Descriptif complet, historique et factures communiqués sur demande."
+        "Nous avons importé nous-mêmes cette TR3 des États-Unis. Elle n'avait pas roulé depuis deux ans et nous savions, en l'achetant, que son joint de culasse était à reprendre : elle était destinée dès le départ à un passage complet à l'atelier.",
+        "Remise en état mécanique complète — train avant, freinage, embrayage, alimentation, refroidissement et moteur — et reprise des planchers et des soubassements. L'habitacle a été mis à nu et repeint, puis regarni d'une moquette neuve.",
+        "Le détail des travaux et les photos prises à l'atelier figurent ci-dessous ; les factures sont communiquées sur demande."
       ],
       "caracteristiques": {
         "Moteur": "Quatre cylindres, 2.0",
@@ -1198,7 +1201,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           "titre": "Moteur et alimentation",
           "points": [
             "Carburateurs déposés, démontés, nettoyés et remontés à l'établi, puis réglés",
-            "À la remise en route, joint de culasse remplacé : chemises extraites puis reposées à la bonne hauteur",
+            "Joint de culasse remplacé : chemises extraites puis reposées à la bonne hauteur",
             "Réservoir vidangé, pompe à carburant neuve, filtre à carburant",
             "Vidange moteur et filtre à huile, vidange de boîte et de pont",
             "Circuit de refroidissement vidangé, durites neuves"
@@ -1243,10 +1246,11 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "videos": [],
       "trad": {
         "en": {
-          "accroche": "Red roadster, black interior, ready to drive.",
+          "accroche": "Imported by us from the United States, fully reworked mechanically, new floors.",
           "description": [
-            "Triumph TR3 roadster in red, black interior, chrome luggage rack on the boot lid.",
-            "Full description, history and invoices available on request."
+            "We imported this TR3 ourselves from the United States. It had not been driven for two years and we knew when buying it that the head gasket needed attention: from the outset it was destined for a complete stay in the workshop.",
+            "Full mechanical recommissioning — front suspension, brakes, clutch, fuel system, cooling and engine — together with new floors and underside work. The cockpit was stripped and repainted, then fitted with a new carpet set.",
+            "Details of the work and photos taken in the workshop are shown below; invoices are available on request."
           ],
           "caracteristiques": {
             "Engine": "Four-cylinder, 2.0",
@@ -1278,7 +1282,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
               "titre": "Engine and fuel system",
               "points": [
                 "Carburettors removed, stripped, cleaned and rebuilt on the bench, then tuned",
-                "At recommissioning, head gasket replaced: liners removed and refitted at the correct height",
+                "Head gasket replaced: liners removed and refitted at the correct height",
                 "Fuel tank drained, new fuel pump, fuel filter fitted",
                 "Engine oil and filter changed, gearbox and rear axle oil changed",
                 "Cooling system drained, new hoses"
@@ -1304,27 +1308,24 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "atelier_leg": [
-            "Cylinder head removed at recommissioning: head gasket at fault",
-            "Liners and pistons removed for inspection",
+            "Liners and pistons removed",
             "Liners refitted at the correct height",
-            "Body-to-chassis mountings, re-welded",
-            "Driver's floor removed, chassis exposed",
-            "New passenger floor fitted",
-            "New driver's floor",
-            "Rear deck before treatment",
-            "Cockpit primed and painted black",
-            "Floors and rear deck painted",
-            "Sill repaired",
-            "Underside before protection",
-            "Underside after stone-chip protection",
-            "Wheels repainted"
+            "Cylinder head refitted with a new gasket",
+            "Floors: before, then new panels welded in",
+            "Cockpit fully stripped and repainted black",
+            "Rear deck, wheel arches and floors repainted",
+            "Sill: repaired, then protected",
+            "Underside: before, then after stone-chip protection",
+            "Wheels repainted",
+            "Cockpit finished: new carpet, seats refitted"
           ]
         },
         "de": {
-          "accroche": "Roter Roadster, schwarzer Innenraum, fahrbereit.",
+          "accroche": "Von uns selbst aus den USA importiert, mechanisch komplett überholt, neue Böden.",
           "description": [
-            "Triumph TR3 Roadster in Rot, schwarzer Innenraum, verchromter Gepäckträger auf dem Kofferraumdeckel.",
-            "Vollständige Beschreibung, Historie und Rechnungen auf Anfrage."
+            "Wir haben diesen TR3 selbst aus den USA importiert. Er war zwei Jahre nicht gefahren, und beim Kauf wussten wir, dass die Zylinderkopfdichtung zu erneuern war: Er war von Anfang an für einen kompletten Werkstattaufenthalt vorgesehen.",
+            "Komplette mechanische Instandsetzung – Vorderachse, Bremsen, Kupplung, Kraftstoffversorgung, Kühlung und Motor – sowie neue Böden und Arbeiten am Unterboden. Der Innenraum wurde freigelegt, neu lackiert und mit einem neuen Teppichsatz ausgestattet.",
+            "Einzelheiten der Arbeiten und Werkstattfotos finden Sie unten; Rechnungen auf Anfrage."
           ],
           "caracteristiques": {
             "Motor": "Vierzylinder, 2.0",
@@ -1356,7 +1357,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
               "titre": "Motor und Kraftstoffversorgung",
               "points": [
                 "Vergaser ausgebaut, zerlegt, gereinigt und auf der Werkbank wieder aufgebaut, anschließend eingestellt",
-                "Bei der Wiederinbetriebnahme Zylinderkopfdichtung erneuert: Laufbuchsen ausgebaut und in korrekter Höhe wieder eingesetzt",
+                "Zylinderkopfdichtung erneuert: Laufbuchsen ausgebaut und in korrekter Höhe wieder eingesetzt",
                 "Tank entleert, neue Kraftstoffpumpe, Kraftstofffilter eingebaut",
                 "Motoröl und Ölfilter gewechselt, Getriebe- und Differenzialöl gewechselt",
                 "Kühlsystem entleert, neue Schläuche"
@@ -1382,27 +1383,24 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "atelier_leg": [
-            "Zylinderkopf bei der Wiederinbetriebnahme abgenommen: Zylinderkopfdichtung defekt",
-            "Laufbuchsen und Kolben zur Kontrolle ausgebaut",
+            "Laufbuchsen und Kolben ausgebaut",
             "Laufbuchsen in korrekter Höhe wieder eingesetzt",
-            "Karosseriebefestigungen am Rahmen, neu verschweißt",
-            "Fahrerboden ausgebaut, Rahmen freigelegt",
-            "Neuer Beifahrerboden eingesetzt",
-            "Neuer Fahrerboden",
-            "Hintere Ablage vor der Behandlung",
-            "Innenraum grundiert und schwarz lackiert",
-            "Böden und hintere Ablage lackiert",
-            "Schweller instand gesetzt",
-            "Unterboden vor dem Schutz",
-            "Unterboden nach Steinschlagschutz",
-            "Felgen neu lackiert"
+            "Zylinderkopf mit neuer Dichtung montiert",
+            "Böden: vorher, dann neue Bleche eingeschweißt",
+            "Innenraum komplett freigelegt und schwarz lackiert",
+            "Hintere Ablage, Radhäuser und Böden lackiert",
+            "Schweller: instand gesetzt, dann geschützt",
+            "Unterboden: vorher, dann mit Steinschlagschutz",
+            "Felgen neu lackiert",
+            "Innenraum fertig: neuer Teppich, Sitze montiert"
           ]
         },
         "pt": {
-          "accroche": "Roadster vermelho, interior preto, pronto a circular.",
+          "accroche": "Importado por nós dos Estados Unidos, totalmente revisto na mecânica, pisos novos.",
           "description": [
-            "Triumph TR3 roadster, cor vermelha, interior preto, porta-bagagens cromado na tampa da mala.",
-            "Descrição completa, historial e faturas enviados a pedido."
+            "Importámos nós próprios este TR3 dos Estados Unidos. Não circulava há dois anos e sabíamos, ao comprá-lo, que a junta da cabeça tinha de ser substituída: estava destinado desde o início a uma passagem completa pela oficina.",
+            "Recuperação mecânica completa — trem dianteiro, travões, embraiagem, alimentação, arrefecimento e motor — e reparação dos pisos e do fundo. O habitáculo foi decapado e repintado, recebendo depois uma alcatifa nova.",
+            "O detalhe dos trabalhos e as fotografias tiradas na oficina estão abaixo; faturas enviadas a pedido."
           ],
           "caracteristiques": {
             "Motor": "Quatro cilindros, 2.0",
@@ -1434,7 +1432,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
               "titre": "Motor e alimentação",
               "points": [
                 "Carburadores removidos, desmontados, limpos e remontados na bancada, depois afinados",
-                "Na recolocação em marcha, junta da cabeça substituída: camisas removidas e recolocadas à altura correta",
+                "Junta da cabeça substituída: camisas removidas e recolocadas à altura correta",
                 "Depósito esvaziado, bomba de combustível nova, filtro de combustível montado",
                 "Mudança de óleo e filtro do motor, óleo da caixa e do diferencial mudados",
                 "Circuito de arrefecimento esvaziado, tubos novos"
@@ -1460,79 +1458,69 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "atelier_leg": [
-            "Cabeça removida na recolocação em marcha: junta da cabeça danificada",
-            "Camisas e êmbolos removidos para controlo",
+            "Camisas e êmbolos removidos",
             "Camisas recolocadas à altura correta",
-            "Fixações da carroçaria ao chassis, novamente soldadas",
-            "Piso do condutor removido, chassis à vista",
-            "Piso do passageiro novo montado",
-            "Piso do condutor novo",
-            "Plataforma traseira antes do tratamento",
-            "Habitáculo aparelhado e pintado de preto",
-            "Pisos e plataforma traseira pintados",
-            "Embaladeira reparada",
-            "Fundo antes da proteção",
-            "Fundo após proteção anti-gravilha",
-            "Jantes repintadas"
+            "Cabeça remontada com junta nova",
+            "Pisos: antes, depois painéis novos soldados",
+            "Habitáculo totalmente decapado e repintado de preto",
+            "Plataforma traseira, cavas de roda e pisos repintados",
+            "Embaladeira: reparada, depois protegida",
+            "Fundo: antes, depois com proteção anti-gravilha",
+            "Jantes repintadas",
+            "Habitáculo terminado: alcatifa nova, bancos remontados"
           ]
         }
       },
       "atelier": [
         {
-          "src": "img/tr3-at-m1.jpg",
-          "legende": "Culasse déposée à la remise en route : joint de culasse en cause"
+          "src": "img/tr3r-at-m1.jpg",
+          "groupe": "meca",
+          "legende": "Chemises et pistons extraits"
         },
         {
-          "src": "img/tr3-at-m2.jpg",
-          "legende": "Chemises et pistons extraits pour contrôle"
-        },
-        {
-          "src": "img/tr3-at-m3.jpg",
+          "src": "img/tr3r-at-m2.jpg",
+          "groupe": "meca",
           "legende": "Chemises reposées à la bonne hauteur"
         },
         {
-          "src": "img/tr3-at-02.jpg",
-          "legende": "Fixations de la caisse sur le châssis, reprises en soudure"
+          "src": "img/tr3r-at-m3.jpg",
+          "groupe": "meca",
+          "legende": "Culasse reposée avec un joint neuf"
         },
         {
-          "src": "img/tr3-at-03.jpg",
-          "legende": "Plancher conducteur déposé, châssis à nu"
+          "src": "img/tr3r-at-c1.jpg",
+          "groupe": "carro",
+          "legende": "Planchers : avant, puis panneaux neufs soudés"
         },
         {
-          "src": "img/tr3-at-04.jpg",
-          "legende": "Plancher passager neuf en place"
+          "src": "img/tr3r-at-c2.jpg",
+          "groupe": "carro",
+          "legende": "Habitacle entièrement mis à nu et repeint en noir"
         },
         {
-          "src": "img/tr3-at-05.jpg",
-          "legende": "Plancher conducteur neuf"
+          "src": "img/tr3r-at-c3.jpg",
+          "groupe": "carro",
+          "legende": "Plage arrière, passages de roue et planchers repeints"
         },
         {
-          "src": "img/tr3-at-06.jpg",
-          "legende": "Plage arrière avant traitement"
+          "src": "img/tr3r-at-c4.jpg",
+          "groupe": "carro",
+          "legende": "Bas de caisse : repris en tôlerie, puis protégé"
         },
         {
-          "src": "img/tr3-at-07.jpg",
-          "legende": "Habitacle apprêté et peint en noir"
+          "src": "img/tr3r-at-c5.jpg",
+          "groupe": "carro",
+          "legende": "Soubassement : avant, puis après protection anti-gravillons"
         },
         {
-          "src": "img/tr3-at-08.jpg",
-          "legende": "Planchers et plage arrière peints"
-        },
-        {
-          "src": "img/tr3-at-09.jpg",
-          "legende": "Bas de caisse repris en tôlerie"
-        },
-        {
-          "src": "img/tr3-at-10.jpg",
-          "legende": "Soubassement avant protection"
-        },
-        {
-          "src": "img/tr3-at-11.jpg",
-          "legende": "Soubassement après protection anti-gravillons"
-        },
-        {
-          "src": "img/tr3-at-12.jpg",
+          "src": "img/tr3r-at-c6.jpg",
+          "groupe": "carro",
           "legende": "Jantes repeintes"
+        },
+        {
+          "src": "img/tr3r-at-c7.jpg",
+          "groupe": "carro",
+          "legende": "Habitacle terminé : moquette neuve, sièges remontés"
         }
       ]
     },
@@ -2311,6 +2299,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "ph.agr": "Agrandir",
   "lb.fermer": "Fermer",
   "tr.at": "À l'atelier",
+  "at.meca": "Mécanique",
+  "at.carro": "Carrosserie et habitacle",
   "pr.titre": "Pièces remplacées",
   "pr.des": "Désignation",
   "pr.ref": "Réf.",
@@ -2449,6 +2439,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "ph.agr": "Enlarge",
   "lb.fermer": "Close",
   "tr.at": "In the workshop",
+  "at.meca": "Mechanical",
+  "at.carro": "Bodywork and cockpit",
   "pr.titre": "Parts replaced",
   "pr.des": "Part",
   "pr.ref": "Ref.",
@@ -2587,6 +2579,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "ph.agr": "Vergrößern",
   "lb.fermer": "Schließen",
   "tr.at": "In der Werkstatt",
+  "at.meca": "Mechanik",
+  "at.carro": "Karosserie und Innenraum",
   "pr.titre": "Ersetzte Teile",
   "pr.des": "Teil",
   "pr.ref": "Art.-Nr.",
@@ -2725,6 +2719,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "ph.agr": "Ampliar",
   "lb.fermer": "Fechar",
   "tr.at": "Na oficina",
+  "at.meca": "Mecânica",
+  "at.carro": "Carroçaria e habitáculo",
   "pr.titre": "Peças substituídas",
   "pr.des": "Peça",
   "pr.ref": "Ref.",
@@ -3096,7 +3092,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         (v.videos&&v.videos.length?'<div class="videos">'+v.videos.map(function(x,i){var lg=(leg&&leg[i])||x.legende; return '<figure><video controls playsinline preload="metadata"'+(x.affiche?' poster="'+esc(x.affiche)+'"':'')+'><source src="'+esc(x.src)+'" type="video/mp4"></video>'+(lg?'<figcaption class="label">'+esc(lg)+'</figcaption>':'')+'</figure>';}).join('')+'</div>':'')+
         (trav&&trav.length?'<div class="travaux"><div class="label">'+t(S.travaux)+'</div>'+listeTravaux(trav)+'</div>':'')+
         (pr.length?'<div class="pieces-r"><div class="label">'+t('pr.titre')+'</div><table><thead><tr><th>'+t('pr.des')+'</th><th class="ref">'+t('pr.ref')+'</th><th class="n q">'+t('pr.qte')+'</th><th class="n">'+t('pr.prix')+'</th></tr></thead><tbody>'+pr.map(function(x,i){return '<tr><td>'+esc(prLeg[i]||x.designation)+'</td><td class="ref">'+esc(x.ref)+'</td><td class="n q">'+esc(x.qte)+'</td><td class="n">'+euro(x.prix)+'</td></tr>';}).join('')+'</tbody><tfoot><tr><td>'+t('pr.total')+'</td><td class="ref"></td><td class="n q"></td><td class="n">'+euro(pr.reduce(function(a,x){return a+x.prix;},0))+'</td></tr></tfoot></table><p class="note">'+t('pr.note')+'</p></div>':'')+
-        (at.length?'<div class="atelier"><div class="label">'+t('tr.at')+'</div><div class="grille-at">'+at.map(function(x,i){return '<figure data-i="'+i+'"><img loading="lazy" src="'+esc(x.src)+'" alt="'+esc(atLeg[i]||'')+'">'+(atLeg[i]?'<figcaption>'+esc(atLeg[i])+'</figcaption>':'')+'</figure>';}).join('')+'</div></div>':'')+
+        (at.length?'<div class="atelier"><div class="label">'+t('tr.at')+'</div>'+(function(){var h='',g=null;at.forEach(function(x,i){var gr=x.groupe||'';if(i===0||gr!==g){if(i>0)h+='</div>';g=gr;h+=(gr?'<div class="sous-at">'+t('at.'+gr)+'</div>':'')+'<div class="grille-at">';}h+='<figure data-i="'+i+'"><img loading="lazy" src="'+esc(x.src)+'" alt="'+esc(atLeg[i]||'')+'">'+(atLeg[i]?'<figcaption>'+esc(atLeg[i])+'</figcaption>':'')+'</figure>';});return h+'</div>';})()+'</div>':'')+
       '</div><aside class="encart"><div class="label">'+t('prix')+'</div><div class="prix">'+esc(prixTxt(v))+'</div>'+
         (note&&v.statut!=='vendu'?'<p class="note" style="margin:-18px 0 30px">'+esc(note)+'</p>':'')+
         '<table>'+rows+'</table>'+
