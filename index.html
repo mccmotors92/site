@@ -210,6 +210,32 @@ body.fiche #page-fiche{display:block}
 .principale .prec{left:0}.principale .suiv{right:0}
 .principale .compteur{position:absolute;right:18px;bottom:16px;font:500 11px var(--sans);letter-spacing:.2em;background:rgba(15,36,27,.6);padding:6px 12px}
 .principale .mention{position:absolute;left:20px;bottom:16px;font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gris)}
+.principale{cursor:zoom-in}
+.principale #grandeImg{position:relative;z-index:1;object-fit:contain}
+.principale .flou{position:absolute;left:-40px;top:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(30px) brightness(.42) saturate(.9);z-index:0;pointer-events:none}
+.principale .nav-ph,.principale .compteur,.principale .agrandir{z-index:2}
+.principale .agrandir{position:absolute;left:18px;bottom:16px;font:500 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;background:rgba(15,36,27,.6);color:var(--ivoire);border:0;padding:6px 12px;cursor:pointer}
+.travaux h4{font:500 11px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--rouge2);margin:30px 0 2px}
+.travaux h4+ul{margin-top:4px}
+.atelier{margin-top:40px}
+.atelier .grille-at{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.atelier figure{margin:0;cursor:zoom-in}
+.atelier img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:opacity .2s}
+.atelier figure:hover img{opacity:.85}
+.atelier figcaption{font-size:12.5px;line-height:1.4;color:var(--gris2);margin-top:7px}
+.lb{position:fixed;inset:0;z-index:2000;background:rgba(5,12,9,.97);display:none;align-items:center;justify-content:center;touch-action:pan-y}
+.lb.ouvert{display:flex}
+body.lb-on{overflow:hidden}
+.lb img{max-width:100vw;max-height:calc(100vh - 90px);max-height:calc(100dvh - 90px);object-fit:contain;user-select:none;-webkit-user-select:none}
+.lb button{position:absolute;background:none;border:0;color:var(--ivoire);cursor:pointer;line-height:1;padding:18px}
+.lb .lb-f{top:4px;right:6px;font-size:34px}
+.lb .lb-p,.lb .lb-s{top:50%;transform:translateY(-50%);font-size:46px;opacity:.75}
+.lb .lb-p{left:2px}.lb .lb-s{right:2px}
+.lb .lb-p:hover,.lb .lb-s:hover{opacity:1}
+.lb .lb-bas{position:absolute;left:0;right:0;bottom:16px;text-align:center;padding:0 60px}
+.lb .lb-leg{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ivoire)}
+.lb .lb-n{font:500 11px var(--sans);letter-spacing:.2em;color:var(--gris2);margin-top:6px}
+@media (max-width:640px){.lb .lb-p,.lb .lb-s{display:none}.lb img{max-height:calc(100dvh - 110px)}.principale .agrandir{display:none}}
 .vignettes{display:flex;gap:10px;margin-top:10px;overflow-x:auto;padding-bottom:4px}
 .vignettes img{width:120px;height:80px;object-fit:cover;cursor:pointer;opacity:.45;transition:opacity .2s;flex:0 0 auto}
 .vignettes img.on,.vignettes img:hover{opacity:1}
@@ -469,13 +495,14 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "statut": "vente",
       "prix": "Nous consulter",
       "prix_note": "",
-      "accroche": "Roadster blanc de 1961, révisé à l'atelier, contrôle technique favorable valable jusqu'en 2027.",
+      "accroche": "Roadster restauré aux États-Unis par un membre du TR Register, remis en route et à la route dans notre atelier.",
       "description": [
-        "Triumph TR3A de 1961, châssis TS78580L, conduite à gauche. Une auto de Californie, qui a gardé sa plaque noire californienne d'époque. Teinte blanche, sellerie noire passepoilée de blanc, moquette noire, porte-bagages chromé sur le coffre.",
-        "Sortie des États-Unis en 2025 par un spécialiste néerlandais des anglaises californiennes, de longue date dans notre réseau, elle est arrivée à notre atelier en septembre 2025.",
-        "Nous y avons refait toute la mécanique d'usage : alimentation, allumage, freinage, embrayage, vidanges complètes (détail ci-dessous), soit près de trente heures d'atelier, puis la présentation. Compressions relevées homogènes sur les quatre cylindres.",
-        "Contrôle technique favorable du 9 octobre 2025, valable jusqu'au 8 octobre 2027. Compteur à cinq chiffres en miles : 21 125 relevés au contrôle.",
-        "Titre californien, factures et procès-verbal communiqués sur demande."
+        "Triumph TR3A de 1961, châssis TS78580L, conduite à gauche. Teinte blanche, sellerie noire passepoilée de blanc, moquette noire, porte-bagages chromé sur le coffre. Une auto de Californie, qui a conservé sa plaque noire californienne d'époque.",
+        "Elle a été restaurée aux États-Unis par un membre du TR Register, dont elle porte toujours le badge sur la barre d'emblèmes. Après le décès de son propriétaire, elle est restée trois ans à l'arrêt, le temps de la succession.",
+        "Elle a été rapatriée en Europe par notre partenaire néerlandais, avec qui l'un de nos associés travaille chaque semaine depuis dix-neuf ans. Ce passionné de près de soixante-dix ans a toujours su dénicher les bonnes autos aux États-Unis, notamment au sein des clubs de marque et de voitures anciennes.",
+        "À l'atelier, nous avons assuré sa remise en route, puis sa remise à la route (détail et photos ci-dessous). Ce travail confirme une belle auto : pas une restauration de l'année, mais une restauration qui a peu roulé. Compressions bonnes et homogènes sur les quatre cylindres, soubassements sains, peinture bien réalisée, habitacle sans défaut notable.",
+        "Contrôle technique favorable, en cours de validité.",
+        "Documents à jour pour l'importation. En qualité de professionnel, nous prenons en charge l'ensemble des démarches d'immatriculation en carte grise française de collection, au nom de l'acquéreur. Cette prestation est incluse dans le prix."
       ],
       "caracteristiques": {
         "Année": "1961",
@@ -487,18 +514,48 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         "Teinte": "Blanc",
         "Intérieur": "Noir, passepoil blanc",
         "Compteur": "21 125 miles (compteur à cinq chiffres)",
-        "Contrôle technique": "Favorable, valable jusqu'au 08/10/2027"
+        "Restauration": "États-Unis, par un membre du TR Register",
+        "Contrôle technique": "Favorable, en cours de validité",
+        "Immatriculation": "Carte grise française de collection, démarches incluses"
       },
       "travaux": [
-        "Réservoir rincé, conduite d'essence et pompe à essence neuves",
-        "Carburateurs SU refaits, filtres à air neufs, allumage neuf",
-        "Vidanges moteur, boîte et pont ; circuit de refroidissement purgé",
-        "Maître-cylindre de frein neuf ; étriers avant refaits (pistons neufs), flexibles neufs ; freins arrière entièrement neufs",
-        "Maître-cylindre et récepteur d'embrayage neufs",
-        "Supports de sièges sablés et repeints",
-        "Chromes, enjoliveurs et porte-bagages rénovés, joints usés remplacés",
-        "Rétroviseur extérieur conducteur et charnière de capot remplacés",
-        "Nettoyage complet de l'habitacle, du coffre et du compartiment moteur"
+        {
+          "titre": "Moteur et alimentation",
+          "points": [
+            "Compressions relevées : bonnes et homogènes sur les quatre cylindres",
+            "Carburateurs SU déposés, refaits à l'établi (kit de réfection et joints neufs), puis réglés",
+            "Collecteurs d'admission et d'échappement déposés, repeints et reposés",
+            "Allumage : vis platinées neuves et réglage",
+            "Réservoir vidangé et rincé, pompe à essence neuve, conduite rigide refaite à l'atelier, filtres à air neufs",
+            "Vidange moteur et filtre à huile, niveaux de boîte et de pont, circuit de refroidissement purgé"
+          ]
+        },
+        {
+          "titre": "Freinage, embrayage et direction",
+          "points": [
+            "Étriers avant ouverts à l'établi : quatre pistons et joints neufs",
+            "Freins arrière refaits : mâchoires, cylindres de roue et ressorts neufs, réglage",
+            "Flexibles de frein neufs, maître-cylindre de frein neuf",
+            "Maître-cylindre et récepteur d'embrayage neufs, supports repeints, purge des deux circuits",
+            "Soufflet de colonne de direction remplacé"
+          ]
+        },
+        {
+          "titre": "Présentation",
+          "points": [
+            "Chromes rénovés : butoirs, poignée de coffre, enjoliveurs de roue, porte-bagages, cerclages de cadrans",
+            "Joints de feux, de phares et d'éclairage de plaque remplacés",
+            "Supports de sièges sablés et repeints, glissières graissées",
+            "Rétroviseur extérieur et charnière de capot remplacés",
+            "Nettoyage complet de l'habitacle, du coffre et du compartiment moteur"
+          ]
+        },
+        {
+          "titre": "Mise au point",
+          "points": [
+            "Essais routiers, réglage des carburateurs et des freins, contrôle technique"
+          ]
+        }
       ],
       "vignette": "img/tr3b-vignette-a.jpg",
       "photos": [
@@ -516,17 +573,24 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         "img/tr3b-12.jpg",
         "img/tr3b-13.jpg"
       ],
-      "videos": [],
+      "videos": [
+        {
+          "src": "img/tr3b-moteur.mp4",
+          "affiche": "img/tr3b-moteur.jpg",
+          "legende": "Moteur au ralenti, à la remise en route"
+        }
+      ],
       "trad": {
         "en": {
           "modele": "TR3A",
-          "accroche": "1961 white roadster, serviced in our workshop, French roadworthiness test passed, valid until 2027.",
+          "accroche": "Roadster restored in the United States by a TR Register member, recommissioned and made road-ready in our workshop.",
           "description": [
-            "1961 Triumph TR3A, chassis TS78580L, left-hand drive. A California car that still wears its period black California plate. White, with black upholstery and white piping, black carpets and a chrome luggage rack on the boot lid.",
-            "Brought out of the United States in 2025 by a Dutch specialist in Californian British cars, a long-standing member of our network, it reached our workshop in September 2025.",
-            "We went through all the running gear: fuel system, ignition, brakes, clutch, full fluid change (details below), close to thirty workshop hours, then the presentation. Compression readings even across all four cylinders.",
-            "French roadworthiness test passed on 9 October 2025, valid until 8 October 2027. Five-digit odometer in miles: 21,125 recorded at the test.",
-            "California title, invoices and test report available on request."
+            "1961 Triumph TR3A, chassis TS78580L, left-hand drive. White, with black upholstery and white piping, black carpets and a chrome luggage rack on the boot lid. A California car that still wears its period black California plate.",
+            "It was restored in the United States by a member of the TR Register, whose badge it still carries on the grille badge bar. After its owner passed away, the car stood unused for three years while the estate was settled.",
+            "It was brought back to Europe by our Dutch partner, with whom one of our partners has worked every week for nineteen years. Now nearly seventy, he has always had a knack for finding the right cars in the United States, notably through marque and classic car clubs.",
+            "In our workshop we recommissioned the car and made it fully road-ready (details and photos below). This work confirmed a fine car: not a fresh restoration, but a restoration that has covered few miles. Good, even compression on all four cylinders, sound underside, well-executed paintwork, an interior with no notable flaws.",
+            "French roadworthiness test passed and currently valid.",
+            "Import paperwork is complete. As a professional dealer, we handle the entire French historic-vehicle registration (carte grise de collection) in the buyer's name. This service is included in the price."
           ],
           "caracteristiques": {
             "Year": "1961",
@@ -538,29 +602,77 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Colour": "White",
             "Interior": "Black, white piping",
             "Odometer": "21,125 miles (five-digit)",
-            "Roadworthiness test": "Passed, valid until 08/10/2027"
+            "Restoration": "United States, by a TR Register member",
+            "Roadworthiness test": "Passed, currently valid",
+            "Registration": "French historic registration, paperwork included"
           },
           "travaux": [
-            "Fuel tank flushed, new fuel line and fuel pump",
-            "SU carburettors rebuilt, new air filters, new ignition",
-            "Engine, gearbox and rear axle oil changed; cooling system flushed",
-            "New brake master cylinder; front calipers rebuilt (new pistons), new hoses; rear brakes all new",
-            "New clutch master and slave cylinders",
-            "Seat frames blasted and repainted",
-            "Chrome, hubcaps and luggage rack refurbished, worn seals replaced",
-            "Driver's door mirror and bonnet hinge replaced",
-            "Full clean of cabin, boot and engine bay"
+            {
+              "titre": "Engine and fuel system",
+              "points": [
+                "Compression tested: good and even on all four cylinders",
+                "SU carburettors removed, rebuilt on the bench (rebuild kit and new gaskets) and tuned",
+                "Inlet and exhaust manifolds removed, repainted and refitted",
+                "Ignition: new contact points and timing",
+                "Fuel tank drained and flushed, new fuel pump, rigid fuel line made in the workshop, new air filters",
+                "Engine oil and filter changed, gearbox and rear axle topped up, cooling system bled"
+              ]
+            },
+            {
+              "titre": "Brakes, clutch and steering",
+              "points": [
+                "Front calipers stripped on the bench: four new pistons and seals",
+                "Rear brakes rebuilt: new shoes, wheel cylinders and springs, adjusted",
+                "New brake hoses, new brake master cylinder",
+                "New clutch master and slave cylinders, brackets repainted, both circuits bled",
+                "Steering column gaiter replaced"
+              ]
+            },
+            {
+              "titre": "Presentation",
+              "points": [
+                "Chrome refurbished: overriders, boot handle, hubcaps, luggage rack, gauge bezels",
+                "Rear lamp, headlamp and number-plate lamp seals replaced",
+                "Seat frames blasted and repainted, runners greased",
+                "Door mirror and bonnet hinge replaced",
+                "Full clean of cabin, boot and engine bay"
+              ]
+            },
+            {
+              "titre": "Final set-up",
+              "points": [
+                "Road tests, carburettor and brake adjustment, roadworthiness test"
+              ]
+            }
+          ],
+          "legendes": [
+            "Engine idling at recommissioning"
+          ],
+          "atelier_leg": [
+            "Compression readings on all four cylinders",
+            "Front calipers: original pistons removed, caliper rebuilt with new pistons and seals",
+            "SU carburettors rebuilt and ignition",
+            "Seat frames, before and after blasting and painting",
+            "Hubcaps, before and after refurbishment",
+            "Rear overriders, before and after",
+            "Boot handle, before and after",
+            "Gauges, before and after cleaning",
+            "Chrome luggage rack refurbished",
+            "Headlamp bowl: seals replaced",
+            "Engine bay after recommissioning",
+            "Cabin after a full clean"
           ]
         },
         "de": {
           "modele": "TR3A",
-          "accroche": "Weißer Roadster von 1961, in unserer Werkstatt überholt, französische Hauptuntersuchung bestanden, gültig bis 2027.",
+          "accroche": "In den USA von einem Mitglied des TR Register restauriert, in unserer Werkstatt wieder in Betrieb genommen und straßenfertig gemacht.",
           "description": [
-            "Triumph TR3A von 1961, Fahrgestell TS78580L, Linkslenker. Ein Fahrzeug aus Kalifornien, das noch sein schwarzes kalifornisches Originalkennzeichen trägt. Weiß, schwarze Ausstattung mit weißen Keder, schwarze Teppiche, verchromter Gepäckträger auf dem Kofferraumdeckel.",
-            "2025 von einem niederländischen Spezialisten für britische Fahrzeuge aus Kalifornien, seit Langem in unserem Netzwerk, aus den USA geholt, kam es im September 2025 in unsere Werkstatt.",
-            "Wir haben die gesamte Technik überholt: Kraftstoffversorgung, Zündung, Bremsen, Kupplung, alle Flüssigkeiten (Einzelheiten unten), knapp dreißig Werkstattstunden, danach die Optik. Gleichmäßige Kompressionswerte auf allen vier Zylindern.",
-            "Französische Hauptuntersuchung am 9. Oktober 2025 bestanden, gültig bis 8. Oktober 2027. Fünfstelliger Meilenzähler: 21.125 bei der Prüfung abgelesen.",
-            "Kalifornischer Title, Rechnungen und Prüfbericht auf Anfrage."
+            "Triumph TR3A von 1961, Fahrgestell TS78580L, Linkslenker. Weiß, schwarze Ausstattung mit weißen Kedern, schwarze Teppiche, verchromter Gepäckträger auf dem Kofferraumdeckel. Ein Fahrzeug aus Kalifornien, das noch sein schwarzes kalifornisches Originalkennzeichen trägt.",
+            "Es wurde in den USA von einem Mitglied des TR Register restauriert, dessen Plakette es noch heute am Emblemhalter trägt. Nach dem Tod des Besitzers stand der Wagen während der Nachlassregelung drei Jahre still.",
+            "Unser niederländischer Partner, mit dem einer unserer Gesellschafter seit neunzehn Jahren wöchentlich zusammenarbeitet, hat ihn nach Europa zurückgeholt. Der fast Siebzigjährige hat schon immer die richtigen Autos in den USA aufgespürt, vor allem über Marken- und Oldtimerclubs.",
+            "In unserer Werkstatt haben wir den Wagen wieder in Betrieb genommen und straßenfertig gemacht (Einzelheiten und Fotos unten). Dabei hat sich ein schönes Fahrzeug bestätigt: keine frische Restaurierung, aber eine Restaurierung mit wenig Laufleistung. Gute, gleichmäßige Kompression auf allen vier Zylindern, gesunder Unterboden, sauber ausgeführte Lackierung, Innenraum ohne nennenswerte Mängel.",
+            "Französische Hauptuntersuchung bestanden und gültig.",
+            "Die Einfuhrpapiere sind vollständig. Als Fachhändler übernehmen wir sämtliche Formalitäten für die französische Oldtimerzulassung (carte grise de collection) auf den Namen des Käufers. Diese Leistung ist im Preis inbegriffen."
           ],
           "caracteristiques": {
             "Baujahr": "1961",
@@ -572,29 +684,77 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Farbe": "Weiß",
             "Innenraum": "Schwarz, weiße Keder",
             "Tachostand": "21.125 Meilen (fünfstellig)",
-            "Hauptuntersuchung": "Bestanden, gültig bis 08.10.2027"
+            "Restaurierung": "USA, durch ein Mitglied des TR Register",
+            "Hauptuntersuchung": "Bestanden, gültig",
+            "Zulassung": "Französische Oldtimerzulassung, Formalitäten inbegriffen"
           },
           "travaux": [
-            "Tank gespült, neue Kraftstoffleitung und Benzinpumpe",
-            "SU-Vergaser überholt, neue Luftfilter, neue Zündung",
-            "Öl in Motor, Getriebe und Hinterachse gewechselt; Kühlsystem gespült",
-            "Neuer Hauptbremszylinder; vordere Bremssättel überholt (neue Kolben), neue Schläuche; hintere Bremsen komplett neu",
-            "Neuer Kupplungsgeber- und -nehmerzylinder",
-            "Sitzgestelle gestrahlt und lackiert",
-            "Chrom, Radkappen und Gepäckträger aufbereitet, verschlissene Dichtungen ersetzt",
-            "Außenspiegel Fahrerseite und Motorhaubenscharnier ersetzt",
-            "Komplette Reinigung von Innenraum, Kofferraum und Motorraum"
+            {
+              "titre": "Motor und Kraftstoffversorgung",
+              "points": [
+                "Kompression gemessen: gut und gleichmäßig auf allen vier Zylindern",
+                "SU-Vergaser ausgebaut, auf der Werkbank überholt (Reparatursatz und neue Dichtungen) und eingestellt",
+                "Ansaug- und Abgaskrümmer ausgebaut, lackiert und wieder eingebaut",
+                "Zündung: neue Unterbrecherkontakte und Einstellung",
+                "Tank entleert und gespült, neue Benzinpumpe, starre Kraftstoffleitung in der Werkstatt gefertigt, neue Luftfilter",
+                "Motoröl und Filter gewechselt, Getriebe und Hinterachse aufgefüllt, Kühlsystem entlüftet"
+              ]
+            },
+            {
+              "titre": "Bremsen, Kupplung und Lenkung",
+              "points": [
+                "Vordere Bremssättel auf der Werkbank zerlegt: vier neue Kolben und Dichtungen",
+                "Hintere Bremsen überholt: neue Bremsbacken, Radbremszylinder und Federn, eingestellt",
+                "Neue Bremsschläuche, neuer Hauptbremszylinder",
+                "Neuer Kupplungsgeber- und -nehmerzylinder, Halter lackiert, beide Kreise entlüftet",
+                "Faltenbalg der Lenksäule ersetzt"
+              ]
+            },
+            {
+              "titre": "Optik",
+              "points": [
+                "Chrom aufbereitet: Stoßstangenhörner, Kofferraumgriff, Radkappen, Gepäckträger, Instrumentenringe",
+                "Dichtungen von Rückleuchten, Scheinwerfern und Kennzeichenleuchte ersetzt",
+                "Sitzgestelle gestrahlt und lackiert, Sitzschienen gefettet",
+                "Außenspiegel und Motorhaubenscharnier ersetzt",
+                "Komplette Reinigung von Innenraum, Kofferraum und Motorraum"
+              ]
+            },
+            {
+              "titre": "Abstimmung",
+              "points": [
+                "Probefahrten, Einstellung von Vergasern und Bremsen, Hauptuntersuchung"
+              ]
+            }
+          ],
+          "legendes": [
+            "Motor im Leerlauf bei der Wiederinbetriebnahme"
+          ],
+          "atelier_leg": [
+            "Kompressionsmessung an allen vier Zylindern",
+            "Vordere Bremssättel: Originalkolben ausgebaut, Sattel mit neuen Kolben und Dichtungen überholt",
+            "SU-Vergaser überholt und Zündung",
+            "Sitzgestelle vor und nach Strahlen und Lackieren",
+            "Radkappen vor und nach der Aufbereitung",
+            "Hintere Stoßstangenhörner vorher und nachher",
+            "Kofferraumgriff vorher und nachher",
+            "Instrumente vor und nach der Reinigung",
+            "Verchromter Gepäckträger aufbereitet",
+            "Scheinwerfertopf: Dichtungen ersetzt",
+            "Motorraum nach der Überholung",
+            "Innenraum nach der kompletten Reinigung"
           ]
         },
         "pt": {
           "modele": "TR3A",
-          "accroche": "Roadster branco de 1961, revisto na nossa oficina, inspeção francesa aprovada, válida até 2027.",
+          "accroche": "Roadster restaurado nos Estados Unidos por um membro do TR Register, reposto a funcionar e pronto para a estrada na nossa oficina.",
           "description": [
-            "Triumph TR3A de 1961, chassis TS78580L, volante à esquerda. Um carro da Califórnia que mantém a sua matrícula preta californiana de época. Branco, estofos pretos com debrum branco, alcatifas pretas, porta-bagagens cromado na tampa da mala.",
-            "Trazido dos Estados Unidos em 2025 por um especialista holandês em ingleses da Califórnia, de longa data na nossa rede, chegou à nossa oficina em setembro de 2025.",
-            "Refizemos toda a mecânica de utilização: alimentação, ignição, travões, embraiagem, mudança de todos os óleos e líquidos (pormenores abaixo), perto de trinta horas de oficina, e depois a apresentação. Compressões homogéneas nos quatro cilindros.",
-            "Inspeção técnica francesa aprovada a 9 de outubro de 2025, válida até 8 de outubro de 2027. Conta-quilómetros de cinco dígitos em milhas: 21 125 registadas na inspeção.",
-            "Título californiano, faturas e relatório de inspeção enviados a pedido."
+            "Triumph TR3A de 1961, chassis TS78580L, volante à esquerda. Branco, estofos pretos com debrum branco, alcatifas pretas e porta-bagagens cromado na tampa da mala. Um carro da Califórnia, que conserva a sua matrícula preta californiana de época.",
+            "Foi restaurado nos Estados Unidos por um membro do TR Register, cujo emblema ainda traz na barra de emblemas da grelha. Após a morte do proprietário, ficou três anos parado durante a partilha da herança.",
+            "Foi trazido de volta para a Europa pelo nosso parceiro holandês, com quem um dos nossos sócios trabalha todas as semanas há dezanove anos. Com quase setenta anos, sempre soube encontrar os bons carros nos Estados Unidos, sobretudo nos clubes de marca e de clássicos.",
+            "Na oficina, pusemo-lo de novo a funcionar e preparámo-lo para a estrada (pormenores e fotografias abaixo). Este trabalho confirmou um belo carro: não é um restauro recente, mas um restauro que rodou pouco. Compressões boas e homogéneas nos quatro cilindros, fundos sãos, pintura bem executada, habitáculo sem defeitos de relevo.",
+            "Inspeção técnica francesa aprovada e válida.",
+            "Documentação de importação em ordem. Enquanto profissionais, tratamos de todo o processo de matrícula francesa de clássico (carte grise de collection) em nome do comprador. Este serviço está incluído no preço."
           ],
           "caracteristiques": {
             "Ano": "1961",
@@ -606,21 +766,118 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Cor": "Branco",
             "Interior": "Preto, debrum branco",
             "Conta-quilómetros": "21 125 milhas (cinco dígitos)",
-            "Inspeção técnica": "Aprovada, válida até 08/10/2027"
+            "Restauro": "Estados Unidos, por um membro do TR Register",
+            "Inspeção técnica": "Aprovada, válida",
+            "Matrícula": "Matrícula francesa de clássico, processo incluído"
           },
           "travaux": [
-            "Depósito lavado, tubo de gasolina e bomba de gasolina novos",
-            "Carburadores SU recuperados, filtros de ar novos, ignição nova",
-            "Óleos do motor, caixa e diferencial mudados; circuito de arrefecimento purgado",
-            "Bomba de travão nova; pinças dianteiras recuperadas (pistões novos), tubos flexíveis novos; travões traseiros totalmente novos",
-            "Bomba e cilindro recetor da embraiagem novos",
-            "Estruturas dos bancos decapadas e pintadas",
-            "Cromados, tampões e porta-bagagens recuperados, juntas gastas substituídas",
-            "Retrovisor exterior do condutor e dobradiça do capô substituídos",
-            "Limpeza completa do habitáculo, da mala e do compartimento do motor"
+            {
+              "titre": "Motor e alimentação",
+              "points": [
+                "Compressões medidas: boas e homogéneas nos quatro cilindros",
+                "Carburadores SU desmontados, reconstruídos na bancada (kit de reparação e juntas novas) e afinados",
+                "Coletores de admissão e de escape desmontados, pintados e remontados",
+                "Ignição: platinados novos e afinação",
+                "Depósito esvaziado e lavado, bomba de gasolina nova, tubo rígido de combustível feito na oficina, filtros de ar novos",
+                "Mudança de óleo e filtro do motor, níveis da caixa e do diferencial, circuito de arrefecimento purgado"
+              ]
+            },
+            {
+              "titre": "Travões, embraiagem e direção",
+              "points": [
+                "Pinças dianteiras desmontadas na bancada: quatro pistões e vedantes novos",
+                "Travões traseiros refeitos: maxilas, cilindros de roda e molas novos, afinação",
+                "Tubos flexíveis de travão novos, bomba de travão nova",
+                "Bomba e cilindro recetor de embraiagem novos, suportes pintados, purga dos dois circuitos",
+                "Fole da coluna de direção substituído"
+              ]
+            },
+            {
+              "titre": "Apresentação",
+              "points": [
+                "Cromados renovados: batentes, puxador da mala, tampões de roda, porta-bagagens, aros dos mostradores",
+                "Vedantes de farolins, faróis e luz da matrícula substituídos",
+                "Estruturas dos bancos decapadas e pintadas, calhas lubrificadas",
+                "Retrovisor exterior e dobradiça do capot substituídos",
+                "Limpeza completa do habitáculo, da mala e do compartimento do motor"
+              ]
+            },
+            {
+              "titre": "Afinação final",
+              "points": [
+                "Ensaios em estrada, afinação dos carburadores e dos travões, inspeção técnica"
+              ]
+            }
+          ],
+          "legendes": [
+            "Motor ao ralenti, no regresso ao funcionamento"
+          ],
+          "atelier_leg": [
+            "Compressões medidas nos quatro cilindros",
+            "Pinças dianteiras: pistões originais retirados, pinça reconstruída com pistões e vedantes novos",
+            "Carburadores SU reconstruídos e ignição",
+            "Estruturas dos bancos, antes e depois da decapagem e pintura",
+            "Tampões de roda, antes e depois da renovação",
+            "Batentes traseiros, antes e depois",
+            "Puxador da mala, antes e depois",
+            "Mostradores, antes e depois da limpeza",
+            "Porta-bagagens cromado renovado",
+            "Farol: vedantes substituídos",
+            "Compartimento do motor após a revisão",
+            "Habitáculo após limpeza completa"
           ]
         }
-      }
+      },
+      "atelier": [
+        {
+          "src": "img/tr3b-at-01.jpg",
+          "legende": "Compressions relevées sur les quatre cylindres"
+        },
+        {
+          "src": "img/tr3b-at-02.jpg",
+          "legende": "Étriers avant : pistons d'origine déposés, étrier remis en état avec pistons et joints neufs"
+        },
+        {
+          "src": "img/tr3b-at-03.jpg",
+          "legende": "Carburateurs SU refaits et allumage"
+        },
+        {
+          "src": "img/tr3b-at-04.jpg",
+          "legende": "Supports de sièges, avant et après sablage et peinture"
+        },
+        {
+          "src": "img/tr3b-at-05.jpg",
+          "legende": "Enjoliveurs de roue, avant et après rénovation"
+        },
+        {
+          "src": "img/tr3b-at-06.jpg",
+          "legende": "Butoirs arrière, avant et après"
+        },
+        {
+          "src": "img/tr3b-at-07.jpg",
+          "legende": "Poignée de coffre, avant et après"
+        },
+        {
+          "src": "img/tr3b-at-08.jpg",
+          "legende": "Cadrans, avant et après nettoyage"
+        },
+        {
+          "src": "img/tr3b-at-09.jpg",
+          "legende": "Porte-bagages chromé rénové"
+        },
+        {
+          "src": "img/tr3b-at-10.jpg",
+          "legende": "Bol de phare : joints remplacés"
+        },
+        {
+          "src": "img/tr3b-at-11.jpg",
+          "legende": "Compartiment moteur après remise en état"
+        },
+        {
+          "src": "img/tr3b-at-12.jpg",
+          "legende": "Habitacle après nettoyage complet"
+        }
+      ]
     },
     {
       "id": "triumph-tr3-rouge",
@@ -843,7 +1100,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       }
     },
     {
-      "id": "jaguar-xjs-cabriolet-1994", "masque": true,
+      "id": "jaguar-xjs-cabriolet-1994",
+      "masque": true,
       "marque": "Jaguar",
       "modele": "XJS 4.0 Cabriolet",
       "annee": "1994",
@@ -902,7 +1160,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       }
     },
     {
-      "id": "jaguar-type-e-38-ots-plancher-plat", "masque": true,
+      "id": "jaguar-type-e-38-ots-plancher-plat",
+      "masque": true,
       "marque": "Jaguar",
       "modele": "Type-E 3.8 Cabriolet",
       "annee": "",
@@ -1465,6 +1724,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "merci": "Merci. Pour finaliser l'envoi, <a href=\"{lien}\">ouvrez votre messagerie</a>, ou écrivez-nous directement à {mail}.",
   "ph.prec": "Photo précédente",
   "ph.suiv": "Photo suivante",
+  "ph.agr": "Agrandir",
+  "lb.fermer": "Fermer",
+  "tr.at": "À l'atelier",
   "titre": "MCC Motors — Automobiles de collection",
   "mentions": "<h1>Mentions légales</h1><h2>Éditeur du site</h2><p>MCC Motors, société par actions simplifiée au capital de 1 000 €<br>Siège social : 31 rue Lavoisier, 92800 Puteaux, France<br>RCS Nanterre 984 835 777 — SIRET 984 835 777 00017<br>N° TVA intracommunautaire : FR57 984 835 777<br>Contact : <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a></p><h2>Directeur de la publication</h2><p>Christophe Da Costa, président de MCC Motors.</p><h2>Hébergement</h2><p>GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, États-Unis — github.com</p><h2>Propriété intellectuelle</h2><p>L'ensemble des textes, photographies et éléments graphiques de ce site est la propriété de MCC Motors, sauf mention contraire. Toute reproduction sans autorisation écrite préalable est interdite. Certains visuels d'illustration (atelier, métiers, pièces de démonstration) ont été créés à l'aide d'outils d'intelligence artificielle ; les photographies des véhicules à vendre sont celles des autos présentées.</p><h2>Informations sur les véhicules</h2><p>Les descriptions et prix sont donnés à titre indicatif et ne constituent pas une offre contractuelle. Les caractéristiques, l'état et la disponibilité de chaque véhicule sont confirmés lors de la prise de contact et de la visite.</p><h2>Données personnelles</h2><p>Les informations transmises par le formulaire de contact (nom, coordonnées, message) servent uniquement à répondre à votre demande. Elles sont acheminées par e-mail via le service FormSubmit et ne sont ni cédées ni utilisées à des fins de prospection. Elles sont conservées le temps nécessaire au traitement de votre demande et à la relation commerciale qui peut en découler.</p><p>Conformément au règlement (UE) 2016/679 (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition, que vous pouvez exercer en écrivant à <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a>. Vous pouvez également adresser une réclamation à la CNIL (cnil.fr).</p><h2>Cookies</h2><p>Ce site n'utilise ni cookie publicitaire ni outil de mesure d'audience. Seul votre choix de langue est conservé dans votre navigateur, pour vous éviter de le refaire à chaque visite.</p>",
   "foot.ml": "Mentions légales",
@@ -1593,6 +1855,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "merci": "Thank you. To send your message, <a href=\"{lien}\">open your e-mail</a>, or write to us directly at {mail}.",
   "ph.prec": "Previous photo",
   "ph.suiv": "Next photo",
+  "ph.agr": "Enlarge",
+  "lb.fermer": "Close",
+  "tr.at": "In the workshop",
   "titre": "MCC Motors — Classic motor cars",
   "mentions": "<h1>Legal notice</h1><h2>Publisher</h2><p>MCC Motors, simplified joint-stock company (SAS) with a share capital of 1 000 €<br>Registered office : 31 rue Lavoisier, 92800 Puteaux, France<br>RCS Nanterre 984 835 777 — SIRET 984 835 777 00017<br>EU VAT number : FR57 984 835 777<br>Contact : <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a></p><h2>Publication director</h2><p>Christophe Da Costa, President of MCC Motors.</p><h2>Hosting</h2><p>GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, United States — github.com</p><h2>Intellectual property</h2><p>All texts, photographs and graphic elements on this site are the property of MCC Motors unless otherwise stated. Any reproduction without prior written permission is prohibited. Some illustrative images (workshop, trades, demonstration parts) were created using artificial intelligence tools; photographs of the cars for sale are of the actual cars.</p><h2>Vehicle information</h2><p>Descriptions and prices are given for information only and do not constitute a contractual offer. The specification, condition and availability of each car are confirmed when you contact us and visit.</p><h2>Personal data</h2><p>Information sent through the contact form (name, contact details, message) is used solely to reply to your enquiry. It is delivered by e-mail via the FormSubmit service and is never sold or used for marketing. It is kept for as long as needed to handle your enquiry and any resulting business relationship.</p><p>Under the EU General Data Protection Regulation (GDPR) and French data protection law, you have the right to access, rectify, erase and object to the processing of your data by writing to <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a>. You may also lodge a complaint with the CNIL (cnil.fr).</p><h2>Cookies</h2><p>This site uses no advertising cookies and no audience measurement tools. Only your choice of language is stored in your browser, so you do not have to select it again on each visit.</p>",
   "foot.ml": "Legal notice",
@@ -1721,6 +1986,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "merci": "Vielen Dank. Um die Nachricht zu senden, <a href=\"{lien}\">öffnen Sie Ihr E-Mail-Programm</a> oder schreiben Sie uns direkt an {mail}.",
   "ph.prec": "Vorheriges Foto",
   "ph.suiv": "Nächstes Foto",
+  "ph.agr": "Vergrößern",
+  "lb.fermer": "Schließen",
+  "tr.at": "In der Werkstatt",
   "titre": "MCC Motors — Klassische Automobile",
   "mentions": "<h1>Impressum</h1><h2>Herausgeber</h2><p>MCC Motors, vereinfachte Aktiengesellschaft (SAS) mit einem Stammkapital von 1 000 €<br>Sitz : 31 rue Lavoisier, 92800 Puteaux, Frankreich<br>RCS Nanterre 984 835 777 — SIRET 984 835 777 00017<br>USt-IdNr. : FR57 984 835 777<br>Kontakt : <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a></p><h2>Verantwortlich für den Inhalt</h2><p>Christophe Da Costa, Präsident von MCC Motors.</p><h2>Hosting</h2><p>GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, USA — github.com</p><h2>Urheberrecht</h2><p>Sämtliche Texte, Fotos und grafischen Elemente dieser Website sind, sofern nicht anders angegeben, Eigentum von MCC Motors. Jede Vervielfältigung ohne vorherige schriftliche Genehmigung ist untersagt. Einige Illustrationen (Werkstatt, Gewerke, Beispielteile) wurden mithilfe von Werkzeugen der künstlichen Intelligenz erstellt; die Fotos der angebotenen Fahrzeuge zeigen die tatsächlichen Fahrzeuge.</p><h2>Fahrzeuginformationen</h2><p>Beschreibungen und Preise sind unverbindlich und stellen kein vertragliches Angebot dar. Ausstattung, Zustand und Verfügbarkeit jedes Fahrzeugs werden bei der Kontaktaufnahme und Besichtigung bestätigt.</p><h2>Datenschutz</h2><p>Die über das Kontaktformular übermittelten Angaben (Name, Kontaktdaten, Nachricht) dienen ausschließlich der Beantwortung Ihrer Anfrage. Sie werden per E-Mail über den Dienst FormSubmit zugestellt und weder weitergegeben noch zu Werbezwecken verwendet. Sie werden so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage und eine daraus entstehende Geschäftsbeziehung erforderlich ist.</p><p>Gemäß der Datenschutz-Grundverordnung (DSGVO) haben Sie das Recht auf Auskunft, Berichtigung, Löschung und Widerspruch; schreiben Sie dazu an <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a>. Sie können außerdem Beschwerde bei der französischen Datenschutzbehörde CNIL (cnil.fr) einlegen.</p><h2>Cookies</h2><p>Diese Website verwendet weder Werbe-Cookies noch Analysewerkzeuge. Lediglich Ihre Sprachauswahl wird in Ihrem Browser gespeichert, damit Sie sie nicht bei jedem Besuch erneut treffen müssen.</p>",
   "foot.ml": "Impressum",
@@ -1849,6 +2117,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "merci": "Obrigado. Para concluir o envio, <a href=\"{lien}\">abra o seu e-mail</a> ou escreva-nos diretamente para {mail}.",
   "ph.prec": "Foto anterior",
   "ph.suiv": "Foto seguinte",
+  "ph.agr": "Ampliar",
+  "lb.fermer": "Fechar",
+  "tr.at": "Na oficina",
   "titre": "MCC Motors — Automóveis de coleção",
   "mentions": "<h1>Informações legais</h1><h2>Editor do site</h2><p>MCC Motors, sociedade por ações simplificada (SAS) com capital social de 1 000 €<br>Sede : 31 rue Lavoisier, 92800 Puteaux, França<br>RCS Nanterre 984 835 777 — SIRET 984 835 777 00017<br>N.º IVA intracomunitário : FR57 984 835 777<br>Contacto : <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a></p><h2>Diretor da publicação</h2><p>Christophe Da Costa, presidente da MCC Motors.</p><h2>Alojamento</h2><p>GitHub, Inc., 88 Colton Street, San Francisco, CA 94107, Estados Unidos — github.com</p><h2>Propriedade intelectual</h2><p>Todos os textos, fotografias e elementos gráficos deste site são propriedade da MCC Motors, salvo indicação em contrário. É proibida qualquer reprodução sem autorização prévia por escrito. Algumas imagens ilustrativas (oficina, especialidades, peças de demonstração) foram criadas com ferramentas de inteligência artificial; as fotografias dos veículos à venda são dos próprios automóveis.</p><h2>Informação sobre os veículos</h2><p>As descrições e os preços são indicativos e não constituem uma oferta contratual. As características, o estado e a disponibilidade de cada veículo são confirmados no contacto e na visita.</p><h2>Dados pessoais</h2><p>As informações enviadas pelo formulário de contacto (nome, contactos, mensagem) servem unicamente para responder ao seu pedido. São encaminhadas por e-mail através do serviço FormSubmit e não são cedidas nem utilizadas para fins de prospeção. São conservadas pelo tempo necessário ao tratamento do pedido e à relação comercial que dele possa resultar.</p><p>Nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD), tem direito de acesso, retificação, apagamento e oposição, que pode exercer escrevendo para <a href=\"mailto:contact@mccmotors.fr\">contact@mccmotors.fr</a>. Pode também apresentar reclamação junto da CNIL (cnil.fr).</p><h2>Cookies</h2><p>Este site não utiliza cookies publicitários nem ferramentas de medição de audiência. Apenas a sua escolha de idioma é guardada no navegador, para não ter de a repetir a cada visita.</p>",
   "foot.ml": "Informações legais",
@@ -2162,19 +2433,46 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   }
   function afficherPhoto(){
     var ph = galerie(courante.v); if(!ph.length) ph=[GEN];
-    document.getElementById('grandeImg').src = ph[idx];
+    document.getElementById('grandeImg').src = ph[idx]; var fl=document.getElementById('flouImg'); if(fl) fl.src=ph[idx];
     var c = document.getElementById('compteur'); if(c) c.textContent=(idx+1)+' / '+ph.length;
     document.querySelectorAll('.vignettes img').forEach(function(im,i){im.classList.toggle('on',i===idx);});
+  }
+  function listeTravaux(tv){
+    var h='', ul=[];
+    function vider(){ if(ul.length){ h+='<ul>'+ul.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>'; ul=[]; } }
+    tv.forEach(function(x){ if(x&&typeof x==='object'){ vider(); h+='<h4>'+esc(x.titre)+'</h4>'; ul=(x.points||[]).slice(); vider(); } else ul.push(x); });
+    vider(); return h;
+  }
+  function glisser(el,cb){ if(!el) return; var x0=null,y0=0; el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;y0=e.touches[0].clientY;},{passive:true}); el.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null; if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)) cb(dx<0?1:-1); },{passive:true}); }
+  var LB=null, lbL=[], lbI=0, lbLeg=[];
+  function lbMaj(){ LB.querySelector('img').src=lbL[lbI]; LB.querySelector('.lb-leg').textContent=lbLeg[lbI]||''; LB.querySelector('.lb-n').textContent=lbL.length>1?(lbI+1)+' / '+lbL.length:''; LB.querySelector('.lb-p').style.visibility=LB.querySelector('.lb-s').style.visibility=lbL.length>1?'':'hidden'; var nx=new Image(); nx.src=lbL[(lbI+1)%lbL.length]; }
+  function lbAller(d){ lbI=(lbI+d+lbL.length)%lbL.length; lbMaj(); }
+  function fermerLb(){ if(!LB) return; LB.classList.remove('ouvert'); document.body.classList.remove('lb-on'); }
+  function ouvrirLb(liste,i,legs){
+    if(!LB){
+      LB=document.createElement('div'); LB.className='lb';
+      LB.innerHTML='<img alt=""><button class="lb-f" aria-label="'+t('lb.fermer')+'">×</button><button class="lb-p" aria-label="'+t('ph.prec')+'">‹</button><button class="lb-s" aria-label="'+t('ph.suiv')+'">›</button><div class="lb-bas"><div class="lb-leg"></div><div class="lb-n"></div></div>';
+      document.body.appendChild(LB);
+      LB.querySelector('.lb-f').onclick=fermerLb;
+      LB.querySelector('.lb-p').onclick=function(e){e.stopPropagation();lbAller(-1);};
+      LB.querySelector('.lb-s').onclick=function(e){e.stopPropagation();lbAller(1);};
+      LB.onclick=function(e){ if(e.target===LB) fermerLb(); };
+      glisser(LB,function(d){ if(lbL.length>1) lbAller(d); });
+      document.addEventListener('keydown',function(e){ if(!document.body.classList.contains('lb-on')) return; if(e.key==='Escape') fermerLb(); if(e.key==='ArrowRight') lbAller(1); if(e.key==='ArrowLeft') lbAller(-1); });
+      window.addEventListener('hashchange',fermerLb);
+    }
+    LB.querySelector('.lb-f').setAttribute('aria-label',t('lb.fermer'));
+    lbL=liste; lbI=i||0; lbLeg=legs||[]; lbMaj(); LB.classList.add('ouvert'); document.body.classList.add('lb-on');
   }
   function rendreFiche(f, garderIdx){
     courante=f; if(!garderIdx) idx=0;
     var v=f.v, ph=galerie(v), multi=ph.length>1, S=SECTION[f.ancre];
     var car=tr(v,'caracteristiques')||{}, rows=''; Object.keys(car).forEach(function(k){rows+='<tr><td>'+esc(k)+'</td><td>'+esc(car[k])+'</td></tr>';});
     var etat = f.type==='projet'&&v.statut==='vente'?t('e.projet'):ETAT(v.statut);
-    var leg=tr(v,'legendes'), trav=tr(v,'travaux'), note=tr(v,'prix_note');
+    var leg=tr(v,'legendes'), trav=tr(v,'travaux'), note=tr(v,'prix_note'), at=v.atelier||[], atTr=tr(v,'atelier_leg')||[], atLeg=at.map(function(x,i){return atTr[i]||x.legende||'';});
     document.getElementById('fiche').innerHTML =
       '<div class="fil"><a class="ret" href="#'+f.ancre+'">'+t(S.retour)+'</a><span class="label">'+esc(etat)+'</span></div>'+
-      '<div class="principale"><img id="grandeImg" src="'+esc(ph[0]||GEN)+'" alt="'+esc(v.marque+' '+modele(v))+'">'+
+      '<div class="principale"><img class="flou" id="flouImg" src="'+esc(ph[0]||GEN)+'" alt="" aria-hidden="true"><img id="grandeImg" src="'+esc(ph[0]||GEN)+'" alt="'+esc(v.marque+' '+modele(v))+'">'+(ph.length?'<button class="agrandir" id="agrandir">'+t('ph.agr')+'</button>':'')+
       (multi?'<button class="nav-ph prec" aria-label="'+t('ph.prec')+'">‹</button><button class="nav-ph suiv" aria-label="'+t('ph.suiv')+'">›</button><span class="compteur" id="compteur"></span>':'')+
       (ph.length?'':'<span class="mention">'+t('mention')+'</span>')+'</div>'+
       (multi?'<div class="vignettes">'+ph.map(function(p,i){return '<img src="'+esc(p)+'" data-i="'+i+'" alt="">';}).join('')+'</div>':'')+
@@ -2183,13 +2481,17 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         '<h1>'+esc(v.marque)+' '+esc(modele(v))+'</h1><p class="accroche">'+esc(tr(v,'accroche'))+'</p>'+
         '<div class="desc">'+(tr(v,'description')||[]).map(function(x){return '<p>'+esc(x)+'</p>';}).join('')+'</div>'+
         (v.videos&&v.videos.length?'<div class="videos">'+v.videos.map(function(x,i){var lg=(leg&&leg[i])||x.legende; return '<figure><video controls playsinline preload="metadata"'+(x.affiche?' poster="'+esc(x.affiche)+'"':'')+'><source src="'+esc(x.src)+'" type="video/mp4"></video>'+(lg?'<figcaption class="label">'+esc(lg)+'</figcaption>':'')+'</figure>';}).join('')+'</div>':'')+
-        (trav&&trav.length?'<div class="travaux"><div class="label">'+t(S.travaux)+'</div><ul>'+trav.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>':'')+
+        (trav&&trav.length?'<div class="travaux"><div class="label">'+t(S.travaux)+'</div>'+listeTravaux(trav)+'</div>':'')+
+        (at.length?'<div class="atelier"><div class="label">'+t('tr.at')+'</div><div class="grille-at">'+at.map(function(x,i){return '<figure data-i="'+i+'"><img loading="lazy" src="'+esc(x.src)+'" alt="'+esc(atLeg[i]||'')+'">'+(atLeg[i]?'<figcaption>'+esc(atLeg[i])+'</figcaption>':'')+'</figure>';}).join('')+'</div></div>':'')+
       '</div><aside class="encart"><div class="label">'+t('prix')+'</div><div class="prix">'+esc(prixTxt(v))+'</div>'+
         (note&&v.statut!=='vendu'?'<p class="note" style="margin:-18px 0 30px">'+esc(note)+'</p>':'')+
         '<table>'+rows+'</table>'+
         '<a class="bouton r" href="#contact" id="demande">'+(v.statut==='vendu'?t('b.rech'):t('b.info'))+'</a>'+
         '<button class="partager" id="partager">'+t('partager')+'</button>'+
         '<p class="note">'+t('n.visite')+'</p></aside></div>';
+    var gi=document.getElementById('grandeImg'), ag=document.getElementById('agrandir');
+    if(ph.length){ gi.onclick=function(){ouvrirLb(ph,idx);}; if(ag) ag.onclick=function(e){e.stopPropagation();ouvrirLb(ph,idx);}; glisser(document.querySelector('.principale'),function(d){ if(ph.length<2) return; idx=(idx+d+ph.length)%ph.length; afficherPhoto(); }); }
+    document.querySelectorAll('.atelier figure').forEach(function(fg){fg.onclick=function(){ouvrirLb(at.map(function(x){return x.src;}),+fg.dataset.i,atLeg);};});
     if(multi){
       document.querySelector('.prec').onclick=function(){idx=(idx-1+ph.length)%ph.length;afficherPhoto();};
       document.querySelector('.suiv').onclick=function(){idx=(idx+1)%ph.length;afficherPhoto();};
@@ -2208,6 +2510,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   }
   function rendreMentions(){ document.getElementById('fiche').innerHTML='<div class="mentions"><a class="ret" href="#accueil">'+t('retour')+'</a>'+t('mentions')+'</div>'; }
   document.addEventListener('keydown',function(e){
+    if(document.body.classList.contains('lb-on')) return;
     if(!document.body.classList.contains('fiche')||!courante) return;
     var n=galerie(courante.v).length; if(n<2) return;
     if(e.key==='ArrowRight'){idx=(idx+1)%n;afficherPhoto();}
