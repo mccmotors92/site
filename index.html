@@ -2986,6 +2986,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     var q=(location.search.match(/[?&]lang=(\w\w)/)||[])[1];
     if(q&&LANGUES.indexOf(q)>=0) return q;
     try{ var m=localStorage.getItem('mccLang'); if(m&&LANGUES.indexOf(m)>=0) return m; }catch(e){}
+    if(/bot|crawl|spider|slurp|google|bing|yandex|duckduck|facebookexternalhit|preview/i.test(navigator.userAgent||'')) return 'fr';
     var n=(navigator.language||'fr').slice(0,2).toLowerCase();
     return LANGUES.indexOf(n)>=0?n:'fr';
   }
