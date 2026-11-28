@@ -17,14 +17,14 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#0f241b">
 <meta name="denicherbot" content="noindex">
-<link rel="preload" href="img/intro.mp4" as="video" type="video/mp4">
-<link rel="preload" href="img/intro-poster.jpg" as="image">
+<link rel="preload" href="img/intro.mp4" as="video" type="video/mp4" media="(min-width: 761px)">
+<link rel="preload" href="img/intro-poster.jpg" as="image" media="(min-width: 761px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --noir:#0f241b; --noir2:#132c21; --noir3:#183528; --trait:#2b4537; --trait2:#3b5848;
-  --rouge:#a87b4f; --rouge2:#c49a6c; --ivoire:#ede3cc; --gris:#b8ad93; --gris2:#859381;
+  --rouge:#a87b4f; --rouge2:#c49a6c; --ivoire:#ede3cc; --gris:#c4b99f; --gris2:#a3ad9c;
   --serif:"Cormorant Garamond",Georgia,serif; --sans:Inter,system-ui,sans-serif; --cond:"Barlow Condensed","Arial Narrow",sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -60,7 +60,7 @@ nav a:hover:after{right:0}
 @media (max-width:1440px) and (min-width:1081px){nav{gap:26px}nav a{font-size:14px;letter-spacing:.16em}}
 @media (max-width:1300px) and (min-width:1081px){nav{gap:18px}nav a{font-size:13px;letter-spacing:.12em}.logo{margin-right:24px}.logo b,.logo em{font-size:38px}.logo i{height:36px}.langues{padding-left:14px}}
 .langues{display:flex;align-items:center;gap:2px;margin-left:6px;padding-left:22px;border-left:1px solid var(--trait)}
-.langues button{background:none;border:0;cursor:pointer;font-family:var(--sans,Inter,sans-serif);font-size:11px;letter-spacing:.14em;color:#8f8a76;padding:6px 6px;transition:color .2s}
+.langues button{background:none;border:0;cursor:pointer;font-family:var(--sans,Inter,sans-serif);font-size:11px;letter-spacing:.14em;color:#aaa48e;padding:6px 6px;transition:color .2s}
 .langues button:hover{color:var(--ivoire)}
 .langues button.on{color:var(--rouge2)}
 @media (max-width:1080px){.langues{margin:8px 0 0;padding:16px 0 0;border-left:0;border-top:1px solid var(--trait)}.langues button{font-size:13px;padding:6px 14px 6px 0}}
@@ -476,7 +476,30 @@ section + section{border-top:1px solid rgba(168,123,79,.22)!important}
 footer{border-top:1px solid rgba(168,123,79,.3)!important}
 .hero h1 em{color:var(--rouge2)!important}
 ::selection{background:var(--rouge);color:var(--noir)}
+/* Lisibilité des petits textes (28/11/2026) */
+.label{font-size:12px;letter-spacing:.26em}
+.carte .marque{font-size:12px;color:#cfc4aa}
+.carte .voir{font-size:11.5px;letter-spacing:.2em;color:#cfc4aa}
+.carte .acc{color:#cdc3ab}
+.filtres .nb{font-size:11px}
+.coord dt,form label,.pieces-r th,.encart td:first-child,.travaux h4{font-size:12px;letter-spacing:.2em}
+.eyebrow{font-size:12px;letter-spacing:.28em}
+nav a.tel-nav{font-size:11.5px}
+/* Services, TTC, lexique (28/11/2026) */
+.encart .note.ttc{margin:-18px 0 30px;font-size:13px}
+.encart .note.ttc+.note{margin-top:-24px!important}
+.services{margin:26px 0 6px;padding-top:18px;border-top:1px solid var(--trait)}
+.services ul{list-style:none;margin:10px 0 0;padding:0}
+.services li{font-size:14.5px;line-height:1.45;color:#d8cfb8;padding:5px 0 5px 18px;position:relative}
+.services li:before{content:"";position:absolute;left:0;top:15px;width:8px;height:1px;background:var(--rouge2)}
+.lexique{margin:34px 0 10px;padding:22px 24px;border:1px solid var(--trait);background:rgba(255,255,255,.015)}
+.lexique dl{margin:12px 0 0;display:grid;gap:12px}
+.lexique dt{font-family:var(--serif);font-size:19px;color:var(--ivoire)}
+.lexique dd{margin:2px 0 0;font-size:14.5px;line-height:1.5;color:#cdc3ab}
+.coord dd.at-txt{font-size:15px;line-height:1.5;color:#cdc3ab}
+@media (max-width:760px){.hero .surtitre span{letter-spacing:.22em}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoDealer", "name": "MCC Motors", "url": "https://mccmotors.fr/", "logo": "https://mccmotors.fr/img/logo-mcc.png", "image": "https://mccmotors.fr/img/partage.jpg", "telephone": "+33185500242", "email": "contact@mccmotors.fr", "address": {"@type": "PostalAddress", "streetAddress": "31 rue Lavoisier", "postalCode": "92800", "addressLocality": "Puteaux", "addressCountry": "FR"}, "areaServed": "Worldwide", "description": "Achat et vente de voitures de collection, autos à restaurer et supervision de restauration."}</script>
 </head>
 <body>
 
@@ -502,7 +525,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "pt": {
         "atelier": "Yvelines (oeste de Paris), apenas por marcação"
       }
-    }
+    },
+    "siege": "31 rue Lavoisier, 92800 Puteaux"
   },
   "afficher_pieces": false,
   "visuel_generique": "img/visuel.jpg",
@@ -548,7 +572,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "caracteristiques": {
         "Année": "1957",
         "Construction": "12 juillet 1957 (certificat Heritage)",
-        "Châssis": "TS20170L",
+        "Châssis": "TS20XXXL",
         "Numéros": "Matching numbers (moteur conforme au certificat d'usine et à la carte grise d'origine)",
         "Historique": "Première main, jamais réimmatriculée, jamais restaurée",
         "Moteur": "Quatre cylindres, 1 991 cm³, deux carburateurs SU",
@@ -907,7 +931,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           "caracteristiques": {
             "Year": "1957",
             "Built": "12 July 1957 (Heritage certificate)",
-            "Chassis": "TS20170L",
+            "Chassis": "TS20XXXL",
             "Numbers": "Matching numbers (engine as per factory certificate and original title)",
             "History": "One owner, never re-registered, never restored",
             "Engine": "Four cylinders, 1,991 cc, twin SU carburettors",
@@ -1152,7 +1176,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           "caracteristiques": {
             "Baujahr": "1957",
             "Gebaut": "12. Juli 1957 (Heritage-Zertifikat)",
-            "Fahrgestell": "TS20170L",
+            "Fahrgestell": "TS20XXXL",
             "Nummern": "Matching numbers (Motor laut Werkszertifikat und Originalbrief)",
             "Historie": "Erste Hand, nie umgemeldet, nie restauriert",
             "Motor": "Vierzylinder, 1.991 cm³, zwei SU-Vergaser",
@@ -1397,7 +1421,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           "caracteristiques": {
             "Ano": "1957",
             "Construção": "12 de julho de 1957 (certificado Heritage)",
-            "Chassis": "TS20170L",
+            "Chassis": "TS20XXXL",
             "Números": "Matching numbers (motor conforme o certificado de fábrica e o título original)",
             "Histórico": "Primeiro dono, nunca rematriculado, nunca restaurado",
             "Motor": "Quatro cilindros, 1 991 cm³, dois carburadores SU",
@@ -1920,14 +1944,14 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "description": [
         "Elle a conservé sa « California Black Plate » : ces plaques noires à caractères jaunes que la Californie a délivrées de 1963 à 1969. Elles ne restent valables que sur l'auto à laquelle elles ont été attribuées, et à condition qu'elle soit restée immatriculée sans interruption. Pour les amateurs, c'est le signe d'une auto restée en Californie depuis les années soixante, sous un climat sec qui épargne les carrosseries.",
         "Elle a été restaurée aux États-Unis par un membre du TR Register, dont elle porte toujours le badge sur la barre d'emblèmes. Ces autos de membres de club, suivies par des passionnés qui en connaissent chaque détail, se présentent rarement : elles changent de mains entre initiés ou restent dans la famille. Après le décès de son propriétaire, celle-ci est restée trois ans à l'arrêt, le temps de la succession.",
-        "C'est notre partenaire néerlandais qui a su la faire venir. Professionnel de l'achat et de l'importation d'autos aux États-Unis depuis près de cinquante ans, il travaille avec les mêmes correspondants américains presque depuis ses débuts, et l'un de nos associés échange avec lui chaque semaine depuis dix-neuf ans. C'est ce réseau, tissé au fil des clubs de marque et de voitures anciennes, qui ouvre l'accès à des autos comme celle-ci.",
+        "C'est l'un de nos partenaires qui a su la faire venir. Professionnel de l'achat et de l'importation d'autos aux États-Unis depuis près de cinquante ans, il travaille avec les mêmes correspondants américains presque depuis ses débuts, et l'un de nos associés échange avec lui chaque semaine depuis dix-neuf ans. C'est ce réseau, tissé au fil des clubs de marque et de voitures anciennes, qui ouvre l'accès à des autos comme celle-ci.",
         "Les TR3, nous les connaissons bien. Après trois ans d'immobilisation, nous avons choisi une remise en route prudente et méthodique : plutôt que d'attendre que les faiblesses connues se manifestent, nous avons remplacé à neuf ce qui s'use ou se fatigue pendant un stockage et qui cède en général dans les premières centaines de kilomètres. Le freinage d'abord, de l'étrier au maître-cylindre ; puis l'alimentation, l'allumage et l'embrayage.",
         "Ce travail confirme une belle auto. Ce n'est pas une restauration de l'année, mais une restauration qui a peu roulé : compressions bonnes et homogènes sur les quatre cylindres, soubassements sains, peinture bien réalisée, habitacle sans défaut notable.",
         "Documents à jour pour l'importation. En qualité de professionnel, nous prenons en charge l'ensemble des démarches d'immatriculation en carte grise française de collection, au nom de l'acquéreur ; cette prestation est incluse."
       ],
       "caracteristiques": {
         "Année": "1961",
-        "Châssis": "TS78580L",
+        "Châssis": "TS78XXXL",
         "Moteur": "Quatre cylindres, 1 991 cm³, deux carburateurs SU",
         "Boîte": "Manuelle, quatre rapports, sans overdrive",
         "Carrosserie": "Roadster",
@@ -1977,7 +2001,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           ]
         }
       ],
-      "vignette": "img/tr3b-vignette-a.jpg",
+      "vignette": "img/tr3b-vignette-a.jpg?v=2",
       "photos": [
         "img/tr3b-1.jpg",
         "img/tr3b-2.jpg",
@@ -2007,14 +2031,14 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           "description": [
             "It has kept its \"California Black Plate\": the black plates with yellow characters that California issued from 1963 to 1969. They remain valid only on the car they were issued to, and only if it has been registered without interruption. For enthusiasts, it is the mark of a car that has stayed in California since the sixties, in a dry climate that spares bodywork.",
             "It was restored in the United States by a member of the TR Register, whose badge it still carries on the grille badge bar. Club members' cars, looked after by enthusiasts who know every detail of them, rarely come up: they change hands among insiders or stay in the family. After its owner passed away, this one stood unused for three years while the estate was settled.",
-            "Our Dutch partner was the one who brought it over. A professional who has been buying and importing cars from the United States for nearly fifty years, he has worked with the same American contacts almost from the start, and one of our partners has spoken with him every week for nineteen years. That network, built up through marque and classic car clubs, is what opens the door to cars like this one.",
+            "One of our partners was the one who brought it over. A professional who has been buying and importing cars from the United States for nearly fifty years, he has worked with the same American contacts almost from the start, and one of our partners has spoken with him every week for nineteen years. That network, built up through marque and classic car clubs, is what opens the door to cars like this one.",
             "We know TR3s well. After three years off the road, we chose a careful, methodical recommissioning: rather than wait for the known weaknesses to show, we replaced with new parts everything that wears or deteriorates during storage and usually fails within the first few hundred kilometres. Brakes first, from caliper to master cylinder; then fuel system, ignition and clutch.",
             "This work confirmed a fine car. Not a fresh restoration, but a restoration that has covered few miles: good, even compression on all four cylinders, sound underside, well-executed paintwork, an interior with no notable flaws.",
             "Import paperwork is complete. As a professional dealer, we handle the entire French historic-vehicle registration (carte grise de collection) in the buyer's name; this service is included."
           ],
           "caracteristiques": {
             "Year": "1961",
-            "Chassis": "TS78580L",
+            "Chassis": "TS78XXXL",
             "Engine": "Four-cylinder, 1,991 cc, twin SU carburettors",
             "Gearbox": "Manual, four-speed, no overdrive",
             "Body": "Roadster",
@@ -2119,14 +2143,14 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           "description": [
             "Er trägt noch seine „California Black Plate“: die schwarzen Kennzeichen mit gelben Zeichen, die Kalifornien von 1963 bis 1969 ausgab. Sie bleiben nur an dem Fahrzeug gültig, für das sie ausgegeben wurden, und nur, wenn es ohne Unterbrechung zugelassen war. Für Kenner ist das das Zeichen eines Autos, das seit den Sechzigern in Kalifornien geblieben ist, in einem trockenen Klima, das Karosserien schont.",
             "Er wurde in den USA von einem Mitglied des TR Register restauriert, dessen Plakette er noch heute am Emblemhalter trägt. Solche Fahrzeuge von Clubmitgliedern, gepflegt von Liebhabern, die jedes Detail kennen, kommen selten auf den Markt: Sie wechseln unter Kennern den Besitzer oder bleiben in der Familie. Nach dem Tod des Besitzers stand dieser Wagen während der Nachlassregelung drei Jahre still.",
-            "Unser niederländischer Partner hat ihn zu uns geholt. Er kauft und importiert seit fast fünfzig Jahren Fahrzeuge aus den USA, arbeitet fast von Anfang an mit denselben amerikanischen Partnern, und einer unserer Gesellschafter steht seit neunzehn Jahren jede Woche mit ihm in Kontakt. Dieses über Marken- und Oldtimerclubs gewachsene Netzwerk öffnet den Zugang zu Fahrzeugen wie diesem.",
+            "Einer unserer Partner hat ihn zu uns geholt. Er kauft und importiert seit fast fünfzig Jahren Fahrzeuge aus den USA, arbeitet fast von Anfang an mit denselben amerikanischen Partnern, und einer unserer Gesellschafter steht seit neunzehn Jahren jede Woche mit ihm in Kontakt. Dieses über Marken- und Oldtimerclubs gewachsene Netzwerk öffnet den Zugang zu Fahrzeugen wie diesem.",
             "Den TR3 kennen wir gut. Nach drei Jahren Standzeit haben wir uns für eine vorsichtige, methodische Wiederinbetriebnahme entschieden: Statt abzuwarten, bis sich die bekannten Schwachstellen zeigen, haben wir alles erneuert, was sich bei Standzeit abnutzt oder ermüdet und meist auf den ersten paar hundert Kilometern versagt. Zuerst die Bremsen, vom Sattel bis zum Hauptzylinder; dann Kraftstoffversorgung, Zündung und Kupplung.",
             "Diese Arbeit bestätigt ein schönes Fahrzeug. Keine frische Restaurierung, aber eine Restaurierung mit wenig Laufleistung: gute, gleichmäßige Kompression auf allen vier Zylindern, gesunder Unterboden, sauber ausgeführte Lackierung, Innenraum ohne nennenswerte Mängel.",
             "Die Einfuhrpapiere sind vollständig. Als Fachhändler übernehmen wir sämtliche Formalitäten für die französische Oldtimerzulassung (carte grise de collection) auf den Namen des Käufers; diese Leistung ist inbegriffen."
           ],
           "caracteristiques": {
             "Baujahr": "1961",
-            "Fahrgestell": "TS78580L",
+            "Fahrgestell": "TS78XXXL",
             "Motor": "Vierzylinder, 1.991 cm³, zwei SU-Vergaser",
             "Getriebe": "Manuell, vier Gänge, ohne Overdrive",
             "Karosserie": "Roadster",
@@ -2231,14 +2255,14 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           "description": [
             "Conserva a sua \"California Black Plate\": as matrículas pretas com caracteres amarelos que a Califórnia emitiu de 1963 a 1969. Só continuam válidas no carro a que foram atribuídas, e desde que este tenha permanecido matriculado sem interrupção. Para os entusiastas, é o sinal de um carro que ficou na Califórnia desde os anos sessenta, num clima seco que poupa as carroçarias.",
             "Foi restaurado nos Estados Unidos por um membro do TR Register, cujo emblema ainda traz na barra de emblemas da grelha. Estes carros de membros de clube, acompanhados por entusiastas que lhes conhecem cada pormenor, raramente aparecem: mudam de mãos entre conhecedores ou ficam na família. Após a morte do proprietário, este ficou três anos parado durante a partilha da herança.",
-            "Foi o nosso parceiro holandês quem o conseguiu trazer. Profissional da compra e importação de automóveis dos Estados Unidos há quase cinquenta anos, trabalha com os mesmos correspondentes americanos praticamente desde o início, e um dos nossos sócios fala com ele todas as semanas há dezanove anos. É esta rede, construída nos clubes de marca e de clássicos, que dá acesso a carros como este.",
+            "Foi um dos nossos parceiros quem o conseguiu trazer. Profissional da compra e importação de automóveis dos Estados Unidos há quase cinquenta anos, trabalha com os mesmos correspondentes americanos praticamente desde o início, e um dos nossos sócios fala com ele todas as semanas há dezanove anos. É esta rede, construída nos clubes de marca e de clássicos, que dá acesso a carros como este.",
             "Conhecemos bem os TR3. Depois de três anos imobilizado, optámos por um regresso ao funcionamento prudente e metódico: em vez de esperar que as fraquezas conhecidas se manifestassem, substituímos por peças novas tudo o que se desgasta ou se degrada durante um armazenamento e que costuma falhar nas primeiras centenas de quilómetros. Primeiro os travões, da pinça à bomba; depois a alimentação, a ignição e a embraiagem.",
             "Este trabalho confirma um belo carro. Não é um restauro recente, mas um restauro que rodou pouco: compressões boas e homogéneas nos quatro cilindros, fundos sãos, pintura bem executada, habitáculo sem defeitos de relevo.",
             "Documentação de importação em ordem. Enquanto profissionais, tratamos de todo o processo de matrícula francesa de clássico (carte grise de collection) em nome do comprador; este serviço está incluído."
           ],
           "caracteristiques": {
             "Ano": "1961",
-            "Chassis": "TS78580L",
+            "Chassis": "TS78XXXL",
             "Motor": "Quatro cilindros, 1991 cm³, dois carburadores SU",
             "Caixa": "Manual, quatro velocidades, sem overdrive",
             "Carroçaria": "Roadster",
@@ -2971,7 +2995,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       ],
       "caracteristiques": {
         "Année": "1954",
-        "Châssis": "TS27XXL",
+        "Châssis": "TS2XXXL",
         "Moteur": "Quatre cylindres, 1 991 cm³, deux carburateurs SU (moteur TR2 refait)",
         "Boîte": "Manuelle, quatre rapports, overdrive",
         "Carrosserie": "Roadster « portes longues »",
@@ -3159,7 +3183,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           ],
           "caracteristiques": {
             "Year": "1954",
-            "Chassis": "TS27XXL",
+            "Chassis": "TS2XXXL",
             "Engine": "Four-cylinder, 1,991 cc, twin SU carburettors (rebuilt TR2 engine)",
             "Gearbox": "Four-speed manual, overdrive",
             "Body": "“Long-door” roadster",
@@ -3247,7 +3271,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           ],
           "caracteristiques": {
             "Baujahr": "1954",
-            "Fahrgestell": "TS27XXL",
+            "Fahrgestell": "TS2XXXL",
             "Motor": "Vierzylinder, 1.991 cm³, zwei SU-Vergaser (überholter TR2-Motor)",
             "Getriebe": "Manuell, vier Gänge, Overdrive",
             "Karosserie": "Roadster „Long Door“",
@@ -3335,7 +3359,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
           ],
           "caracteristiques": {
             "Ano": "1954",
-            "Chassis": "TS27XXL",
+            "Chassis": "TS2XXXL",
             "Motor": "Quatro cilindros, 1 991 cm³, dois carburadores SU (motor TR2 refeito)",
             "Caixa": "Manual, quatro velocidades, overdrive",
             "Carroçaria": "Roadster “portas longas”",
@@ -4453,7 +4477,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "annee": "1967",
       "statut": "vente",
       "prix": "250 000 €",
-      "prix_note": "En l'état. Restaurée : 370 000 €.",
+      "prix_note": "Vendue en l'état.",
       "accroche": "Olive d'origine, conduite à gauche, moteur Vantage d'usine.",
       "description": [
         "Aston Martin DB6 Mk1 berline de 1967, conduite à gauche d'origine, livrée neuve en Belgique. Fiche d'usine et Heritage Certificate de l'Aston Martin Heritage Trust.",
@@ -4622,7 +4646,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Instruments supplied with the car, for the rebuilt dashboard"
           ],
           "couleur": "Olive",
-          "prix_note": "As it stands. Restored: €370,000."
+          "prix_note": "Sold as it stands."
         },
         "de": {
           "modele": "DB6 Mk1",
@@ -4670,7 +4694,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Mit dem Fahrzeug gelieferte Instrumente, für das neu aufgebaute Armaturenbrett"
           ],
           "couleur": "Olivgrün",
-          "prix_note": "Im aktuellen Zustand. Restauriert: 370.000 €."
+          "prix_note": "Verkauf im aktuellen Zustand."
         },
         "pt": {
           "modele": "DB6 Mk1",
@@ -4718,7 +4742,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             "Instrumentação fornecida com o automóvel, para o tablier reconstruído"
           ],
           "couleur": "Verde-oliva",
-          "prix_note": "No estado atual. Restaurado: 370 000 €."
+          "prix_note": "Vendido no estado em que se encontra."
         }
       },
       "couleur": "Olive"
@@ -5454,7 +5478,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       "annee": "1964",
       "statut": "vente",
       "prix": "36 000 €",
-      "prix_note": "Base en l'état, valant réservation. Restaurée : 150 000 €.",
+      "prix_note": "Base en l'état, valant réservation.",
       "accroche": "Opalescent Golden Sand, livrée neuve à New York.",
       "description": [
         "Jaguar Type-E Série 1 3.8 cabriolet, conduite à gauche, fabriquée le 24 janvier 1964 et expédiée à Jaguar Cars New York. Teinte d'origine Opalescent Golden Sand, sellerie tan. Certificat Jaguar Heritage.",
@@ -5508,7 +5532,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         "en": {
           "modele": "E-Type 3.8 Roadster",
           "accroche": "Opalescent Golden Sand, delivered new to New York.",
-          "prix_note": "Car as it stands, securing the project. Restored: €150,000.",
+          "prix_note": "Car as it stands, securing the project.",
           "description": [
             "Jaguar E-Type Series 1 3.8 roadster, left-hand drive, built on 24 January 1964 and shipped to Jaguar Cars New York. Original colour Opalescent Golden Sand, tan upholstery. Jaguar Heritage certificate.",
             "Two options: buy the car as it stands, which secures the project, or have it restored and delivered to the same technical standard as our previous flat-floor E-Type."
@@ -5533,7 +5557,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         "de": {
           "modele": "E-Type 3.8 Roadster",
           "accroche": "Opalescent Golden Sand, neu nach New York ausgeliefert.",
-          "prix_note": "Basisfahrzeug im aktuellen Zustand, gilt als Reservierung. Restauriert: 150.000 €.",
+          "prix_note": "Basisfahrzeug im aktuellen Zustand, gilt als Reservierung.",
           "description": [
             "Jaguar E-Type Serie 1 3.8 Roadster, Linkslenker, gebaut am 24. Januar 1964 und an Jaguar Cars New York ausgeliefert. Originalfarbe Opalescent Golden Sand, Ausstattung in Tan. Jaguar-Heritage-Zertifikat.",
             "Zwei Möglichkeiten: Kauf des Basisfahrzeugs im aktuellen Zustand, der als Reservierung des Projekts gilt, oder das restaurierte Fahrzeug, ausgeliefert nach denselben technischen Standards wie unser vorheriger E-Type Flat Floor."
@@ -5558,7 +5582,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         "pt": {
           "modele": "E-Type 3.8 Roadster",
           "accroche": "Opalescent Golden Sand, entregue nova em Nova Iorque.",
-          "prix_note": "Base no estado atual, valendo como reserva. Restaurado: 150 000 €.",
+          "prix_note": "Base no estado atual, valendo como reserva.",
           "description": [
             "Jaguar E-Type Série 1 3.8 roadster, volante à esquerda, fabricado a 24 de janeiro de 1964 e expedido para a Jaguar Cars New York. Cor de origem Opalescent Golden Sand, estofos tan. Certificado Jaguar Heritage.",
             "Duas opções: a compra da base no estado atual, que vale como reserva do projeto, ou o automóvel restaurado e entregue nas mesmas condições técnicas do nosso anterior E-Type flat floor."
@@ -5824,7 +5848,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "b.rech": "Nous confier une recherche",
   "b.info": "Demander des informations",
   "ou.appel": "Ou appelez-nous au",
-  "n.visite": "Visite à l'atelier sur rendez-vous uniquement.",
+  "n.visite": "Visite à l'atelier sur rendez-vous, après un premier échange.",
   "msg.rech": "Je recherche une auto comparable à : ",
   "msg.int": "Je suis intéressé par : ",
   "merci": "Merci. Pour finaliser l'envoi, <a href=\"{lien}\">ouvrez votre messagerie</a>, ou écrivez-nous directement à {mail}.",
@@ -5880,6 +5904,70 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
      "photo": "img/associe-martin.jpg"
     }
    ]
+  },
+  "p.ttc": "Prix toutes taxes comprises, hors frais d'immatriculation.",
+  "srv.titre": "Avec cette auto",
+  "srv.essai": "Essai possible, et présentation de l'auto sur pont.",
+  "srv.pont": "Présentation de l'auto sur pont.",
+  "srv.garantie": "Garantie possible, en option.",
+  "srv.livr": "Livraison à tarif préférentiel.",
+  "srv.log": "Logistique dans le monde entier, en porte-à-porte.",
+  "l.siege": "Siège",
+  "atelier.txt": "Yvelines. L'adresse de l'atelier et des autos est communiquée après un premier échange : nous y travaillons portes fermées et recevons nos clients sur rendez-vous, aux disponibilités communes des deux associés, pour les accueillir dans de bonnes conditions.",
+  "lex.titre": "Lexique",
+  "lex": {
+   "pb": {
+    "t": "« Petite bouche »",
+    "d": "Surnom des TR2 et des premières TR3 (1953-1957), à calandre étroite placée en retrait. La TR3A de 1957 adopte la grande calandre pleine largeur."
+   },
+   "pl": {
+    "t": "« Portes longues »",
+    "d": "Premières TR2 (1953-1954), dont les portes descendent jusqu'au bas de caisse. Un seuil sous la porte apparaît fin 1954."
+   },
+   "bp": {
+    "t": "« Black plate »",
+    "d": "Plaque californienne noire à caractères jaunes (1963-1969), conservée seulement si l'auto est restée immatriculée sans interruption."
+   },
+   "trr": {
+    "t": "TR Register",
+    "d": "Club historique des propriétaires de Triumph TR, fondé au Royaume-Uni en 1970."
+   },
+   "her": {
+    "t": "Certificat Heritage",
+    "d": "Certificat de production établi par les archives de la marque d'après les registres d'usine : date de fabrication, teinte, options, pays de livraison."
+   },
+   "irs": {
+    "t": "IRS",
+    "d": "Independent Rear Suspension : suspension arrière à roues indépendantes, proposée sur la TR4A à partir de 1965."
+   },
+   "od": {
+    "t": "Overdrive",
+    "d": "Surmultiplication à commande électrique qui allonge les rapports supérieurs : moins de régime moteur sur route."
+   },
+   "mn": {
+    "t": "« Matching numbers »",
+    "d": "Numéros de châssis et de moteur d'origine, concordant avec ceux de la sortie d'usine."
+   },
+   "van": {
+    "t": "Vantage",
+    "d": "Version d'usine du six-cylindres Aston Martin, à trois carburateurs Weber et culasse revue : environ 325 ch au lieu de 282."
+   },
+   "pp": {
+    "t": "« Plancher plat »",
+    "d": "Premières Type-E 3.8 (1961-1962), au plancher sans les creux pour les pieds ajoutés ensuite."
+   },
+   "su": {
+    "t": "Carburateurs SU",
+    "d": "Carburateurs anglais à piston, montés par paire ou par trois sur la plupart des anglaises de l'époque."
+   },
+   "bt7": {
+    "t": "BT7",
+    "d": "Austin Healey 3000 avec deux places d'appoint à l'arrière (1959-1962). La BN7 est la version deux places."
+   },
+   "22": {
+    "t": "2+2",
+    "d": "Deux places avant et deux places d'appoint à l'arrière."
+   }
   }
  },
  "en": {
@@ -5993,7 +6081,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "b.rech": "Ask us to find one",
   "b.info": "Request information",
   "ou.appel": "Or call us on",
-  "n.visite": "Workshop visits by appointment only.",
+  "n.visite": "Workshop visits by appointment, after a first conversation.",
   "msg.rech": "I am looking for a car similar to: ",
   "msg.int": "I am interested in: ",
   "merci": "Thank you. To send your message, <a href=\"{lien}\">open your e-mail</a>, or write to us directly at {mail}.",
@@ -6049,6 +6137,70 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
      "photo": "img/associe-martin.jpg"
     }
    ]
+  },
+  "p.ttc": "Price includes all taxes, registration costs excluded.",
+  "srv.titre": "With this car",
+  "srv.essai": "Test drive available, and inspection of the car on a lift.",
+  "srv.pont": "Inspection of the car on a lift.",
+  "srv.garantie": "Warranty available as an option.",
+  "srv.livr": "Delivery at a preferential rate.",
+  "srv.log": "Worldwide door-to-door logistics.",
+  "l.siege": "Registered office",
+  "atelier.txt": "Yvelines, west of Paris. The address of the workshop and the cars is given after a first conversation: we work behind closed doors and welcome clients by appointment, when both partners are available, so that we can receive you properly.",
+  "lex.titre": "Glossary",
+  "lex": {
+   "pb": {
+    "t": "“Small mouth”",
+    "d": "Nickname of the TR2 and early TR3 (1953-1957), with a narrow, recessed grille. The 1957 TR3A introduced the full-width grille."
+   },
+   "pl": {
+    "t": "“Long door”",
+    "d": "Early TR2s (1953-1954), whose doors reach down to the sill. A sill below the door was added in late 1954."
+   },
+   "bp": {
+    "t": "“Black plate”",
+    "d": "Californian black plate with yellow characters (1963-1969), kept only if the car stayed registered without interruption."
+   },
+   "trr": {
+    "t": "TR Register",
+    "d": "The historic Triumph TR owners' club, founded in the United Kingdom in 1970."
+   },
+   "her": {
+    "t": "Heritage certificate",
+    "d": "Production certificate issued by the marque's archive from the factory records: build date, colour, options, destination."
+   },
+   "irs": {
+    "t": "IRS",
+    "d": "Independent Rear Suspension, offered on the TR4A from 1965."
+   },
+   "od": {
+    "t": "Overdrive",
+    "d": "Electrically switched extra ratio that lengthens the upper gears, for lower revs on the road."
+   },
+   "mn": {
+    "t": "“Matching numbers”",
+    "d": "Original chassis and engine numbers, matching those recorded when the car left the factory."
+   },
+   "van": {
+    "t": "Vantage",
+    "d": "Factory version of the Aston Martin six-cylinder, with three Weber carburettors and a revised head: about 325 bhp instead of 282."
+   },
+   "pp": {
+    "t": "“Flat floor”",
+    "d": "Early E-Type 3.8 cars (1961-1962), with a floor lacking the footwells added later."
+   },
+   "su": {
+    "t": "SU carburettors",
+    "d": "British piston-type carburettors, fitted in pairs or threes to most British cars of the period."
+   },
+   "bt7": {
+    "t": "BT7",
+    "d": "Austin Healey 3000 with two occasional rear seats (1959-1962). The BN7 is the two-seater."
+   },
+   "22": {
+    "t": "2+2",
+    "d": "Two front seats and two occasional rear seats."
+   }
   }
  },
  "de": {
@@ -6162,7 +6314,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "b.rech": "Suchauftrag erteilen",
   "b.info": "Informationen anfordern",
   "ou.appel": "Oder rufen Sie uns an:",
-  "n.visite": "Besichtigung in der Werkstatt nur nach Vereinbarung.",
+  "n.visite": "Besichtigung in der Werkstatt nach Vereinbarung, nach einem ersten Gespräch.",
   "msg.rech": "Ich suche ein vergleichbares Fahrzeug wie: ",
   "msg.int": "Ich interessiere mich für: ",
   "merci": "Vielen Dank. Um die Nachricht zu senden, <a href=\"{lien}\">öffnen Sie Ihr E-Mail-Programm</a> oder schreiben Sie uns direkt an {mail}.",
@@ -6218,6 +6370,70 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
      "photo": "img/associe-martin.jpg"
     }
    ]
+  },
+  "p.ttc": "Preis inklusive aller Steuern, ohne Zulassungskosten.",
+  "srv.titre": "Zu diesem Fahrzeug",
+  "srv.essai": "Probefahrt möglich, Besichtigung auf der Hebebühne.",
+  "srv.pont": "Besichtigung auf der Hebebühne.",
+  "srv.garantie": "Garantie optional möglich.",
+  "srv.livr": "Lieferung zu Vorzugskonditionen.",
+  "srv.log": "Weltweite Logistik, von Tür zu Tür.",
+  "l.siege": "Firmensitz",
+  "atelier.txt": "Yvelines, westlich von Paris. Die Adresse der Werkstatt und der Fahrzeuge teilen wir nach einem ersten Gespräch mit: Wir arbeiten hinter verschlossenen Türen und empfangen unsere Kunden nach Vereinbarung, wenn beide Gesellschafter verfügbar sind, um Sie angemessen zu empfangen.",
+  "lex.titre": "Glossar",
+  "lex": {
+   "pb": {
+    "t": "„Small Mouth“",
+    "d": "Beiname des TR2 und der frühen TR3 (1953-1957) mit schmalem, zurückgesetztem Kühlergrill. Der TR3A von 1957 erhielt den breiten Grill."
+   },
+   "pl": {
+    "t": "„Long Door“",
+    "d": "Frühe TR2 (1953-1954), deren Türen bis zum Schweller reichen. Ende 1954 kam eine Schwelle unter der Tür hinzu."
+   },
+   "bp": {
+    "t": "„Black Plate“",
+    "d": "Kalifornisches Kennzeichen, schwarz mit gelber Schrift (1963-1969), nur gültig, wenn das Fahrzeug ununterbrochen zugelassen blieb."
+   },
+   "trr": {
+    "t": "TR Register",
+    "d": "Traditionsreicher Club der Triumph-TR-Besitzer, 1970 in Großbritannien gegründet."
+   },
+   "her": {
+    "t": "Heritage-Zertifikat",
+    "d": "Produktionszertifikat aus dem Archiv der Marke, nach den Werksunterlagen: Baudatum, Farbe, Ausstattung, Lieferland."
+   },
+   "irs": {
+    "t": "IRS",
+    "d": "Independent Rear Suspension: Einzelradaufhängung hinten, beim TR4A ab 1965 erhältlich."
+   },
+   "od": {
+    "t": "Overdrive",
+    "d": "Elektrisch geschalteter Schnellgang, der die oberen Gänge verlängert: weniger Drehzahl auf der Straße."
+   },
+   "mn": {
+    "t": "„Matching Numbers“",
+    "d": "Originale Fahrgestell- und Motornummern, übereinstimmend mit den Werksangaben."
+   },
+   "van": {
+    "t": "Vantage",
+    "d": "Werksversion des Aston-Martin-Sechszylinders mit drei Weber-Vergasern und überarbeitetem Kopf: rund 325 PS statt 282."
+   },
+   "pp": {
+    "t": "„Flat Floor“",
+    "d": "Frühe E-Type 3.8 (1961-1962) mit flachem Boden, ohne die später eingeführten Fußmulden."
+   },
+   "su": {
+    "t": "SU-Vergaser",
+    "d": "Englische Kolbenvergaser, paarweise oder zu dritt an den meisten englischen Autos der Zeit verbaut."
+   },
+   "bt7": {
+    "t": "BT7",
+    "d": "Austin Healey 3000 mit zwei Notsitzen hinten (1959-1962). Der BN7 ist der Zweisitzer."
+   },
+   "22": {
+    "t": "2+2",
+    "d": "Zwei Vordersitze und zwei Notsitze hinten."
+   }
   }
  },
  "pt": {
@@ -6331,7 +6547,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   "b.rech": "Confie-nos uma procura",
   "b.info": "Pedir informações",
   "ou.appel": "Ou ligue-nos para",
-  "n.visite": "Visita à oficina apenas por marcação.",
+  "n.visite": "Visita à oficina por marcação, após uma primeira conversa.",
   "msg.rech": "Procuro um automóvel semelhante a: ",
   "msg.int": "Tenho interesse em: ",
   "merci": "Obrigado. Para concluir o envio, <a href=\"{lien}\">abra o seu e-mail</a> ou escreva-nos diretamente para {mail}.",
@@ -6387,6 +6603,70 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
      "photo": "img/associe-martin.jpg"
     }
    ]
+  },
+  "p.ttc": "Preço com todos os impostos incluídos, sem custos de matrícula.",
+  "srv.titre": "Com este automóvel",
+  "srv.essai": "Test drive possível e apresentação do automóvel num elevador.",
+  "srv.pont": "Apresentação do automóvel num elevador.",
+  "srv.garantie": "Garantia possível, como opção.",
+  "srv.livr": "Entrega a preço preferencial.",
+  "srv.log": "Logística em todo o mundo, porta a porta.",
+  "l.siege": "Sede",
+  "atelier.txt": "Yvelines, a oeste de Paris. A morada da oficina e dos automóveis é comunicada após uma primeira conversa: trabalhamos de portas fechadas e recebemos os clientes por marcação, quando ambos os sócios estão disponíveis, para os receber nas melhores condições.",
+  "lex.titre": "Glossário",
+  "lex": {
+   "pb": {
+    "t": "« Boca pequena »",
+    "d": "Alcunha dos TR2 e dos primeiros TR3 (1953-1957), com grelha estreita e recuada. O TR3A de 1957 adotou a grelha larga."
+   },
+   "pl": {
+    "t": "« Portas longas »",
+    "d": "Primeiros TR2 (1953-1954), cujas portas descem até à embaladeira. No final de 1954 surgiu uma soleira sob a porta."
+   },
+   "bp": {
+    "t": "« Black plate »",
+    "d": "Matrícula californiana preta com caracteres amarelos (1963-1969), mantida apenas se o automóvel ficou matriculado sem interrupção."
+   },
+   "trr": {
+    "t": "TR Register",
+    "d": "Clube histórico dos proprietários de Triumph TR, fundado no Reino Unido em 1970."
+   },
+   "her": {
+    "t": "Certificado Heritage",
+    "d": "Certificado de produção emitido pelo arquivo da marca a partir dos registos de fábrica: data de fabrico, cor, opções, país de entrega."
+   },
+   "irs": {
+    "t": "IRS",
+    "d": "Independent Rear Suspension: suspensão traseira independente, disponível no TR4A a partir de 1965."
+   },
+   "od": {
+    "t": "Overdrive",
+    "d": "Sobremultiplicação de comando elétrico que alonga as relações superiores: menos rotações em estrada."
+   },
+   "mn": {
+    "t": "« Matching numbers »",
+    "d": "Números de chassis e de motor de origem, coincidentes com os registados à saída da fábrica."
+   },
+   "van": {
+    "t": "Vantage",
+    "d": "Versão de fábrica do seis cilindros Aston Martin, com três carburadores Weber e cabeça revista: cerca de 325 cv em vez de 282."
+   },
+   "pp": {
+    "t": "« Flat floor »",
+    "d": "Primeiros E-Type 3.8 (1961-1962), com piso sem as cavidades para os pés acrescentadas depois."
+   },
+   "su": {
+    "t": "Carburadores SU",
+    "d": "Carburadores ingleses de pistão, montados aos pares ou a três na maioria dos automóveis ingleses da época."
+   },
+   "bt7": {
+    "t": "BT7",
+    "d": "Austin Healey 3000 com dois lugares de recurso atrás (1959-1962). O BN7 é a versão de dois lugares."
+   },
+   "22": {
+    "t": "2+2",
+    "d": "Dois lugares à frente e dois lugares de recurso atrás."
+   }
   }
  }
 }
@@ -6678,7 +6958,8 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     if(C.telephone){ var tf=telAff(); dl+='<div><dt>'+t('l.tel')+'</dt><dd><a href="tel:+33'+C.telephone.replace(/\s/g,'').replace(/^0/,'')+'">'+esc(tf)+'</a></dd></div>'; }
     if(C.email) dl+='<div><dt>'+t('l.mail')+'</dt><dd>'+esc(C.email)+'</dd></div>';
     if(C.whatsapp) dl+='<div><dt>WhatsApp</dt><dd><a class="lien-wa" target="_blank" rel="noopener" href="'+lienWa()+'">'+t('wa.ecrire')+'</a></dd></div>';
-    if(C.atelier) dl+='<div><dt>'+t('l.atelier')+'</dt><dd>'+esc(tr(C,'atelier'))+'</dd></div>';
+    if(C.siege) dl+='<div><dt>'+t('l.siege')+'</dt><dd>'+esc(C.siege)+'</dd></div>';
+    dl+='<div><dt>'+t('l.atelier')+'</dt><dd class="at-txt">'+esc(t('atelier.txt'))+'</dd></div>';
     document.getElementById('coordonnees').innerHTML = dl;
   }
   document.getElementById('an').textContent = new Date().getFullYear();
@@ -6724,6 +7005,12 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     LB.querySelector('.lb-f').setAttribute('aria-label',t('lb.fermer'));
     lbL=liste; lbI=i||0; lbLeg=legs||[]; lbMaj(); LB.classList.add('ouvert'); document.body.classList.add('lb-on');
   }
+  var LEX={pb:/petite bouche/i,pl:/portes longues/i,bp:/black plate/i,trr:/TR Register/,her:/Heritage/,irs:/\bIRS\b/,od:/overdrive/i,mn:/matching numbers|numéros concordants/i,van:/Vantage/,pp:/plancher plat|flat floor/i,su:/\bSU\b/,bt7:/BT7/,'22':/2\+2/};
+  function lexique(v){
+    var txt=[v.modele,v.accroche].concat(v.description||[]).concat(JSON.stringify(v.caracteristiques||{})).concat(JSON.stringify(v.travaux||[])).join(' ');
+    var D=t('lex'), h=''; Object.keys(LEX).forEach(function(k){ if(LEX[k].test(txt)&&D[k]) h+='<div><dt>'+esc(D[k].t)+'</dt><dd>'+esc(D[k].d)+'</dd></div>'; });
+    return h?'<div class="lexique"><div class="label">'+t('lex.titre')+'</div><dl>'+h+'</dl></div>':'';
+  }
   function rendreFiche(f, garderIdx){
     courante=f; if(!garderIdx) idx=0;
     var v=f.v, ph=galerie(v), multi=ph.length>1, S=SECTION[f.ancre];
@@ -6740,15 +7027,18 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
         '<div class="label r">'+esc(v.marque)+(v.annee?' · '+esc(v.annee):'')+'</div>'+
         '<h1>'+esc(v.marque)+' '+esc(modele(v))+'</h1><p class="accroche">'+esc(tr(v,'accroche'))+'</p>'+
         '<div class="desc">'+(tr(v,'description')||[]).map(function(x){return '<p>'+esc(x)+'</p>';}).join('')+'</div>'+
+        lexique(v)+
         (v.videos&&v.videos.length?'<div class="videos">'+v.videos.map(function(x,i){var lg=(leg&&leg[i])||x.legende; return '<figure><video controls playsinline preload="metadata"'+(x.affiche?' poster="'+esc(x.affiche)+'"':'')+'><source src="'+esc(x.src)+'" type="video/mp4"></video>'+(lg?'<figcaption class="label">'+esc(lg)+'</figcaption>':'')+'</figure>';}).join('')+'</div>':'')+
         (trav&&trav.length?'<div class="travaux"><div class="label">'+t(S.travaux)+'</div>'+listeTravaux(trav)+'</div>':'')+
         (pr.length?(function(){var hp=pr.some(function(x){return x.prix!=null;}),bil=tr(v,'pieces_rempl_bilan')||'';return '<div class="pieces-r"><div class="label">'+t('pr.titre')+'</div><table><thead><tr><th>'+t('pr.des')+'</th><th class="ref">'+t('pr.ref')+'</th><th class="n q">'+t('pr.qte')+'</th>'+(hp?'<th class="n">'+t('pr.prix')+'</th>':'')+'</tr></thead><tbody>'+pr.map(function(x,i){return '<tr><td>'+esc(prLeg[i]||x.designation)+'</td><td class="ref">'+esc(x.ref)+'</td><td class="n q">'+esc(x.qte)+'</td>'+(hp?'<td class="n">'+euro(x.prix)+'</td>':'')+'</tr>';}).join('')+'</tbody>'+(hp?'<tfoot><tr><td>'+t('pr.total')+'</td><td class="ref"></td><td class="n q"></td><td class="n">'+euro(pr.reduce(function(a,x){return a+x.prix;},0))+'</td></tr></tfoot>':'')+'</table>'+(hp?'<p class="note">'+t('pr.note')+'</p>':(bil?'<p class="note"><strong>'+esc(bil)+'</strong></p>':''))+'</div>';})():'')+
         (at.length?'<div class="atelier"><div class="label">'+t('tr.at')+'</div>'+(function(){var h='',g=null;at.forEach(function(x,i){var gr=x.groupe||'';if(i===0||gr!==g){if(i>0)h+='</div>';g=gr;h+=(gr?'<div class="sous-at">'+t('at.'+gr)+'</div>':'')+'<div class="grille-at">';}h+='<figure data-i="'+i+'"><img loading="lazy" src="'+esc(x.src)+'" alt="'+esc(atLeg[i]||'')+'">'+(atLeg[i]?'<figcaption>'+esc(atLeg[i])+'</figcaption>':'')+'</figure>';});return h+'</div>';})()+'</div>':'')+
       '</div><aside class="encart"><div class="label">'+t('prix')+'</div><div class="prix">'+esc(prixTxt(v))+'</div>'+
+        (/\d/.test(v.prix||'')&&v.statut!=='vendu'?'<p class="note ttc">'+t('p.ttc')+'</p>':'')+
         (note&&v.statut!=='vendu'?'<p class="note" style="margin:-18px 0 30px">'+esc(note)+'</p>':'')+
         '<table>'+rows+'</table>'+
         '<a class="bouton r" href="#contact" id="demande">'+(v.statut==='vendu'?t('b.rech'):t('b.info'))+'</a>'+
         (C.telephone&&v.statut!=='vendu'?'<a class="tel-fiche" href="tel:+33'+C.telephone.replace(/\s/g,'').replace(/^0/,'')+'">'+t('ou.appel')+' <b>'+esc(telAff())+'</b></a>':'')+'<button class="partager" id="partager">'+t('partager')+'</button>'+
+        (v.statut!=='vendu'?'<div class="services"><div class="label">'+t('srv.titre')+'</div><ul>'+(f.type==='projet'?['srv.pont','srv.livr','srv.log']:['srv.essai','srv.garantie','srv.livr','srv.log']).map(function(k){return '<li>'+t(k)+'</li>';}).join('')+'</ul></div>':'')+
         '<p class="note">'+t('n.visite')+'</p></aside></div>';
     var gi=document.getElementById('grandeImg'), ag=document.getElementById('agrandir');
     if(ph.length){ gi.onclick=function(){ouvrirLb(ph,idx);}; if(ag) ag.onclick=function(e){e.stopPropagation();ouvrirLb(ph,idx);}; glisser(document.querySelector('.principale'),function(d){ if(ph.length<2) return; idx=(idx+d+ph.length)%ph.length; afficherPhoto(); }); }
@@ -6848,7 +7138,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   // Vidéo d'ouverture : une fois par onglet
   var ia=document.getElementById('introAnim'), deja=false;
   try{deja=sessionStorage.getItem('mccIntro')==='1';}catch(e){}
-  if(!ia || deja || location.hash || window.matchMedia('(prefers-reduced-motion: reduce)').matches){ if(ia) ia.remove(); }
+  if(!ia || deja || location.hash || window.matchMedia('(max-width: 760px)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches){ if(ia) ia.remove(); }
   else{
     document.body.classList.add('anim');
     var v=document.getElementById('introVid'), fini=false, textes=false, lance=false;
