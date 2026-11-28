@@ -186,9 +186,9 @@ textarea{min-height:110px;resize:vertical}
 .bouton.r{border-color:var(--rouge);background:var(--rouge);color:#0f241b;font-weight:600}
 .bouton.r:hover{background:var(--rouge2);border-color:var(--rouge2)}
 .retour-msg{display:none;color:var(--gris);font-size:14.5px;border-left:1px solid var(--rouge);padding-left:16px}
-.tel-ent{display:flex;align-items:center;gap:9px;margin-left:24px;padding-left:22px;border-left:1px solid var(--trait);color:var(--ivoire);font-family:var(--sans);font-size:12px;letter-spacing:.14em;white-space:nowrap;text-decoration:none;transition:color .2s}.tel-ent:hover{color:var(--rouge2)}.tel-ent svg{color:var(--rouge2)}header .wrap nav{margin-left:auto}
-@media (max-width:1300px) and (min-width:1081px){.tel-ent{margin-left:14px;padding-left:14px}.tel-ent span{display:none}}
-@media (max-width:1080px){.tel-ent{margin-left:auto;margin-right:20px;padding:8px;border:1px solid var(--trait);border-radius:50%}.tel-ent span{display:none}.tel-ent svg{width:17px;height:17px}}
+html,body{overflow-x:clip}
+.nav-cont{position:relative;display:flex}nav a.tel-nav{position:absolute;left:0;top:100%;margin-top:2px;padding:0;font-family:var(--sans);font-size:10.5px;font-weight:400;letter-spacing:.14em;color:var(--rouge2);white-space:nowrap}nav a.tel-nav:after{display:none}nav a.tel-nav:hover{color:var(--ivoire)}
+@media (max-width:1080px){.nav-cont{flex-direction:column;gap:6px}nav a.tel-nav{position:static;margin:0;font-size:13px}}
 .tel-fiche{display:block;text-align:center;margin:14px 0 0;color:#c9bea4;font-size:13px;text-decoration:none}.tel-fiche b{color:var(--ivoire);font-weight:500;letter-spacing:.06em;white-space:nowrap}.tel-fiche:hover b{color:var(--rouge2)}
 .partager{display:block;width:100%;margin:14px 0 0;background:none;border:1px solid var(--trait2);color:#c9bea4;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;padding:15px;cursor:pointer;transition:border-color .2s,color .2s}.partager:hover{border-color:var(--rouge);color:var(--ivoire)}
 .wa{position:fixed;right:26px;bottom:26px;z-index:40;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--noir2);color:var(--rouge2);border:1px solid var(--rouge);box-shadow:0 6px 24px rgba(0,0,0,.35);transition:background .2s,color .2s}.wa:hover{background:var(--rouge);color:var(--noir)}
@@ -5250,10 +5250,9 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       <a href="#projets" data-i18n="nav.proj">Projets</a>
       <a href="#pieces" data-pieces data-i18n="nav.pie">Pièces</a>
       <a href="#supervision" data-i18n="nav.rest">Restauration</a>
-      <a href="#contact" data-i18n="nav.cont">Contact</a>
+      <span class="nav-cont"><a href="#contact" data-i18n="nav.cont">Contact</a><a class="tel-nav" id="telEnt" href="tel:+33185500242"><span>01 85 50 02 42</span></a></span>
       <div class="langues" id="langues"><button data-l="fr">FR</button><button data-l="en">EN</button><button data-l="de">DE</button><button data-l="pt">PT</button></div>
     </nav>
-    <a class="tel-ent" id="telEnt" href="tel:+33185500242" aria-label="01 85 50 02 42"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span>01 85 50 02 42</span></a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
