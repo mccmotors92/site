@@ -104,7 +104,7 @@ section + section{border-top:1px solid var(--trait)}
 
 /* Grille véhicules */
 .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 32px}
-.carte{display:block;cursor:pointer}
+.carte{display:flex;flex-direction:column;cursor:pointer}
 .carte .img{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--noir3)}
 .carte .img img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.6,.2,1)}
 .carte:hover .img img{transform:scale(1.045)}
@@ -115,7 +115,8 @@ section + section{border-top:1px solid var(--trait)}
 .carte .marque{margin-top:22px}
 .carte h3{font-size:31px;margin-top:6px}
 .carte .acc{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--gris);margin-top:6px;line-height:1.35}
-.carte .bas{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:14px;border-top:1px solid var(--trait)}
+.carte .acc{margin-bottom:18px}
+.carte .bas{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--trait)}
 .carte .prix{font-family:var(--serif);font-size:23px}
 .carte .prix.v{color:var(--gris2);font-style:italic}
 .carte .voir{font-size:10.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gris)}
