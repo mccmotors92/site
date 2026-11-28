@@ -4077,7 +4077,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   function carte(v,pref){
     var cl = v.statut==='vendu'?'vendu':(v.statut==='reserve'?'reserve':'');
     return '<a class="carte" href="#'+pref+'-'+esc(v.id)+'">'+
-      '<div class="img"><img loading="lazy" src="'+esc(photo1(v))+'" alt="'+esc(v.marque+' '+modele(v))+'"><span class="etat '+cl+'">'+(pref==='projet'&&v.statut==='vente'?t('e.projet'):ETAT(v.statut))+'</span></div>'+
+      '<div class="img"><img loading="lazy" src="'+esc(photo1(v))+'" alt="'+esc(v.marque+' '+modele(v))+'">'+(v.statut==='vente'?'':'<span class="etat '+cl+'">'+(pref==='projet'&&v.statut==='vente'?t('e.projet'):ETAT(v.statut))+'</span>')+'</div>'+
       '<div class="label marque">'+esc(v.marque)+(v.annee?' · '+esc(v.annee):'')+'</div>'+
       '<h3>'+esc(modele(v))+'</h3><p class="acc">'+esc(tr(v,'accroche'))+'</p>'+
       '<div class="bas"><span class="prix'+(v.statut==='vendu'?' v':'')+'">'+esc(prixTxt(v))+'</span><span class="voir">'+t('voir')+'</span></div></a>';
@@ -4162,7 +4162,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
     var etat = f.type==='projet'&&v.statut==='vente'?t('e.projet'):ETAT(v.statut);
     var leg=tr(v,'legendes'), trav=tr(v,'travaux'), note=tr(v,'prix_note'), at=v.atelier||[], atTr=tr(v,'atelier_leg')||[], pr=v.pieces_rempl||[], prLeg=tr(v,'pieces_rempl_leg')||[], atLeg=at.map(function(x,i){return atTr[i]||x.legende||'';});
     document.getElementById('fiche').innerHTML =
-      '<div class="fil"><a class="ret" href="#'+f.ancre+'">'+t(S.retour)+'</a><span class="label">'+esc(etat)+'</span></div>'+
+      '<div class="fil"><a class="ret" href="#'+f.ancre+'">'+t(S.retour)+'</a>'+(v.statut==='vente'?'':'<span class="label">'+esc(etat)+'</span>')+'</div>'+
       '<div class="principale"><img class="flou" id="flouImg" src="'+esc(ph[0]||GEN)+'" alt="" aria-hidden="true"><img id="grandeImg" src="'+esc(ph[0]||GEN)+'" alt="'+esc(v.marque+' '+modele(v))+'">'+(ph.length?'<button class="agrandir" id="agrandir">'+t('ph.agr')+'</button>':'')+
       (multi?'<button class="nav-ph prec" aria-label="'+t('ph.prec')+'">‹</button><button class="nav-ph suiv" aria-label="'+t('ph.suiv')+'">›</button><span class="compteur" id="compteur"></span>':'')+
       (ph.length?'':'<span class="mention">'+t('mention')+'</span>')+'</div>'+
