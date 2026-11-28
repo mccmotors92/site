@@ -3381,55 +3381,33 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
       ],
       "vignette": "img/f365-vignette-a.jpg",
       "photos": [
-        "img/f365-1.jpg",
-        "img/f365-2.jpg"
+        "img/f365-1.jpg"
       ],
       "videos": [],
       "atelier": [
         {
           "src": "img/f365-at-1.jpg",
-          "legende": "Le V12 Colombo refait",
-          "groupe": "meca"
+          "legende": "Carter peint en orange, pompe à huile en place"
         },
         {
           "src": "img/f365-at-2.jpg",
-          "legende": "Bloc moteur au remontage",
-          "groupe": "meca"
+          "legende": "Pompe à huile refaite"
         },
         {
           "src": "img/f365-at-3.jpg",
-          "legende": "Bloc et chemises de cylindres",
-          "groupe": "meca"
+          "legende": "Bloc et chemises de cylindres"
         },
         {
           "src": "img/f365-at-4.jpg",
-          "legende": "Chemise et piston",
-          "groupe": "meca"
+          "legende": "Culasse et arbre à cames au remontage"
         },
         {
           "src": "img/f365-at-5.jpg",
-          "legende": "Boîte de vitesses déposée",
-          "groupe": "meca"
+          "legende": "Boîte de vitesses ouverte, pièces contrôlées"
         },
         {
           "src": "img/f365-at-6.jpg",
-          "legende": "Caisse mise à nu",
-          "groupe": "carro"
-        },
-        {
-          "src": "img/f365-at-7.jpg",
-          "legende": "Caisse à nu, avant l'apprêt",
-          "groupe": "carro"
-        },
-        {
-          "src": "img/f365-at-8.jpg",
-          "legende": "En cabine de peinture",
-          "groupe": "carro"
-        },
-        {
-          "src": "img/f365-at-9.jpg",
-          "legende": "Peinte en Verde Medio, sa teinte d'origine",
-          "groupe": "carro"
+          "legende": "Moteur remonté dans la caisse peinte en Verde Medio"
         }
       ],
       "trad": {
@@ -3489,15 +3467,12 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "atelier_leg": [
-            "The Colombo V12 rebuilt",
-            "Engine block during reassembly",
+            "Crankcase painted orange, oil pump fitted",
+            "Oil pump rebuilt",
             "Block and cylinder liners",
-            "Liner and piston",
-            "Gearbox removed",
-            "Body stripped to bare metal",
-            "Bare body, before primer",
-            "In the paint booth",
-            "Painted in Verde Medio, its original colour"
+            "Cylinder head and camshaft during reassembly",
+            "Gearbox opened, parts inspected",
+            "Engine back in the body painted Verde Medio"
           ]
         },
         "de": {
@@ -3556,15 +3531,12 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "atelier_leg": [
-            "Der überholte Colombo-V12",
-            "Motorblock beim Zusammenbau",
+            "Orange lackiertes Kurbelgehäuse, Ölpumpe eingebaut",
+            "Überholte Ölpumpe",
             "Block und Zylinderlaufbuchsen",
-            "Laufbuchse und Kolben",
-            "Ausgebautes Getriebe",
-            "Karosserie auf blankes Blech",
-            "Blanke Karosserie, vor der Grundierung",
-            "In der Lackierkabine",
-            "Lackiert in Verde Medio, ihrer Originalfarbe"
+            "Zylinderkopf und Nockenwelle beim Zusammenbau",
+            "Geöffnetes Getriebe, Teile geprüft",
+            "Motor eingebaut, Karosserie in Verde Medio lackiert"
           ]
         },
         "pt": {
@@ -3623,19 +3595,17 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
             }
           ],
           "atelier_leg": [
-            "O V12 Colombo refeito",
-            "Bloco do motor na montagem",
+            "Cárter pintado de laranja, bomba de óleo montada",
+            "Bomba de óleo refeita",
             "Bloco e camisas dos cilindros",
-            "Camisa e pistão",
-            "Caixa de velocidades desmontada",
-            "Carroçaria em chapa nua",
-            "Carroçaria nua, antes do primário",
-            "Na cabine de pintura",
-            "Pintada em Verde Medio, a sua cor de origem"
+            "Cabeça e árvore de cames na montagem",
+            "Caixa de velocidades aberta, peças verificadas",
+            "Motor montado na carroçaria pintada em Verde Medio"
           ]
         }
       },
-      "couleur": "Verde Medio"
+      "couleur": "Verde Medio",
+      "vignette_fiche": false
     },
     {
       "id": "triumph-tr2-portes-longues-1954",
@@ -6400,7 +6370,7 @@ footer{border-top:1px solid rgba(168,123,79,.3)!important}
   var ETAT = function(s){return t('e.'+s);};
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function photo1(v){return v.vignette||(v.photos&&v.photos[0])||GEN;}
-  function galerie(v){var g=[]; if(v.vignette) g.push(v.vignette); (v.photos||[]).forEach(function(p){g.push(p);}); return g;}
+  function galerie(v){var g=[]; if(v.vignette && v.vignette_fiche!==false) g.push(v.vignette); (v.photos||[]).forEach(function(p){g.push(p);}); return g;}
   var SECTION={vehicules:{pref:'vehicule',grille:'grilleVehicules',retour:'ret.veh',travaux:'tr.veh'},projets:{pref:'projet',grille:'grilleProjets',retour:'ret.proj',travaux:'tr.proj'}};
   function prix(p){ return (!p||p==='Nous consulter')?t('consulter'):(p==='Sur demande'?t('surdemande'):p); }
   function prixTxt(v){return v.statut==='vendu'?ETAT('vendu'):prix(v.prix);}
